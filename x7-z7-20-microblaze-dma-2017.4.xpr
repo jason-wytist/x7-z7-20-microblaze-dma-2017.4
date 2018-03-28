@@ -32,7 +32,7 @@
     <Option Name="DSAVendor" Val="xilinx"/>
     <Option Name="DSABoardId" Val="zybo-z7-10"/>
     <Option Name="DSANumComputeUnits" Val="60"/>
-    <Option Name="WTXSimLaunchSim" Val="2"/>
+    <Option Name="WTXSimLaunchSim" Val="3"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -64,9 +64,6 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_axi_smc_0/microblaze_system_axi_smc_0.xci">
-          <Proxy FileSetName="microblaze_system_axi_smc_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_axi_dma_0_0/microblaze_system_axi_dma_0_0.xci">
           <Proxy FileSetName="microblaze_system_axi_dma_0_0"/>
         </CompFileExtendedInfo>
@@ -76,20 +73,23 @@
         <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_processing_system7_0_0/microblaze_system_processing_system7_0_0.xci">
           <Proxy FileSetName="microblaze_system_processing_system7_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_axi_bram_ctrl_0_bram_0/microblaze_system_axi_bram_ctrl_0_bram_0.xci">
-          <Proxy FileSetName="microblaze_system_axi_bram_ctrl_0_bram_0"/>
+        <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_xbar_1/microblaze_system_xbar_1.xci">
+          <Proxy FileSetName="microblaze_system_xbar_1"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_xlconcat_0_0/microblaze_system_xlconcat_0_0.xci">
           <Proxy FileSetName="microblaze_system_xlconcat_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_axi_bram_ctrl_0_0/microblaze_system_axi_bram_ctrl_0_0.xci">
-          <Proxy FileSetName="microblaze_system_axi_bram_ctrl_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_axi_intc_0_0/microblaze_system_axi_intc_0_0.xci">
           <Proxy FileSetName="microblaze_system_axi_intc_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_xbar_1/microblaze_system_xbar_1.xci">
-          <Proxy FileSetName="microblaze_system_xbar_1"/>
+        <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_axi_bram_ctrl_0_0/microblaze_system_axi_bram_ctrl_0_0.xci">
+          <Proxy FileSetName="microblaze_system_axi_bram_ctrl_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_axi_smc_0/microblaze_system_axi_smc_0.xci">
+          <Proxy FileSetName="microblaze_system_axi_smc_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_axi_bram_ctrl_0_bram_0/microblaze_system_axi_bram_ctrl_0_bram_0.xci">
+          <Proxy FileSetName="microblaze_system_axi_bram_ctrl_0_bram_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/microblaze_system/hdl/microblaze_system_wrapper.v">
@@ -127,13 +127,6 @@
           <Attr Name="ImportTime" Val="1522168068"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_1/imports/xz7-z7-10-microblaze-dma-2017.4/testbench_behav.wcfg">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../xz7-z7-10-microblaze-dma-2017.4/testbench_behav.wcfg"/>
-          <Attr Name="ImportTime" Val="1522169038"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
