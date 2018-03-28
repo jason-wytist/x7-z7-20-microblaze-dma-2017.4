@@ -1,0 +1,85 @@
+23:33:50 INFO  : Registering command handlers for SDK TCF services
+23:33:54 INFO  : Launching XSCT server: xsct -n -interactive /home/truemind/work/private/xz7-z7-10-microblaze-dma-2017.4/xz7-z7-10-microblaze-dma-2017.4.sdk/temp_xsdb_launch_script.tcl
+23:33:56 INFO  : XSCT server has started successfully.
+23:33:57 INFO  : Successfully done setting XSCT server connection channel  
+23:33:57 INFO  : Successfully done setting SDK workspace  
+23:33:57 INFO  : Processing command line option -hwspec /home/truemind/work/private/xz7-z7-10-microblaze-dma-2017.4/xz7-z7-10-microblaze-dma-2017.4.sdk/microblaze_system_wrapper.hdf.
+23:59:51 INFO  : Launching XSCT server: xsct -n -interactive /home/truemind/work/private/xz7-z7-10-microblaze-dma-2017.4/xz7-z7-10-microblaze-dma-2017.4.sdk/temp_xsdb_launch_script.tcl
+23:59:52 INFO  : XSCT server has started successfully.
+23:59:52 INFO  : Successfully done setting XSCT server connection channel  
+23:59:52 INFO  : Successfully done setting SDK workspace  
+23:59:55 INFO  : Registering command handlers for SDK TCF services
+23:59:55 INFO  : Processing command line option -hwspec /home/truemind/work/private/xz7-z7-10-microblaze-dma-2017.4/xz7-z7-10-microblaze-dma-2017.4.sdk/microblaze_system_wrapper.hdf.
+23:59:56 INFO  : Checking for hwspec changes in the project microblaze_system_wrapper_hw_platform_0.
+23:59:56 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1522162748000,  Project:1522161195000
+23:59:56 INFO  : The hardware specification for project 'microblaze_system_wrapper_hw_platform_0' is different from /home/truemind/work/private/xz7-z7-10-microblaze-dma-2017.4/xz7-z7-10-microblaze-dma-2017.4.sdk/microblaze_system_wrapper.hdf.
+23:59:56 INFO  : Copied contents of /home/truemind/work/private/xz7-z7-10-microblaze-dma-2017.4/xz7-z7-10-microblaze-dma-2017.4.sdk/microblaze_system_wrapper.hdf into /microblaze_system_wrapper_hw_platform_0/system.hdf.
+23:59:58 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+23:59:59 INFO  : 
+00:00:00 INFO  : Updating hardware inferred compiler options for hello.
+00:00:00 INFO  : Clearing existing target manager status.
+00:00:01 WARN  : Given IPC port value is invalid. Using default port 2350
+00:00:01 WARN  : Given XMD timeout value is invalid. Using default value of 50000
+00:00:06 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+00:00:06 INFO  : Closing and re-opening the MSS file of ther project microblaze_standalone_bsp_0
+00:00:07 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+00:00:08 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+00:04:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:05:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:08:20 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+01:04:00 INFO  : Registering command handlers for SDK TCF services
+01:04:01 INFO  : Launching XSCT server: xsct -n -interactive /home/truemind/work/private/xz7-z7-10-microblaze-dma-2017.4/xz7-z7-10-microblaze-dma-2017.4.sdk/temp_xsdb_launch_script.tcl
+01:04:03 INFO  : XSCT server has started successfully.
+01:04:03 INFO  : Successfully done setting XSCT server connection channel  
+01:04:04 INFO  : Successfully done setting SDK workspace  
+01:04:04 INFO  : Processing command line option -hwspec /home/truemind/work/private/xz7-z7-10-microblaze-dma-2017.4/xz7-z7-10-microblaze-dma-2017.4.sdk/microblaze_system_wrapper.hdf.
+01:04:04 INFO  : Checking for hwspec changes in the project microblaze_system_wrapper_hw_platform_0.
+01:04:10 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1522166342000,  Project:1522162748000
+01:04:10 INFO  : The hardware specification for project 'microblaze_system_wrapper_hw_platform_0' is different from /home/truemind/work/private/xz7-z7-10-microblaze-dma-2017.4/xz7-z7-10-microblaze-dma-2017.4.sdk/microblaze_system_wrapper.hdf.
+01:04:10 INFO  : Copied contents of /home/truemind/work/private/xz7-z7-10-microblaze-dma-2017.4/xz7-z7-10-microblaze-dma-2017.4.sdk/microblaze_system_wrapper.hdf into /microblaze_system_wrapper_hw_platform_0/system.hdf.
+01:04:18 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+01:04:19 INFO  : 
+01:04:20 INFO  : 
+01:04:21 INFO  : Updating hardware inferred compiler options for hello.
+01:04:22 INFO  : Updating hardware inferred compiler options for hello_zynq.
+01:04:22 INFO  : Clearing existing target manager status.
+01:04:22 WARN  : Given IPC port value is invalid. Using default port 2350
+01:04:22 WARN  : Given XMD timeout value is invalid. Using default value of 50000
+01:04:32 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+01:07:21 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+03:35:34 INFO  : Registering command handlers for SDK TCF services
+03:35:36 INFO  : Launching XSCT server: xsct -n -interactive /home/truemind/work/private/xz7-z7-10-microblaze-dma-2017.4/xz7-z7-10-microblaze-dma-2017.4.sdk/temp_xsdb_launch_script.tcl
+03:35:38 INFO  : XSCT server has started successfully.
+03:35:38 INFO  : Successfully done setting XSCT server connection channel  
+03:35:38 INFO  : Successfully done setting SDK workspace  
+03:35:38 INFO  : Processing command line option -hwspec /home/truemind/work/private/xz7-z7-10-microblaze-dma-2017.4/xz7-z7-10-microblaze-dma-2017.4.sdk/microblaze_system_wrapper.hdf.
+03:35:39 INFO  : Checking for hwspec changes in the project microblaze_system_wrapper_hw_platform_0.
+03:35:45 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1522175515000,  Project:1522166342000
+03:35:45 INFO  : The hardware specification for project 'microblaze_system_wrapper_hw_platform_0' is different from /home/truemind/work/private/xz7-z7-10-microblaze-dma-2017.4/xz7-z7-10-microblaze-dma-2017.4.sdk/microblaze_system_wrapper.hdf.
+03:35:45 INFO  : Copied contents of /home/truemind/work/private/xz7-z7-10-microblaze-dma-2017.4/xz7-z7-10-microblaze-dma-2017.4.sdk/microblaze_system_wrapper.hdf into /microblaze_system_wrapper_hw_platform_0/system.hdf.
+03:35:52 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+03:35:54 INFO  : 
+03:35:55 INFO  : 
+03:35:56 INFO  : Updating hardware inferred compiler options for hello.
+03:35:57 INFO  : Updating hardware inferred compiler options for hello_zynq.
+03:35:57 INFO  : Clearing existing target manager status.
+03:35:57 WARN  : Given IPC port value is invalid. Using default port 2350
+03:35:57 WARN  : Given XMD timeout value is invalid. Using default value of 50000
+03:36:07 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+03:37:46 INFO  : No changes in MSS file content so not generating sources.
+03:38:09 INFO  : No changes in MSS file content so not generating sources.
+03:39:48 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+18:39:19 INFO  : Registering command handlers for SDK TCF services
+18:39:21 INFO  : Launching XSCT server: xsct -n -interactive /home/truemind/work/private/x7-z7-20-microblaze-dma-2017.4/x7-z7-20-microblaze-dma-2017.4.sdk/temp_xsdb_launch_script.tcl
+18:39:23 INFO  : XSCT server has started successfully.
+18:39:23 INFO  : Successfully done setting XSCT server connection channel  
+18:39:23 INFO  : Successfully done setting SDK workspace  
+18:39:23 INFO  : Processing command line option -hwspec /home/truemind/work/private/x7-z7-20-microblaze-dma-2017.4/x7-z7-20-microblaze-dma-2017.4.sdk/microblaze_system_wrapper.hdf.
+19:00:43 INFO  : Registering command handlers for SDK TCF services
+19:00:44 INFO  : Launching XSCT server: xsct -n -interactive /home/truemind/work/private/x7-z7-20-microblaze-dma-2017.4/x7-z7-20-microblaze-dma-2017.4.sdk/temp_xsdb_launch_script.tcl
+19:00:46 INFO  : XSCT server has started successfully.
+19:00:46 INFO  : Successfully done setting XSCT server connection channel  
+19:00:46 INFO  : Successfully done setting SDK workspace  
+19:00:46 INFO  : Processing command line option -hwspec /home/truemind/work/private/x7-z7-20-microblaze-dma-2017.4/x7-z7-20-microblaze-dma-2017.4.sdk/microblaze_system_wrapper.hdf.
+19:00:46 INFO  : Checking for hwspec changes in the project microblaze_system_wrapper_hw_platform_1.
+19:10:04 INFO  : Refreshed build settings on project hello_zynq
