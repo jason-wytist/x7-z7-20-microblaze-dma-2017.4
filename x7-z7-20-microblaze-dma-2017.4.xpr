@@ -32,7 +32,7 @@
     <Option Name="DSAVendor" Val="xilinx"/>
     <Option Name="DSABoardId" Val="zybo-z7-20"/>
     <Option Name="DSANumComputeUnits" Val="60"/>
-    <Option Name="WTXSimLaunchSim" Val="23"/>
+    <Option Name="WTXSimLaunchSim" Val="24"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -64,50 +64,23 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_clk_wiz_1_0/microblaze_system_clk_wiz_1_0.xci">
-          <Proxy FileSetName="microblaze_system_clk_wiz_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_lmb_bram_0/microblaze_system_lmb_bram_0.xci">
-          <Proxy FileSetName="microblaze_system_lmb_bram_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_mdm_1_0/microblaze_system_mdm_1_0.xci">
-          <Proxy FileSetName="microblaze_system_mdm_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_microblaze_0_0/microblaze_system_microblaze_0_0.xci">
-          <Proxy FileSetName="microblaze_system_microblaze_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_axi_smc_0/microblaze_system_axi_smc_0.xci">
-          <Proxy FileSetName="microblaze_system_axi_smc_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_axi_bram_ctrl_0_0/microblaze_system_axi_bram_ctrl_0_0.xci">
-          <Proxy FileSetName="microblaze_system_axi_bram_ctrl_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_xlconcat_0_0/microblaze_system_xlconcat_0_0.xci">
-          <Proxy FileSetName="microblaze_system_xlconcat_0_0"/>
+        <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_xlconstant_0_0/microblaze_system_xlconstant_0_0.xci">
+          <Proxy FileSetName="microblaze_system_xlconstant_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_axi_dma_0_0/microblaze_system_axi_dma_0_0.xci">
           <Proxy FileSetName="microblaze_system_axi_dma_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_xlconstant_0_0/microblaze_system_xlconstant_0_0.xci">
-          <Proxy FileSetName="microblaze_system_xlconstant_0_0"/>
+        <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_xlconcat_0_0/microblaze_system_xlconcat_0_0.xci">
+          <Proxy FileSetName="microblaze_system_xlconcat_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_ilmb_bram_if_cntlr_0/microblaze_system_ilmb_bram_if_cntlr_0.xci">
-          <Proxy FileSetName="microblaze_system_ilmb_bram_if_cntlr_0"/>
+        <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_axi_bram_ctrl_0_0/microblaze_system_axi_bram_ctrl_0_0.xci">
+          <Proxy FileSetName="microblaze_system_axi_bram_ctrl_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_dlmb_bram_if_cntlr_0/microblaze_system_dlmb_bram_if_cntlr_0.xci">
-          <Proxy FileSetName="microblaze_system_dlmb_bram_if_cntlr_0"/>
+        <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_axi_smc_0/microblaze_system_axi_smc_0.xci">
+          <Proxy FileSetName="microblaze_system_axi_smc_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_ilmb_v10_0/microblaze_system_ilmb_v10_0.xci">
-          <Proxy FileSetName="microblaze_system_ilmb_v10_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_dlmb_v10_0/microblaze_system_dlmb_v10_0.xci">
-          <Proxy FileSetName="microblaze_system_dlmb_v10_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_axi_intc_0_0/microblaze_system_axi_intc_0_0.xci">
-          <Proxy FileSetName="microblaze_system_axi_intc_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_axi_uartlite_0_0/microblaze_system_axi_uartlite_0_0.xci">
-          <Proxy FileSetName="microblaze_system_axi_uartlite_0_0"/>
+        <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_axi_bram_ctrl_0_bram_0/microblaze_system_axi_bram_ctrl_0_bram_0.xci">
+          <Proxy FileSetName="microblaze_system_axi_bram_ctrl_0_bram_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_axi_cdma_0_0/microblaze_system_axi_cdma_0_0.xci">
           <Proxy FileSetName="microblaze_system_axi_cdma_0_0"/>
@@ -115,14 +88,41 @@
         <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_xbar_0/microblaze_system_xbar_0.xci">
           <Proxy FileSetName="microblaze_system_xbar_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_axi_bram_ctrl_0_bram_0/microblaze_system_axi_bram_ctrl_0_bram_0.xci">
-          <Proxy FileSetName="microblaze_system_axi_bram_ctrl_0_bram_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_processing_system7_0_1/microblaze_system_processing_system7_0_1.xci">
           <Proxy FileSetName="microblaze_system_processing_system7_0_1"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_lmb_bram_0/microblaze_system_lmb_bram_0.xci">
+          <Proxy FileSetName="microblaze_system_lmb_bram_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_ilmb_bram_if_cntlr_0/microblaze_system_ilmb_bram_if_cntlr_0.xci">
+          <Proxy FileSetName="microblaze_system_ilmb_bram_if_cntlr_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_ilmb_v10_0/microblaze_system_ilmb_v10_0.xci">
+          <Proxy FileSetName="microblaze_system_ilmb_v10_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_dlmb_bram_if_cntlr_0/microblaze_system_dlmb_bram_if_cntlr_0.xci">
+          <Proxy FileSetName="microblaze_system_dlmb_bram_if_cntlr_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_dlmb_v10_0/microblaze_system_dlmb_v10_0.xci">
+          <Proxy FileSetName="microblaze_system_dlmb_v10_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_rst_clk_wiz_1_100M_0/microblaze_system_rst_clk_wiz_1_100M_0.xci">
           <Proxy FileSetName="microblaze_system_rst_clk_wiz_1_100M_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_axi_intc_0_0/microblaze_system_axi_intc_0_0.xci">
+          <Proxy FileSetName="microblaze_system_axi_intc_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_mdm_1_0/microblaze_system_mdm_1_0.xci">
+          <Proxy FileSetName="microblaze_system_mdm_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_clk_wiz_1_0/microblaze_system_clk_wiz_1_0.xci">
+          <Proxy FileSetName="microblaze_system_clk_wiz_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_axi_uartlite_0_0/microblaze_system_axi_uartlite_0_0.xci">
+          <Proxy FileSetName="microblaze_system_axi_uartlite_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="microblaze_system.bd" FileRelPathName="ip/microblaze_system_microblaze_0_0/microblaze_system_microblaze_0_0.xci">
+          <Proxy FileSetName="microblaze_system_microblaze_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/microblaze_system/hdl/microblaze_system_wrapper.v">
