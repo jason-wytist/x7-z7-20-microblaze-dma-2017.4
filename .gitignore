@@ -1,0 +1,14 @@
+/*
+
+!/.gitignore
+
+!/*.srcs
+!/*.srcs/*
+!/*.sdk
+!/*.sdk/*
+/*.sdk/*/Debug
+/*.sdk/*/Release
+/*.sdk/webtalk
+
+!/scripts/*
+
