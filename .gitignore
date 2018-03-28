@@ -11,6 +11,10 @@
 /*.sdk/*/Debug
 /*.sdk/*/Release
 /*.sdk/webtalk
+/*.sdk/.metadata
+/*.sdk/.sdk
+/*.sdk/RemoteSystemsTempFiles 
+/*.sdk/SDK.log 
 
 !/scripts
 !/scripts/*
