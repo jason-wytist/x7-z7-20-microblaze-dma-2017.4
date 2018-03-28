@@ -58,7 +58,7 @@ initial begin
     I_CLK = 0;
     forever begin
         #4;
-        I_CLK = ~I_CLK;
+        I_CLK <= ~I_CLK;
     end
 end
 
@@ -66,6 +66,12 @@ initial begin
     I_RESET_N = 1'b0;
     repeat(40) @(negedge I_CLK);
     I_RESET_N = 1'b1;
+end
+
+
+reg R_CLK;
+always @(*) begin
+    R_CLK <= #9 uut.microblaze_system_i.microblaze_0_Clk;
 end
 
 endmodule

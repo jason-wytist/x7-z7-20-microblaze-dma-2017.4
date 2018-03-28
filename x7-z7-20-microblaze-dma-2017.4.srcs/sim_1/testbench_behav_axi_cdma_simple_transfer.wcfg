@@ -22,13 +22,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="810880000000fs"></ZoomStartTime>
-      <ZoomEndTime time="811175400001fs"></ZoomEndTime>
-      <Cursor1Time time="810972000000fs"></Cursor1Time>
+      <ZoomStartTime time="811381900000fs"></ZoomStartTime>
+      <ZoomEndTime time="811460000001fs"></ZoomEndTime>
+      <Cursor1Time time="811412600000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="266"></NameColumnWidth>
-      <ValueColumnWidth column_width="133"></ValueColumnWidth>
+      <NameColumnWidth column_width="180"></NameColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="2" />
    <wvobject type="group" fp_name="group10">
@@ -38,6 +38,12 @@
       <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_bram_ctrl_0_bram/clka">
          <obj_property name="ElementShortName">clka</obj_property>
          <obj_property name="ObjectShortName">clka</obj_property>
+         <obj_property name="CustomSignalColor">#808080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/R_CLK">
+         <obj_property name="ElementShortName">R_CLK</obj_property>
+         <obj_property name="ObjectShortName">R_CLK</obj_property>
          <obj_property name="CustomSignalColor">#F0E68C</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
@@ -207,6 +213,12 @@
          <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/s_axi_lite_aclk">
             <obj_property name="ElementShortName">s_axi_lite_aclk</obj_property>
             <obj_property name="ObjectShortName">s_axi_lite_aclk</obj_property>
+            <obj_property name="CustomSignalColor">#808080</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/testbench/R_CLK">
+            <obj_property name="ElementShortName">R_CLK</obj_property>
+            <obj_property name="ObjectShortName">R_CLK</obj_property>
             <obj_property name="CustomSignalColor">#F0E68C</obj_property>
             <obj_property name="UseCustomSignalColor">true</obj_property>
          </wvobject>
@@ -340,6 +352,12 @@
          <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/m_axi_aclk">
             <obj_property name="ElementShortName">m_axi_aclk</obj_property>
             <obj_property name="ObjectShortName">m_axi_aclk</obj_property>
+            <obj_property name="CustomSignalColor">#808080</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/testbench/R_CLK">
+            <obj_property name="ElementShortName">R_CLK</obj_property>
+            <obj_property name="ObjectShortName">R_CLK</obj_property>
             <obj_property name="CustomSignalColor">#F0E68C</obj_property>
             <obj_property name="UseCustomSignalColor">true</obj_property>
          </wvobject>
