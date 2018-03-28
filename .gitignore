@@ -2,6 +2,8 @@
 
 !/.gitignore
 
+!/*.xpr 
+
 !/*.srcs
 !/*.srcs/*
 !/*.sdk
