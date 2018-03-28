@@ -10,5 +10,6 @@
 /*.sdk/*/Release
 /*.sdk/webtalk
 
+!/scripts
 !/scripts/*
 
