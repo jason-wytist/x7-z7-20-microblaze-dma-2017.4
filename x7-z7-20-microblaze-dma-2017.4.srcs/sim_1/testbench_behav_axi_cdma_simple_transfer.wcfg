@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/truemind/work/private/x7-z7-20-microblaze-dma-2017.4/x7-z7-20-microblaze-dma-2017.4.sim/sim_1/behav/xsim/testbench_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="axi_bram_ctrl_funcs" />
+            <top_module name="axi_cdma_pkg" />
+            <top_module name="axi_dma_pkg" />
+            <top_module name="axi_vip_pkg" />
+            <top_module name="glbl" />
+            <top_module name="ipif_pkg" />
+            <top_module name="lib_pkg" />
+            <top_module name="lmb_bram_if_funcs" />
+            <top_module name="mdm_funcs" />
+            <top_module name="std" />
+            <top_module name="testbench" />
+            <top_module name="vcomponents" />
+            <top_module name="xil_common_vip_pkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="810880000000fs"></ZoomStartTime>
+      <ZoomEndTime time="811175400001fs"></ZoomEndTime>
+      <Cursor1Time time="810972000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="266"></NameColumnWidth>
+      <ValueColumnWidth column_width="133"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="2" />
+   <wvobject type="group" fp_name="group10">
+      <obj_property name="label">BRAM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_bram_ctrl_0_bram/clka">
+         <obj_property name="ElementShortName">clka</obj_property>
+         <obj_property name="ObjectShortName">clka</obj_property>
+         <obj_property name="CustomSignalColor">#F0E68C</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_bram_ctrl_0_bram/rsta">
+         <obj_property name="ElementShortName">rsta</obj_property>
+         <obj_property name="ObjectShortName">rsta</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_bram_ctrl_0_bram/ena">
+         <obj_property name="ElementShortName">ena</obj_property>
+         <obj_property name="ObjectShortName">ena</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/uut/microblaze_system_i/axi_bram_ctrl_0_bram/wea">
+         <obj_property name="ElementShortName">wea[3:0]</obj_property>
+         <obj_property name="ObjectShortName">wea[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/uut/microblaze_system_i/axi_bram_ctrl_0_bram/addra">
+         <obj_property name="ElementShortName">addra[31:0]</obj_property>
+         <obj_property name="ObjectShortName">addra[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="vbus" fp_name="vbus165">
+         <obj_property name="label">addra_u32_index</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="CustomSignalColor">#FFFFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_bram_ctrl_0_bram/addra[31]">
+            <obj_property name="ElementShortName">[31]</obj_property>
+            <obj_property name="ObjectShortName">[31]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_bram_ctrl_0_bram/addra[30]">
+            <obj_property name="ElementShortName">[30]</obj_property>
+            <obj_property name="ObjectShortName">[30]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_bram_ctrl_0_bram/addra[29]">
+            <obj_property name="ElementShortName">[29]</obj_property>
+            <obj_property name="ObjectShortName">[29]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_bram_ctrl_0_bram/addra[28]">
+            <obj_property name="ElementShortName">[28]</obj_property>
+            <obj_property name="ObjectShortName">[28]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_bram_ctrl_0_bram/addra[27]">
+            <obj_property name="ElementShortName">[27]</obj_property>
+            <obj_property name="ObjectShortName">[27]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_bram_ctrl_0_bram/addra[26]">
+            <obj_property name="ElementShortName">[26]</obj_property>
+            <obj_property name="ObjectShortName">[26]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_bram_ctrl_0_bram/addra[25]">
+            <obj_property name="ElementShortName">[25]</obj_property>
+            <obj_property name="ObjectShortName">[25]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_bram_ctrl_0_bram/addra[24]">
+            <obj_property name="ElementShortName">[24]</obj_property>
+            <obj_property name="ObjectShortName">[24]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_bram_ctrl_0_bram/addra[23]">
+            <obj_property name="ElementShortName">[23]</obj_property>
+            <obj_property name="ObjectShortName">[23]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_bram_ctrl_0_bram/addra[22]">
+            <obj_property name="ElementShortName">[22]</obj_property>
+            <obj_property name="ObjectShortName">[22]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_bram_ctrl_0_bram/addra[21]">
+            <obj_property name="ElementShortName">[21]</obj_property>
+            <obj_property name="ObjectShortName">[21]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_bram_ctrl_0_bram/addra[20]">
+            <obj_property name="ElementShortName">[20]</obj_property>
+            <obj_property name="ObjectShortName">[20]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_bram_ctrl_0_bram/addra[19]">
+            <obj_property name="ElementShortName">[19]</obj_property>
+            <obj_property name="ObjectShortName">[19]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_bram_ctrl_0_bram/addra[18]">
+            <obj_property name="ElementShortName">[18]</obj_property>
+            <obj_property name="ObjectShortName">[18]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_bram_ctrl_0_bram/addra[17]">
+            <obj_property name="ElementShortName">[17]</obj_property>
+            <obj_property name="ObjectShortName">[17]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_bram_ctrl_0_bram/addra[16]">
+            <obj_property name="ElementShortName">[16]</obj_property>
+            <obj_property name="ObjectShortName">[16]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_bram_ctrl_0_bram/addra[15]">
+            <obj_property name="ElementShortName">[15]</obj_property>
+            <obj_property name="ObjectShortName">[15]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_bram_ctrl_0_bram/addra[14]">
+            <obj_property name="ElementShortName">[14]</obj_property>
+            <obj_property name="ObjectShortName">[14]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_bram_ctrl_0_bram/addra[13]">
+            <obj_property name="ElementShortName">[13]</obj_property>
+            <obj_property name="ObjectShortName">[13]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_bram_ctrl_0_bram/addra[12]">
+            <obj_property name="ElementShortName">[12]</obj_property>
+            <obj_property name="ObjectShortName">[12]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_bram_ctrl_0_bram/addra[11]">
+            <obj_property name="ElementShortName">[11]</obj_property>
+            <obj_property name="ObjectShortName">[11]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_bram_ctrl_0_bram/addra[10]">
+            <obj_property name="ElementShortName">[10]</obj_property>
+            <obj_property name="ObjectShortName">[10]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_bram_ctrl_0_bram/addra[9]">
+            <obj_property name="ElementShortName">[9]</obj_property>
+            <obj_property name="ObjectShortName">[9]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_bram_ctrl_0_bram/addra[8]">
+            <obj_property name="ElementShortName">[8]</obj_property>
+            <obj_property name="ObjectShortName">[8]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_bram_ctrl_0_bram/addra[7]">
+            <obj_property name="ElementShortName">[7]</obj_property>
+            <obj_property name="ObjectShortName">[7]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_bram_ctrl_0_bram/addra[6]">
+            <obj_property name="ElementShortName">[6]</obj_property>
+            <obj_property name="ObjectShortName">[6]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_bram_ctrl_0_bram/addra[5]">
+            <obj_property name="ElementShortName">[5]</obj_property>
+            <obj_property name="ObjectShortName">[5]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_bram_ctrl_0_bram/addra[4]">
+            <obj_property name="ElementShortName">[4]</obj_property>
+            <obj_property name="ObjectShortName">[4]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_bram_ctrl_0_bram/addra[3]">
+            <obj_property name="ElementShortName">[3]</obj_property>
+            <obj_property name="ObjectShortName">[3]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_bram_ctrl_0_bram/addra[2]">
+            <obj_property name="ElementShortName">[2]</obj_property>
+            <obj_property name="ObjectShortName">[2]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/uut/microblaze_system_i/axi_bram_ctrl_0_bram/dina">
+         <obj_property name="ElementShortName">dina[31:0]</obj_property>
+         <obj_property name="ObjectShortName">dina[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/uut/microblaze_system_i/axi_bram_ctrl_0_bram/douta">
+         <obj_property name="ElementShortName">douta[31:0]</obj_property>
+         <obj_property name="ObjectShortName">douta[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group34">
+      <obj_property name="label">AXI CDMA</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="group" fp_name="group90">
+         <obj_property name="label">s_axi_lite</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/s_axi_lite_aclk">
+            <obj_property name="ElementShortName">s_axi_lite_aclk</obj_property>
+            <obj_property name="ObjectShortName">s_axi_lite_aclk</obj_property>
+            <obj_property name="CustomSignalColor">#F0E68C</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="group92">
+            <obj_property name="label">write_addr_ch</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/s_axi_lite_awready">
+               <obj_property name="ElementShortName">s_axi_lite_awready</obj_property>
+               <obj_property name="ObjectShortName">s_axi_lite_awready</obj_property>
+               <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/s_axi_lite_awvalid">
+               <obj_property name="ElementShortName">s_axi_lite_awvalid</obj_property>
+               <obj_property name="ObjectShortName">s_axi_lite_awvalid</obj_property>
+               <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/s_axi_lite_awaddr">
+               <obj_property name="ElementShortName">s_axi_lite_awaddr[5:0]</obj_property>
+               <obj_property name="ObjectShortName">s_axi_lite_awaddr[5:0]</obj_property>
+               <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group96">
+            <obj_property name="label">write_data_ch</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/s_axi_lite_wready">
+               <obj_property name="ElementShortName">s_axi_lite_wready</obj_property>
+               <obj_property name="ObjectShortName">s_axi_lite_wready</obj_property>
+               <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/s_axi_lite_wvalid">
+               <obj_property name="ElementShortName">s_axi_lite_wvalid</obj_property>
+               <obj_property name="ObjectShortName">s_axi_lite_wvalid</obj_property>
+               <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/s_axi_lite_wdata">
+               <obj_property name="ElementShortName">s_axi_lite_wdata[31:0]</obj_property>
+               <obj_property name="ObjectShortName">s_axi_lite_wdata[31:0]</obj_property>
+               <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group95">
+            <obj_property name="label">write_resp_ch</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/s_axi_lite_bready">
+               <obj_property name="ElementShortName">s_axi_lite_bready</obj_property>
+               <obj_property name="ObjectShortName">s_axi_lite_bready</obj_property>
+               <obj_property name="CustomSignalColor">#FFA500</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/s_axi_lite_bvalid">
+               <obj_property name="ElementShortName">s_axi_lite_bvalid</obj_property>
+               <obj_property name="ObjectShortName">s_axi_lite_bvalid</obj_property>
+               <obj_property name="CustomSignalColor">#FFA500</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/s_axi_lite_bresp">
+               <obj_property name="ElementShortName">s_axi_lite_bresp[1:0]</obj_property>
+               <obj_property name="ObjectShortName">s_axi_lite_bresp[1:0]</obj_property>
+               <obj_property name="CustomSignalColor">#FFA500</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group94">
+            <obj_property name="label">read_addr_ch</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/s_axi_lite_aresetn">
+               <obj_property name="ElementShortName">s_axi_lite_aresetn</obj_property>
+               <obj_property name="ObjectShortName">s_axi_lite_aresetn</obj_property>
+               <obj_property name="CustomSignalColor">#00FF7F</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/s_axi_lite_araddr">
+               <obj_property name="ElementShortName">s_axi_lite_araddr[5:0]</obj_property>
+               <obj_property name="ObjectShortName">s_axi_lite_araddr[5:0]</obj_property>
+               <obj_property name="CustomSignalColor">#00FF7F</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/s_axi_lite_arvalid">
+               <obj_property name="ElementShortName">s_axi_lite_arvalid</obj_property>
+               <obj_property name="ObjectShortName">s_axi_lite_arvalid</obj_property>
+               <obj_property name="CustomSignalColor">#00FF7F</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/s_axi_lite_arready">
+               <obj_property name="ElementShortName">s_axi_lite_arready</obj_property>
+               <obj_property name="ObjectShortName">s_axi_lite_arready</obj_property>
+               <obj_property name="CustomSignalColor">#00FF7F</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group93">
+            <obj_property name="label">read_data_ch</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/s_axi_lite_rready">
+               <obj_property name="ElementShortName">s_axi_lite_rready</obj_property>
+               <obj_property name="ObjectShortName">s_axi_lite_rready</obj_property>
+               <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/s_axi_lite_rvalid">
+               <obj_property name="ElementShortName">s_axi_lite_rvalid</obj_property>
+               <obj_property name="ObjectShortName">s_axi_lite_rvalid</obj_property>
+               <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/s_axi_lite_rdata">
+               <obj_property name="ElementShortName">s_axi_lite_rdata[31:0]</obj_property>
+               <obj_property name="ObjectShortName">s_axi_lite_rdata[31:0]</obj_property>
+               <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/s_axi_lite_rresp">
+               <obj_property name="ElementShortName">s_axi_lite_rresp[1:0]</obj_property>
+               <obj_property name="ObjectShortName">s_axi_lite_rresp[1:0]</obj_property>
+               <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group91">
+         <obj_property name="label">m_axi</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/m_axi_aclk">
+            <obj_property name="ElementShortName">m_axi_aclk</obj_property>
+            <obj_property name="ObjectShortName">m_axi_aclk</obj_property>
+            <obj_property name="CustomSignalColor">#F0E68C</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="group97">
+            <obj_property name="label">write_addr_ch</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/m_axi_awready">
+               <obj_property name="ElementShortName">m_axi_awready</obj_property>
+               <obj_property name="ObjectShortName">m_axi_awready</obj_property>
+               <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/m_axi_awvalid">
+               <obj_property name="ElementShortName">m_axi_awvalid</obj_property>
+               <obj_property name="ObjectShortName">m_axi_awvalid</obj_property>
+               <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/m_axi_awaddr">
+               <obj_property name="ElementShortName">m_axi_awaddr[31:0]</obj_property>
+               <obj_property name="ObjectShortName">m_axi_awaddr[31:0]</obj_property>
+               <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/m_axi_awlen">
+               <obj_property name="ElementShortName">m_axi_awlen[7:0]</obj_property>
+               <obj_property name="ObjectShortName">m_axi_awlen[7:0]</obj_property>
+               <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/m_axi_awsize">
+               <obj_property name="ElementShortName">m_axi_awsize[2:0]</obj_property>
+               <obj_property name="ObjectShortName">m_axi_awsize[2:0]</obj_property>
+               <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/m_axi_awburst">
+               <obj_property name="ElementShortName">m_axi_awburst[1:0]</obj_property>
+               <obj_property name="ObjectShortName">m_axi_awburst[1:0]</obj_property>
+               <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/m_axi_awprot">
+               <obj_property name="ElementShortName">m_axi_awprot[2:0]</obj_property>
+               <obj_property name="ObjectShortName">m_axi_awprot[2:0]</obj_property>
+               <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/m_axi_awcache">
+               <obj_property name="ElementShortName">m_axi_awcache[3:0]</obj_property>
+               <obj_property name="ObjectShortName">m_axi_awcache[3:0]</obj_property>
+               <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group98">
+            <obj_property name="label">write_data_ch</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="array" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/m_axi_wdata">
+               <obj_property name="ElementShortName">m_axi_wdata[31:0]</obj_property>
+               <obj_property name="ObjectShortName">m_axi_wdata[31:0]</obj_property>
+               <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/m_axi_wstrb">
+               <obj_property name="ElementShortName">m_axi_wstrb[3:0]</obj_property>
+               <obj_property name="ObjectShortName">m_axi_wstrb[3:0]</obj_property>
+               <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/m_axi_wvalid">
+               <obj_property name="ElementShortName">m_axi_wvalid</obj_property>
+               <obj_property name="ObjectShortName">m_axi_wvalid</obj_property>
+               <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/m_axi_wready">
+               <obj_property name="ElementShortName">m_axi_wready</obj_property>
+               <obj_property name="ObjectShortName">m_axi_wready</obj_property>
+               <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/m_axi_wlast">
+               <obj_property name="ElementShortName">m_axi_wlast</obj_property>
+               <obj_property name="ObjectShortName">m_axi_wlast</obj_property>
+               <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group99">
+            <obj_property name="label">write_resp_ch</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/m_axi_bready">
+               <obj_property name="ElementShortName">m_axi_bready</obj_property>
+               <obj_property name="ObjectShortName">m_axi_bready</obj_property>
+               <obj_property name="CustomSignalColor">#FFA500</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/m_axi_bvalid">
+               <obj_property name="ElementShortName">m_axi_bvalid</obj_property>
+               <obj_property name="ObjectShortName">m_axi_bvalid</obj_property>
+               <obj_property name="CustomSignalColor">#FFA500</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/m_axi_bresp">
+               <obj_property name="ElementShortName">m_axi_bresp[1:0]</obj_property>
+               <obj_property name="ObjectShortName">m_axi_bresp[1:0]</obj_property>
+               <obj_property name="CustomSignalColor">#FFA500</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group100">
+            <obj_property name="label">read_addr_ch</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/m_axi_arready">
+               <obj_property name="ElementShortName">m_axi_arready</obj_property>
+               <obj_property name="ObjectShortName">m_axi_arready</obj_property>
+               <obj_property name="CustomSignalColor">#00FF7F</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/m_axi_arvalid">
+               <obj_property name="ElementShortName">m_axi_arvalid</obj_property>
+               <obj_property name="ObjectShortName">m_axi_arvalid</obj_property>
+               <obj_property name="CustomSignalColor">#00FF7F</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/m_axi_araddr">
+               <obj_property name="ElementShortName">m_axi_araddr[31:0]</obj_property>
+               <obj_property name="ObjectShortName">m_axi_araddr[31:0]</obj_property>
+               <obj_property name="CustomSignalColor">#00FF7F</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/m_axi_arlen">
+               <obj_property name="ElementShortName">m_axi_arlen[7:0]</obj_property>
+               <obj_property name="ObjectShortName">m_axi_arlen[7:0]</obj_property>
+               <obj_property name="CustomSignalColor">#00FF7F</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/m_axi_arsize">
+               <obj_property name="ElementShortName">m_axi_arsize[2:0]</obj_property>
+               <obj_property name="ObjectShortName">m_axi_arsize[2:0]</obj_property>
+               <obj_property name="CustomSignalColor">#00FF7F</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/m_axi_arburst">
+               <obj_property name="ElementShortName">m_axi_arburst[1:0]</obj_property>
+               <obj_property name="ObjectShortName">m_axi_arburst[1:0]</obj_property>
+               <obj_property name="CustomSignalColor">#00FF7F</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/m_axi_arprot">
+               <obj_property name="ElementShortName">m_axi_arprot[2:0]</obj_property>
+               <obj_property name="ObjectShortName">m_axi_arprot[2:0]</obj_property>
+               <obj_property name="CustomSignalColor">#00FF7F</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/m_axi_arcache">
+               <obj_property name="ElementShortName">m_axi_arcache[3:0]</obj_property>
+               <obj_property name="ObjectShortName">m_axi_arcache[3:0]</obj_property>
+               <obj_property name="CustomSignalColor">#00FF7F</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group101">
+            <obj_property name="label">read_data_ch</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/m_axi_rready">
+               <obj_property name="ElementShortName">m_axi_rready</obj_property>
+               <obj_property name="ObjectShortName">m_axi_rready</obj_property>
+               <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/m_axi_rvalid">
+               <obj_property name="ElementShortName">m_axi_rvalid</obj_property>
+               <obj_property name="ObjectShortName">m_axi_rvalid</obj_property>
+               <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/m_axi_rdata">
+               <obj_property name="ElementShortName">m_axi_rdata[31:0]</obj_property>
+               <obj_property name="ObjectShortName">m_axi_rdata[31:0]</obj_property>
+               <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/m_axi_rresp">
+               <obj_property name="ElementShortName">m_axi_rresp[1:0]</obj_property>
+               <obj_property name="ObjectShortName">m_axi_rresp[1:0]</obj_property>
+               <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/m_axi_rlast">
+               <obj_property name="ElementShortName">m_axi_rlast</obj_property>
+               <obj_property name="ObjectShortName">m_axi_rlast</obj_property>
+               <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/cdma_introut">
+         <obj_property name="ElementShortName">cdma_introut</obj_property>
+         <obj_property name="ObjectShortName">cdma_introut</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/uut/microblaze_system_i/axi_cdma_0/cdma_tvect_out">
+         <obj_property name="ElementShortName">cdma_tvect_out[31:0]</obj_property>
+         <obj_property name="ObjectShortName">cdma_tvect_out[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>
