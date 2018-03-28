@@ -1,14 +1,14 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
-// Date        : Tue Mar 27 23:13:35 2018
+// Date        : Thu Mar 29 00:24:42 2018
 // Host        : big-ubuntu-for-fpga running 64-bit Ubuntu 16.04.4 LTS
 // Command     : write_verilog -force -mode funcsim -rename_top microblaze_system_ilmb_v10_0 -prefix
 //               microblaze_system_ilmb_v10_0_ microblaze_system_dlmb_v10_0_sim_netlist.v
 // Design      : microblaze_system_dlmb_v10_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
-// Device      : xc7z010clg400-1
+// Device      : xc7z020clg400-1
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 

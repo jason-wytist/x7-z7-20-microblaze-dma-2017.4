@@ -43,8 +43,8 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 set list_projs [get_projects -quiet]
 if { $list_projs eq "" } {
-   create_project project_1 myproj -part xc7z010clg400-1
-   set_property BOARD_PART digilentinc.com:zybo-z7-10:part0:1.0 [current_project]
+   create_project project_1 myproj -part xc7z020clg400-1
+   set_property BOARD_PART digilentinc.com:zybo-z7-20:part0:1.0 [current_project]
 }
 
 
@@ -723,7 +723,7 @@ proc create_hier_cell_s03_entry_pipeline { parentCell nameHier } {
   set_property -dict [ list \
    CONFIG.ADDR_WIDTH {32} \
    CONFIG.IS_CASCADED {0} \
-   CONFIG.MEP_IDENTIFIER {3} \
+   CONFIG.MEP_IDENTIFIER {0} \
    CONFIG.MEP_IDENTIFIER_WIDTH {2} \
    CONFIG.RDATA_WIDTH {32} \
    CONFIG.READ_WRITE_MODE {READ_WRITE} \
@@ -1175,7 +1175,7 @@ proc create_hier_cell_s02_entry_pipeline { parentCell nameHier } {
   set_property -dict [ list \
    CONFIG.ADDR_WIDTH {32} \
    CONFIG.IS_CASCADED {0} \
-   CONFIG.MEP_IDENTIFIER {1} \
+   CONFIG.MEP_IDENTIFIER {3} \
    CONFIG.MEP_IDENTIFIER_WIDTH {2} \
    CONFIG.RDATA_WIDTH {32} \
    CONFIG.READ_WRITE_MODE {READ_WRITE} \
@@ -1807,7 +1807,7 @@ proc create_hier_cell_s00_entry_pipeline { parentCell nameHier } {
   set_property -dict [ list \
    CONFIG.ADDR_WIDTH {32} \
    CONFIG.IS_CASCADED {0} \
-   CONFIG.MEP_IDENTIFIER {0} \
+   CONFIG.MEP_IDENTIFIER {1} \
    CONFIG.MEP_IDENTIFIER_WIDTH {2} \
    CONFIG.RDATA_WIDTH {32} \
    CONFIG.READ_WRITE_MODE {READ_ONLY} \
@@ -2217,10 +2217,10 @@ proc create_hier_cell_m00_exit_pipeline { parentCell nameHier } {
    CONFIG.NUM_MSC {1} \
    CONFIG.RDATA_WIDTH {32} \
    CONFIG.READ_WRITE_MODE {READ_WRITE} \
-   CONFIG.SSC000_ROUTE {0b0001} \
-   CONFIG.SSC001_ROUTE {0b0100} \
+   CONFIG.SSC000_ROUTE {0b1000} \
+   CONFIG.SSC001_ROUTE {0b0001} \
    CONFIG.SSC002_ROUTE {0b0010} \
-   CONFIG.SSC003_ROUTE {0b1000} \
+   CONFIG.SSC003_ROUTE {0b0100} \
    CONFIG.SSC_ROUTE_WIDTH {4} \
    CONFIG.S_ID_WIDTH {2} \
    CONFIG.WDATA_WIDTH {32} \
