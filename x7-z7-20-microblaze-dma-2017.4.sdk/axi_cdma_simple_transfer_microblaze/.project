@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>axi_cdma_simple_transder_microblaze</name>
+	<name>axi_cdma_simple_transfer_microblaze</name>
 	<comment>Created by SDK v2017.4. microblaze_standalone_bsp_0 - microblaze_0</comment>
 	<projects>
 		<project>microblaze_standalone_bsp_0</project>
