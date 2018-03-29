@@ -12,12 +12,12 @@
 
 //#define FOR_SIM
 
-// no simulation printf
-void ns_printf(char *str, ...){
-#ifndef FOR_SIM
-	printf(str);
-#endif
-}
+//// no simulation printf
+//void ns_printf(char *str, ...){
+//#ifndef FOR_SIM
+//	printf(str);
+//#endif
+//}
 
 #define BRAM_SIZE_IN_BYTE (XPAR_AXI_BRAM_CTRL_0_S_AXI_HIGHADDR - XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR + 1)
 
@@ -32,17 +32,24 @@ int main()
 	u32 *destMemPtr = (u32 *)(bramBaseAddr + transferSizeInWord);
 	int printJump = 8;
 
-    ns_printf("Hello Microblaze CDMA\n\r");
+#ifndef FOR_SIM
+	printf("XAxiCdma size = %d", sizeof(XAxiCdma));
+	printf("Hello Microblaze CDMA\n\r");
+#endif
 
     xAxiCdma0_CfgPtr = XAxiCdma_LookupConfig(XPAR_AXICDMA_0_DEVICE_ID);
     if(!xAxiCdma0_CfgPtr) {
-    	ns_printf("AXI CDMA 0 Configuration Failed\n\r");
+#ifndef FOR_SIM
+    	printf("AXI CDMA 0 Configuration Failed\n\r");
+#endif
     	return XST_FAILURE;
     }
 
     status = XAxiCdma_CfgInitialize(&xAxiCdma0Instance, xAxiCdma0_CfgPtr, xAxiCdma0_CfgPtr->BaseAddress);
     if(status == XST_FAILURE) {
-    	ns_printf("AXI CDMA 0 Initialization Failed\n\r");
+#ifndef FOR_SIM
+    	printf("AXI CDMA 0 Initialization Failed\n\r");
+#endif
         return status;
     }
 
@@ -51,11 +58,13 @@ int main()
 
     // initialize BRAM
     memset((u8 *)bramBaseAddr, 0, BRAM_SIZE_IN_BYTE);
+#ifndef FOR_SIM
     for(int i=0; i<transferSizeInWord; i++) {
     	if(i % printJump == 0)
-    		ns_printf("srcMem[%d] = %d : destMem[%d] = %d\n\r", i, (int)srcMemPtr[i], i, (int)destMemPtr[i]);
+			printf("srcMem[%d] = %d : destMem[%d] = %d\n\r", i, (int)srcMemPtr[i], i, (int)destMemPtr[i]);
     }
-    ns_printf("\n\r\n\r\n\r\n\r");
+	printf("\n\r\n\r\n\r\n\r");
+#endif
 
     // initialize srcMem
     for(int i=0; i<transferSizeInWord; i++) {
@@ -65,25 +74,32 @@ int main()
     // Simple Transfer using CDMA
     status = XAxiCdma_SimpleTransfer(&xAxiCdma0Instance, (UINTPTR)srcMemPtr, (UINTPTR)destMemPtr, transferSizeInWord*sizeof(u32), NULL, NULL);
     if(status == XST_FAILURE) {
-    	ns_printf("AXI CDMA 0 Transfer Failed\n\r");
+#ifndef FOR_SIM
+    	printf("AXI CDMA 0 Transfer Failed\n\r");
     	return status;
+#endif
     }
 
     // wait;
     while(XAxiCdma_IsBusy(&xAxiCdma0Instance));
 
     // compare result
+#ifndef FOR_SIM
     for(int i=0; i<transferSizeInWord; i++) {
     	if(i % printJump == 0)
-    		ns_printf("srcMem[%d] = %d : destMem[%d] = %d\n\r", i, (int)srcMemPtr[i], i, (int)destMemPtr[i]);
+    		printf("srcMem[%d] = %d : destMem[%d] = %d\n\r", i, (int)srcMemPtr[i], i, (int)destMemPtr[i]);
     }
+#endif
 
     status = memcmp((u32 *)srcMemPtr, (u32 *)destMemPtr, 32);
+#ifndef FOR_SIM
     if(status == XST_SUCCESS) {
     	printf("\n\rResult Compare Success\n\r");
+
     } else {
     	printf("\n\rResult Compare Failed\n\r");
     }
+#endif
 
     return status;
 }
