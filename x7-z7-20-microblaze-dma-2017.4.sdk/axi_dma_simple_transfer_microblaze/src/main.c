@@ -10,7 +10,7 @@
 #include "xaxidma.h"
 #include "xparameters.h"
 
-//#define FOR_SIM
+#define FOR_SIM
 #define BRAM_SIZE_IN_BYTE (XPAR_AXI_BRAM_CTRL_0_S_AXI_HIGHADDR - XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR + 1)
 
 XAxiDma xAxiDma0Instance;
@@ -51,14 +51,12 @@ int main()
 
     // initialize BRAM
     memset((u8 *)bramBaseAddr, 0, BRAM_SIZE_IN_BYTE);
+#ifndef FOR_SIM
     for(int i=0; i<transferSizeInWord; i++) {
     	if(i % printJump == 0)
-#ifndef FOR_SIM
-		printf("srcMem[%d] = %d : destMem[%d] = %d\n\r", i, (int)srcMemPtr[i], i, (int)destMemPtr[i]);
-#endif
+    		printf("srcMem[%d] = %d : destMem[%d] = %d\n\r", i, (int)srcMemPtr[i], i, (int)destMemPtr[i]);
     }
-#ifndef FOR_SIM
-    	printf("\n\r\n\r\n\r\n\r");
+	printf("\n\r\n\r\n\r\n\r");
 #endif
 
     // initialize srcMem
@@ -85,12 +83,12 @@ int main()
     while(XAxiDma_Busy(&xAxiDma0Instance, XAXIDMA_DEVICE_TO_DMA) || XAxiDma_Busy(&xAxiDma0Instance, XAXIDMA_DMA_TO_DEVICE));
 
     // compare result
+#ifndef FOR_SIM
     for(int i=0; i<transferSizeInWord; i++) {
     	if(i % printJump == 0)
-#ifndef FOR_SIM
-    	printf("srcMem[%d] = %d : destMem[%d] = %d\n\r", i, (int)srcMemPtr[i], i, (int)destMemPtr[i]);
-#endif
+    		printf("srcMem[%d] = %d : destMem[%d] = %d\n\r", i, (int)srcMemPtr[i], i, (int)destMemPtr[i]);
     }
+#endif
 
     status = memcmp((u32 *)srcMemPtr, (u32 *)destMemPtr, transferSizeInWord*sizeof(u32));
     if(status == XST_SUCCESS) {
