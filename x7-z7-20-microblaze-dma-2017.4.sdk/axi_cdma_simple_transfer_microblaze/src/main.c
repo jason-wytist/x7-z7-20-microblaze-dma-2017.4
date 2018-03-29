@@ -42,11 +42,11 @@ int main()
     }
 
     status = XAxiCdma_CfgInitialize(&xAxiCdma0Instance, xAxiCdma0_CfgPtr, xAxiCdma0_CfgPtr->BaseAddress);
-    if(status == XST_FAILURE) {
+    if(status != XST_SUCCESS) {
 #ifndef FOR_SIM
     	printf("AXI CDMA 0 Initialization Failed\n\r");
 #endif
-        return status;
+        return XST_FAILURE;
     }
 
     // disable interrupt
@@ -70,10 +70,10 @@ int main()
 
     // Simple Transfer using CDMA
     status = XAxiCdma_SimpleTransfer(&xAxiCdma0Instance, (UINTPTR)srcMemPtr, (UINTPTR)destMemPtr, transferSizeInWord*sizeof(u32), NULL, NULL);
-    if(status == XST_FAILURE) {
+    if(status != XST_SUCCESS) {
 #ifndef FOR_SIM
     	printf("AXI CDMA 0 Transfer Failed\n\r");
-    	return status;
+    	return XST_FAILURE;
 #endif
     }
 
@@ -92,7 +92,6 @@ int main()
 #ifndef FOR_SIM
     if(status == XST_SUCCESS) {
     	printf("\n\rResult Compare Success\n\r");
-
     } else {
     	printf("\n\rResult Compare Failed\n\r");
     }
