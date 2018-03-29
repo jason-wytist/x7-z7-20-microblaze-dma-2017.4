@@ -52,8 +52,8 @@ preplace netloc axi_dma_0_mm2s_introut 1 1 6 220 450 NJ 450 NJ 450 NJ 450 1860J 
 preplace netloc rst_clk_wiz_1_100M_peripheral_aresetn 1 2 6 650 510 NJ 510 1520 510 1890 260 2310 360 2620
 preplace netloc rst_clk_wiz_1_100M_mb_reset 1 2 2 630J 680 1010
 preplace netloc clk_wiz_1_locked 1 1 1 240
-preplace netloc axi_uartlite_0_UART 1 6 4 NJ 490 NJ 490 NJ 490 NJ
 preplace netloc axi_dma_0_M_AXI_S2MM 1 6 1 2320
+preplace netloc axi_uartlite_0_UART 1 6 4 NJ 490 NJ 490 NJ 490 NJ
 preplace netloc microblaze_0_axi_periph_M02_AXI 1 2 4 690 470 NJ 470 NJ 470 1820
 preplace netloc microblaze_0_dlmb_1 1 4 1 N
 preplace netloc axi_dma_0_M_AXIS_MM2S 1 5 2 1890 10 2290
@@ -64,10 +64,10 @@ levelinfo -pg 1 0 120 440 840 1260 1680 2090 2470 2760 3040 3190 -top 0 -bot 960
 ",
 }
 {
-   da_axi4_cnt: "15",
+   da_axi4_cnt: "17",
    da_board_cnt: "4",
    da_bram_cntlr_cnt: "1",
-   da_clkrst_cnt: "1",
+   da_clkrst_cnt: "3",
    da_mb_cnt: "1",
    da_ps7_cnt: "2",
 }

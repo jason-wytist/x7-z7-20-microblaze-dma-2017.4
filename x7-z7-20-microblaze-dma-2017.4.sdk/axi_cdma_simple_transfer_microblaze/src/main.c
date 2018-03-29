@@ -10,7 +10,7 @@
 #include "xaxicdma.h"
 #include "xparameters.h"
 
-//#define FOR_SIM
+#define FOR_SIM
 #define BRAM_SIZE_IN_BYTE (XPAR_AXI_BRAM_CTRL_0_S_AXI_HIGHADDR - XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR + 1)
 
 XAxiCdma xAxiCdma0Instance;
@@ -19,7 +19,11 @@ XAxiCdma_Config *xAxiCdma0_CfgPtr;
 int main()
 {
 	int status;
+#ifndef FOR_SIM
 	int transferSizeInWord = BRAM_SIZE_IN_BYTE / (sizeof(32) * 2);
+#else
+	int transferSizeInWord = 8;
+#endif
 	u32 *bramBaseAddr = (u32 *)XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR;
 	u32 *srcMemPtr = (u32 *)(bramBaseAddr + 0);
 	u32 *destMemPtr = (u32 *)(bramBaseAddr + transferSizeInWord);
@@ -49,7 +53,7 @@ int main()
     XAxiCdma_IntrDisable(&xAxiCdma0Instance, XAXICDMA_XR_IRQ_ALL_MASK);
 
     // initialize BRAM
-    memset((u8 *)bramBaseAddr, 0, BRAM_SIZE_IN_BYTE);
+//    memset((u8 *)bramBaseAddr, 0, BRAM_SIZE_IN_BYTE);
 #ifndef FOR_SIM
     for(int i=0; i<transferSizeInWord; i++) {
     	if(i % printJump == 0)
@@ -61,6 +65,7 @@ int main()
     // initialize srcMem
     for(int i=0; i<transferSizeInWord; i++) {
     	srcMemPtr[i] = i;
+    	destMemPtr[i] = 0;
     }
 
     // Simple Transfer using CDMA

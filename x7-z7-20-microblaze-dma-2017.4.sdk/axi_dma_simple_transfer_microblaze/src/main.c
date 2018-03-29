@@ -19,7 +19,11 @@ XAxiDma_Config *xAxiDma0_CftPtr;
 int main()
 {
 	int status;
-	int transferSizeInWord = BRAM_SIZE_IN_BYTE / (sizeof(32) * 2);
+#ifndef FOR_SIM
+	int BRAM_SIZE_IN_BYTE / (sizeof(32) * 2);
+#else
+	int transferSizeInWord = 8;
+#endif
 	u32 *bramBaseAddr = (u32 *)XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR;
 	u32 *srcMemPtr = (u32 *)(bramBaseAddr + 0);
 	u32 *destMemPtr = (u32 *)(bramBaseAddr + transferSizeInWord);
@@ -50,7 +54,7 @@ int main()
     XAxiDma_IntrDisable(&xAxiDma0Instance, XAXIDMA_IRQ_ALL_MASK, XAXIDMA_DMA_TO_DEVICE);
 
     // initialize BRAM
-    memset((u8 *)bramBaseAddr, 0, BRAM_SIZE_IN_BYTE);
+//    memset((u8 *)bramBaseAddr, 0, BRAM_SIZE_IN_BYTE);
 #ifndef FOR_SIM
     for(int i=0; i<transferSizeInWord; i++) {
     	if(i % printJump == 0)
@@ -62,25 +66,26 @@ int main()
     // initialize srcMem
     for(int i=0; i<transferSizeInWord; i++) {
     	srcMemPtr[i] = i;
+    	destMemPtr[i] = 0;
     }
 
     // Simple Transfer using AXI DMA
     status = XAxiDma_SimpleTransfer(&xAxiDma0Instance, (UINTPTR)destMemPtr, transferSizeInWord*sizeof(u32), XAXIDMA_DEVICE_TO_DMA);
-    if(status == XST_FAILURE) {
+    if(status != XST_SUCCESS) {
 #ifndef FOR_SIM
     	printf("AXI DMA Device-to-DMA Transfer Failed\n\r");
 #endif
-    	return status;
+    	return XST_FAILURE;
     }
     status = XAxiDma_SimpleTransfer(&xAxiDma0Instance, (UINTPTR)srcMemPtr, transferSizeInWord*sizeof(u32), XAXIDMA_DMA_TO_DEVICE);
-    if(status == XST_FAILURE) {
+    if(status == XST_SUCCESS) {
 #ifndef FOR_SIM
     	printf("AXI DMA DMA-to-Device Transfer Failed\n\r");
 #endif
+    	return XST_FAILURE;
     }
-
-    // wait;
-    while(XAxiDma_Busy(&xAxiDma0Instance, XAXIDMA_DEVICE_TO_DMA) || XAxiDma_Busy(&xAxiDma0Instance, XAXIDMA_DMA_TO_DEVICE));
+    while(XAxiDma_Busy(&xAxiDma0Instance, XAXIDMA_DMA_TO_DEVICE));
+    while(XAxiDma_Busy(&xAxiDma0Instance, XAXIDMA_DEVICE_TO_DMA));
 
     // compare result
 #ifndef FOR_SIM
