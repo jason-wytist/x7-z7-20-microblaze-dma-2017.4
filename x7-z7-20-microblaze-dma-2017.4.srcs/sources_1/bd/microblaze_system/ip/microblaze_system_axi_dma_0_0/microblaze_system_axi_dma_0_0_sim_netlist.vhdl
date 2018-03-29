@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
--- Date        : Thu Mar 29 07:26:33 2018
+-- Date        : Thu Mar 29 07:26:30 2018
 -- Host        : big-ubuntu-for-fpga running 64-bit Ubuntu 16.04.4 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/truemind/work/private/x7-z7-20-microblaze-dma-2017.4/x7-z7-20-microblaze-dma-2017.4.srcs/sources_1/bd/microblaze_system/ip/microblaze_system_axi_dma_0_0/microblaze_system_axi_dma_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top microblaze_system_axi_dma_0_0 -prefix
+--               microblaze_system_axi_dma_0_0_ microblaze_system_axi_dma_0_0_sim_netlist.vhdl
 -- Design      : microblaze_system_axi_dma_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -39,8 +39,6 @@ entity microblaze_system_axi_dma_0_0_axi_datamover_fifo is
     sm_scc_sm_ready : in STD_LOGIC;
     \GEN_CMD_BTT_LESS_23.cmnd_data_reg[63]\ : in STD_LOGIC_VECTOR ( 40 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_dma_0_0_axi_datamover_fifo : entity is "axi_datamover_fifo";
 end microblaze_system_axi_dma_0_0_axi_datamover_fifo;
 
 architecture STRUCTURE of microblaze_system_axi_dma_0_0_axi_datamover_fifo is
@@ -1687,8 +1685,6 @@ entity microblaze_system_axi_dma_0_0_axi_datamover_rd_status_cntl is
     sig_stat2rsc_status_ready : in STD_LOGIC;
     sig_cmd_stat_rst_user_reg_n_cdc_from_reg : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_dma_0_0_axi_datamover_rd_status_cntl : entity is "axi_datamover_rd_status_cntl";
 end microblaze_system_axi_dma_0_0_axi_datamover_rd_status_cntl;
 
 architecture STRUCTURE of microblaze_system_axi_dma_0_0_axi_datamover_rd_status_cntl is
@@ -1791,8 +1787,6 @@ entity microblaze_system_axi_dma_0_0_axi_datamover_reset is
     \GNE_SYNC_RESET.halt_i_reg\ : in STD_LOGIC;
     sig_halt_reg : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_dma_0_0_axi_datamover_reset : entity is "axi_datamover_reset";
 end microblaze_system_axi_dma_0_0_axi_datamover_reset;
 
 architecture STRUCTURE of microblaze_system_axi_dma_0_0_axi_datamover_reset is
@@ -1957,8 +1951,6 @@ entity microblaze_system_axi_dma_0_0_axi_datamover_scc is
     \USE_SINGLE_REG.sig_regfifo_empty_reg_reg\ : in STD_LOGIC;
     sig_cmd2mstr_cmd_valid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_dma_0_0_axi_datamover_scc : entity is "axi_datamover_scc";
 end microblaze_system_axi_dma_0_0_axi_datamover_scc;
 
 architecture STRUCTURE of microblaze_system_axi_dma_0_0_axi_datamover_scc is
@@ -3782,8 +3774,6 @@ entity microblaze_system_axi_dma_0_0_axi_datamover_skid2mm_buf is
     \sig_next_strt_strb_reg_reg[3]\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \sig_next_strt_strb_reg_reg[3]_0\ : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_dma_0_0_axi_datamover_skid2mm_buf : entity is "axi_datamover_skid2mm_buf";
 end microblaze_system_axi_dma_0_0_axi_datamover_skid2mm_buf;
 
 architecture STRUCTURE of microblaze_system_axi_dma_0_0_axi_datamover_skid2mm_buf is
@@ -5126,8 +5116,6 @@ entity microblaze_system_axi_dma_0_0_axi_datamover_skid_buf is
     sig_halt_reg_dly2 : in STD_LOGIC;
     sig_halt_reg_dly3 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_dma_0_0_axi_datamover_skid_buf : entity is "axi_datamover_skid_buf";
 end microblaze_system_axi_dma_0_0_axi_datamover_skid_buf;
 
 architecture STRUCTURE of microblaze_system_axi_dma_0_0_axi_datamover_skid_buf is
@@ -8062,8 +8050,6 @@ entity microblaze_system_axi_dma_0_0_axi_dma_lite_if is
     err_irq_reg : in STD_LOGIC;
     s_axi_lite_araddr : in STD_LOGIC_VECTOR ( 9 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_dma_0_0_axi_dma_lite_if : entity is "axi_dma_lite_if";
 end microblaze_system_axi_dma_0_0_axi_dma_lite_if;
 
 architecture STRUCTURE of microblaze_system_axi_dma_0_0_axi_dma_lite_if is
@@ -10644,8 +10630,6 @@ entity microblaze_system_axi_dma_0_0_axi_dma_mm2s_cmdsts_if is
     dma_slverr_reg_0 : in STD_LOGIC;
     dma_interr_reg_0 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_dma_0_0_axi_dma_mm2s_cmdsts_if : entity is "axi_dma_mm2s_cmdsts_if";
 end microblaze_system_axi_dma_0_0_axi_dma_mm2s_cmdsts_if;
 
 architecture STRUCTURE of microblaze_system_axi_dma_0_0_axi_dma_mm2s_cmdsts_if is
@@ -10817,8 +10801,6 @@ entity microblaze_system_axi_dma_0_0_axi_dma_mm2s_sts_mngr is
     mm2s_dmasr : in STD_LOGIC;
     \GNE_SYNC_RESET.scndry_resetn_reg_0\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_dma_0_0_axi_dma_mm2s_sts_mngr : entity is "axi_dma_mm2s_sts_mngr";
 end microblaze_system_axi_dma_0_0_axi_dma_mm2s_sts_mngr;
 
 architecture STRUCTURE of microblaze_system_axi_dma_0_0_axi_dma_mm2s_sts_mngr is
@@ -10937,8 +10919,6 @@ entity microblaze_system_axi_dma_0_0_axi_dma_register is
     \GEN_SYNC_WRITE.axi2ip_wrce_reg[6]\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     \GEN_SYNC_WRITE.axi2ip_wrce_reg[10]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_dma_0_0_axi_dma_register : entity is "axi_dma_register";
 end microblaze_system_axi_dma_0_0_axi_dma_register;
 
 architecture STRUCTURE of microblaze_system_axi_dma_0_0_axi_dma_register is
@@ -12138,8 +12118,6 @@ entity microblaze_system_axi_dma_0_0_axi_dma_register_s2mm is
     \GEN_SYNC_WRITE.axi2ip_wrce_reg[18]\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     \GEN_SYNC_WRITE.axi2ip_wrce_reg[22]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_dma_0_0_axi_dma_register_s2mm : entity is "axi_dma_register_s2mm";
 end microblaze_system_axi_dma_0_0_axi_dma_register_s2mm;
 
 architecture STRUCTURE of microblaze_system_axi_dma_0_0_axi_dma_register_s2mm is
@@ -13280,8 +13258,6 @@ entity microblaze_system_axi_dma_0_0_axi_dma_reset is
     mm2s_halt_cmplt : in STD_LOGIC;
     sig_rst2all_stop_request : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_dma_0_0_axi_dma_reset : entity is "axi_dma_reset";
 end microblaze_system_axi_dma_0_0_axi_dma_reset;
 
 architecture STRUCTURE of microblaze_system_axi_dma_0_0_axi_dma_reset is
@@ -14023,8 +13999,6 @@ entity microblaze_system_axi_dma_0_0_axi_dma_s2mm_cmdsts_if is
     dma_slverr_reg_0 : in STD_LOGIC;
     dma_interr_reg_0 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_dma_0_0_axi_dma_s2mm_cmdsts_if : entity is "axi_dma_s2mm_cmdsts_if";
 end microblaze_system_axi_dma_0_0_axi_dma_s2mm_cmdsts_if;
 
 architecture STRUCTURE of microblaze_system_axi_dma_0_0_axi_dma_s2mm_cmdsts_if is
@@ -14196,8 +14170,6 @@ entity microblaze_system_axi_dma_0_0_axi_dma_s2mm_sts_mngr is
     s2mm_dmasr : in STD_LOGIC;
     \GNE_SYNC_RESET.scndry_resetn_reg_0\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_dma_0_0_axi_dma_s2mm_sts_mngr : entity is "axi_dma_s2mm_sts_mngr";
 end microblaze_system_axi_dma_0_0_axi_dma_s2mm_sts_mngr;
 
 architecture STRUCTURE of microblaze_system_axi_dma_0_0_axi_dma_s2mm_sts_mngr is
@@ -14286,8 +14258,6 @@ entity microblaze_system_axi_dma_0_0_axi_dma_smple_sm is
     \dmacr_i_reg[3]\ : in STD_LOGIC;
     \GEN_REG_FOR_SMPL.buffer_length_i_reg[6]\ : in STD_LOGIC_VECTOR ( 6 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_dma_0_0_axi_dma_smple_sm : entity is "axi_dma_smple_sm";
 end microblaze_system_axi_dma_0_0_axi_dma_smple_sm;
 
 architecture STRUCTURE of microblaze_system_axi_dma_0_0_axi_dma_smple_sm is
@@ -15370,8 +15340,6 @@ entity microblaze_system_axi_dma_0_0_axi_dma_sofeof_gen is
     m_axis_mm2s_tlast : in STD_LOGIC;
     \out\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_dma_0_0_axi_dma_sofeof_gen : entity is "axi_dma_sofeof_gen";
 end microblaze_system_axi_dma_0_0_axi_dma_sofeof_gen;
 
 architecture STRUCTURE of microblaze_system_axi_dma_0_0_axi_dma_sofeof_gen is
@@ -15706,8 +15674,6 @@ entity microblaze_system_axi_dma_0_0_cdc_sync is
     axi_resetn : in STD_LOGIC;
     s_axi_lite_aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_dma_0_0_cdc_sync : entity is "cdc_sync";
 end microblaze_system_axi_dma_0_0_cdc_sync;
 
 architecture STRUCTURE of microblaze_system_axi_dma_0_0_cdc_sync is
@@ -15888,8 +15854,6 @@ entity microblaze_system_axi_dma_0_0_cntr_incr_decr_addn_f is
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     m_axi_s2mm_aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_dma_0_0_cntr_incr_decr_addn_f : entity is "cntr_incr_decr_addn_f";
 end microblaze_system_axi_dma_0_0_cntr_incr_decr_addn_f;
 
 architecture STRUCTURE of microblaze_system_axi_dma_0_0_cntr_incr_decr_addn_f is
@@ -17056,8 +17020,6 @@ entity microblaze_system_axi_dma_0_0_dynshreg_f is
     Q : in STD_LOGIC_VECTOR ( 1 downto 0 );
     m_axi_s2mm_aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_dma_0_0_dynshreg_f : entity is "dynshreg_f";
 end microblaze_system_axi_dma_0_0_dynshreg_f;
 
 architecture STRUCTURE of microblaze_system_axi_dma_0_0_dynshreg_f is
@@ -19402,8 +19364,6 @@ entity microblaze_system_axi_dma_0_0_axi_datamover_cmd_status is
     sig_wsc2stat_status : in STD_LOGIC_VECTOR ( 2 downto 0 );
     \GEN_CMD_BTT_LESS_23.cmnd_data_reg[63]\ : in STD_LOGIC_VECTOR ( 40 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_dma_0_0_axi_datamover_cmd_status : entity is "axi_datamover_cmd_status";
 end microblaze_system_axi_dma_0_0_axi_datamover_cmd_status;
 
 architecture STRUCTURE of microblaze_system_axi_dma_0_0_axi_datamover_cmd_status is
@@ -19577,8 +19537,6 @@ entity microblaze_system_axi_dma_0_0_axi_dma_mm2s_mngr is
     \dmacr_i_reg[3]\ : in STD_LOGIC;
     \GEN_REG_FOR_SMPL.buffer_length_i_reg[6]\ : in STD_LOGIC_VECTOR ( 6 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_dma_0_0_axi_dma_mm2s_mngr : entity is "axi_dma_mm2s_mngr";
 end microblaze_system_axi_dma_0_0_axi_dma_mm2s_mngr;
 
 architecture STRUCTURE of microblaze_system_axi_dma_0_0_axi_dma_mm2s_mngr is
@@ -19753,8 +19711,6 @@ entity microblaze_system_axi_dma_0_0_axi_dma_reg_module is
     s_axi_lite_araddr : in STD_LOGIC_VECTOR ( 9 downto 0 );
     axi_dma_tstvec : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_dma_0_0_axi_dma_reg_module : entity is "axi_dma_reg_module";
 end microblaze_system_axi_dma_0_0_axi_dma_reg_module;
 
 architecture STRUCTURE of microblaze_system_axi_dma_0_0_axi_dma_reg_module is
@@ -20182,8 +20138,6 @@ entity microblaze_system_axi_dma_0_0_axi_dma_rst_module is
     sig_s_h_halt_reg : in STD_LOGIC;
     axi_resetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_dma_0_0_axi_dma_rst_module : entity is "axi_dma_rst_module";
 end microblaze_system_axi_dma_0_0_axi_dma_rst_module;
 
 architecture STRUCTURE of microblaze_system_axi_dma_0_0_axi_dma_rst_module is
@@ -20382,8 +20336,6 @@ entity microblaze_system_axi_dma_0_0_axi_dma_s2mm_mngr is
     \dmacr_i_reg[3]\ : in STD_LOGIC;
     \GEN_REG_FOR_SMPL.buffer_length_i_reg[6]\ : in STD_LOGIC_VECTOR ( 6 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_dma_0_0_axi_dma_s2mm_mngr : entity is "axi_dma_s2mm_mngr";
 end microblaze_system_axi_dma_0_0_axi_dma_s2mm_mngr;
 
 architecture STRUCTURE of microblaze_system_axi_dma_0_0_axi_dma_s2mm_mngr is
@@ -20490,8 +20442,6 @@ entity microblaze_system_axi_dma_0_0_srl_fifo_rbu_f is
     sig_cmd_stat_rst_user_reg_n_cdc_from_reg : in STD_LOGIC;
     \in\ : in STD_LOGIC_VECTOR ( 38 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_dma_0_0_srl_fifo_rbu_f : entity is "srl_fifo_rbu_f";
 end microblaze_system_axi_dma_0_0_srl_fifo_rbu_f;
 
 architecture STRUCTURE of microblaze_system_axi_dma_0_0_srl_fifo_rbu_f is
@@ -21089,8 +21039,6 @@ entity microblaze_system_axi_dma_0_0_srl_fifo_f is
     sig_cmd_stat_rst_user_reg_n_cdc_from_reg : in STD_LOGIC;
     \in\ : in STD_LOGIC_VECTOR ( 38 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_dma_0_0_srl_fifo_f : entity is "srl_fifo_f";
 end microblaze_system_axi_dma_0_0_srl_fifo_f;
 
 architecture STRUCTURE of microblaze_system_axi_dma_0_0_srl_fifo_f is
@@ -22002,8 +21950,6 @@ entity microblaze_system_axi_dma_0_0_axi_datamover_addr_cntl is
     m_axi_mm2s_arready : in STD_LOGIC;
     \in\ : in STD_LOGIC_VECTOR ( 38 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_dma_0_0_axi_datamover_addr_cntl : entity is "axi_datamover_addr_cntl";
 end microblaze_system_axi_dma_0_0_axi_datamover_addr_cntl;
 
 architecture STRUCTURE of microblaze_system_axi_dma_0_0_axi_datamover_addr_cntl is
@@ -23191,8 +23137,6 @@ entity microblaze_system_axi_dma_0_0_axi_datamover_rddata_cntl is
     \in\ : in STD_LOGIC_VECTOR ( 9 downto 0 );
     sig_posted_to_axi_reg : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_dma_0_0_axi_datamover_rddata_cntl : entity is "axi_datamover_rddata_cntl";
 end microblaze_system_axi_dma_0_0_axi_datamover_rddata_cntl;
 
 architecture STRUCTURE of microblaze_system_axi_dma_0_0_axi_datamover_rddata_cntl is
@@ -24109,8 +24053,6 @@ entity microblaze_system_axi_dma_0_0_axi_datamover_wr_status_cntl is
     m_axi_s2mm_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     \in\ : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_dma_0_0_axi_datamover_wr_status_cntl : entity is "axi_datamover_wr_status_cntl";
 end microblaze_system_axi_dma_0_0_axi_datamover_wr_status_cntl;
 
 architecture STRUCTURE of microblaze_system_axi_dma_0_0_axi_datamover_wr_status_cntl is
@@ -24499,8 +24441,6 @@ entity microblaze_system_axi_dma_0_0_axi_datamover_wrdata_cntl is
     p_0_out : in STD_LOGIC;
     sm_set_error_reg : in STD_LOGIC_VECTOR ( 9 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_dma_0_0_axi_datamover_wrdata_cntl : entity is "axi_datamover_wrdata_cntl";
 end microblaze_system_axi_dma_0_0_axi_datamover_wrdata_cntl;
 
 architecture STRUCTURE of microblaze_system_axi_dma_0_0_axi_datamover_wrdata_cntl is
@@ -25595,8 +25535,6 @@ entity microblaze_system_axi_dma_0_0_axi_datamover_mm2s_basic_wrap is
     m_axi_mm2s_arready : in STD_LOGIC;
     D : in STD_LOGIC_VECTOR ( 40 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_dma_0_0_axi_datamover_mm2s_basic_wrap : entity is "axi_datamover_mm2s_basic_wrap";
 end microblaze_system_axi_dma_0_0_axi_datamover_mm2s_basic_wrap;
 
 architecture STRUCTURE of microblaze_system_axi_dma_0_0_axi_datamover_mm2s_basic_wrap is
@@ -25999,8 +25937,6 @@ entity microblaze_system_axi_dma_0_0_axi_datamover_s2mm_basic_wrap is
     m_axi_s2mm_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     \GEN_CMD_BTT_LESS_23.cmnd_data_reg[63]\ : in STD_LOGIC_VECTOR ( 40 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_dma_0_0_axi_datamover_s2mm_basic_wrap : entity is "axi_datamover_s2mm_basic_wrap";
 end microblaze_system_axi_dma_0_0_axi_datamover_s2mm_basic_wrap;
 
 architecture STRUCTURE of microblaze_system_axi_dma_0_0_axi_datamover_s2mm_basic_wrap is
@@ -26520,8 +26456,6 @@ entity microblaze_system_axi_dma_0_0_axi_datamover is
     D : in STD_LOGIC_VECTOR ( 40 downto 0 );
     \GEN_CMD_BTT_LESS_23.cmnd_data_reg[63]\ : in STD_LOGIC_VECTOR ( 40 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_dma_0_0_axi_datamover : entity is "axi_datamover";
 end microblaze_system_axi_dma_0_0_axi_datamover;
 
 architecture STRUCTURE of microblaze_system_axi_dma_0_0_axi_datamover is
@@ -26783,8 +26717,6 @@ entity microblaze_system_axi_dma_0_0_axi_dma is
   attribute C_S_AXI_LITE_ADDR_WIDTH of microblaze_system_axi_dma_0_0_axi_dma : entity is 10;
   attribute C_S_AXI_LITE_DATA_WIDTH : integer;
   attribute C_S_AXI_LITE_DATA_WIDTH of microblaze_system_axi_dma_0_0_axi_dma : entity is 32;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_dma_0_0_axi_dma : entity is "axi_dma";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of microblaze_system_axi_dma_0_0_axi_dma : entity is "yes";
 end microblaze_system_axi_dma_0_0_axi_dma;

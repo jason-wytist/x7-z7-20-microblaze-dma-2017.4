@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
--- Date        : Thu Mar 29 07:11:33 2018
+-- Date        : Thu Mar 29 07:11:27 2018
 -- Host        : big-ubuntu-for-fpga running 64-bit Ubuntu 16.04.4 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/truemind/work/private/x7-z7-20-microblaze-dma-2017.4/x7-z7-20-microblaze-dma-2017.4.srcs/sources_1/bd/microblaze_system/ip/microblaze_system_microblaze_0_0/microblaze_system_microblaze_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top microblaze_system_microblaze_0_0 -prefix
+--               microblaze_system_microblaze_0_0_ microblaze_system_microblaze_0_0_sim_netlist.vhdl
 -- Design      : microblaze_system_microblaze_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -40,8 +40,6 @@ entity microblaze_system_microblaze_0_0_DAXI_interface is
     M_AXI_DP_RDATA : in STD_LOGIC_VECTOR ( 31 downto 0 );
     \Using_FPGA.Native\ : in STD_LOGIC_VECTOR ( 67 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_DAXI_interface : entity is "DAXI_interface";
 end microblaze_system_microblaze_0_0_DAXI_interface;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_DAXI_interface is
@@ -1298,8 +1296,6 @@ entity microblaze_system_microblaze_0_0_MB_DSP48E1 is
     EX_Op2 : in STD_LOGIC_VECTOR ( 16 downto 0 );
     EX_Op1 : in STD_LOGIC_VECTOR ( 16 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_MB_DSP48E1 : entity is "MB_DSP48E1";
 end microblaze_system_microblaze_0_0_MB_DSP48E1;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_MB_DSP48E1 is
@@ -2201,8 +2197,6 @@ entity microblaze_system_microblaze_0_0_MB_FD is
     EX_Result : in STD_LOGIC_VECTOR ( 0 to 0 );
     Clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_MB_FD : entity is "MB_FD";
 end microblaze_system_microblaze_0_0_MB_FD;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_MB_FD is
@@ -2234,8 +2228,6 @@ entity microblaze_system_microblaze_0_0_MB_FDE is
     Address : in STD_LOGIC_VECTOR ( 0 to 0 );
     Clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_MB_FDE : entity is "MB_FDE";
 end microblaze_system_microblaze_0_0_MB_FDE;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_MB_FDE is
@@ -5655,8 +5647,6 @@ entity microblaze_system_microblaze_0_0_MB_FDR is
     iFetch_In_Progress_reg : in STD_LOGIC;
     nonvalid_IFetch_n_reg_0 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_MB_FDR : entity is "MB_FDR";
 end microblaze_system_microblaze_0_0_MB_FDR;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_MB_FDR is
@@ -5750,8 +5740,6 @@ entity microblaze_system_microblaze_0_0_MB_FDRE is
     correct_Carry_II : in STD_LOGIC;
     Clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_MB_FDRE : entity is "MB_FDRE";
 end microblaze_system_microblaze_0_0_MB_FDRE;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_MB_FDRE is
@@ -8890,8 +8878,6 @@ entity microblaze_system_microblaze_0_0_MB_FDRSE is
     Reset_Mode : in STD_LOGIC_VECTOR ( 0 to 1 );
     start_dbg_exec_reg : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_MB_FDRSE : entity is "MB_FDRSE";
 end microblaze_system_microblaze_0_0_MB_FDRSE;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_MB_FDRSE is
@@ -9860,8 +9846,6 @@ entity microblaze_system_microblaze_0_0_MB_FDS is
     missed_IFetch : in STD_LOGIC;
     mul_Executing_reg : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_MB_FDS : entity is "MB_FDS";
 end microblaze_system_microblaze_0_0_MB_FDS;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_MB_FDS is
@@ -9927,8 +9911,6 @@ entity microblaze_system_microblaze_0_0_MB_FDSE is
     Reg_Test_Equal_i : in STD_LOGIC;
     Clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_MB_FDSE : entity is "MB_FDSE";
 end microblaze_system_microblaze_0_0_MB_FDSE;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_MB_FDSE is
@@ -12144,8 +12126,6 @@ entity microblaze_system_microblaze_0_0_MB_LUT2 is
     I0 : in STD_LOGIC;
     res_00_2 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_MB_LUT2 : entity is "MB_LUT2";
 end microblaze_system_microblaze_0_0_MB_LUT2;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_MB_LUT2 is
@@ -12435,8 +12415,6 @@ entity microblaze_system_microblaze_0_0_MB_LUT3 is
     instr_OF : in STD_LOGIC_VECTOR ( 1 downto 0 );
     D : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_MB_LUT3 : entity is "MB_LUT3";
 end microblaze_system_microblaze_0_0_MB_LUT3;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_MB_LUT3 is
@@ -12674,8 +12652,6 @@ entity microblaze_system_microblaze_0_0_MB_LUT4 is
     Q : in STD_LOGIC_VECTOR ( 4 downto 0 );
     writing_reg : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_MB_LUT4 : entity is "MB_LUT4";
 end microblaze_system_microblaze_0_0_MB_LUT4;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_MB_LUT4 is
@@ -18241,8 +18217,6 @@ entity microblaze_system_microblaze_0_0_MB_LUT5 is
     \Using_FPGA.Native_0\ : in STD_LOGIC;
     dbg_pause : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_MB_LUT5 : entity is "MB_LUT5";
 end microblaze_system_microblaze_0_0_MB_LUT5;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_MB_LUT5 is
@@ -18320,8 +18294,6 @@ entity microblaze_system_microblaze_0_0_MB_LUT6 is
     alu_Op : in STD_LOGIC_VECTOR ( 0 to 1 );
     Shifted : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_MB_LUT6 : entity is "MB_LUT6";
 end microblaze_system_microblaze_0_0_MB_LUT6;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_MB_LUT6 is
@@ -18356,8 +18328,6 @@ entity microblaze_system_microblaze_0_0_MB_LUT6_2 is
     Address : in STD_LOGIC_VECTOR ( 0 to 0 );
     opsel1_SPR : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_MB_LUT6_2 : entity is "MB_LUT6_2";
 end microblaze_system_microblaze_0_0_MB_LUT6_2;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_MB_LUT6_2 is
@@ -25524,8 +25494,6 @@ entity microblaze_system_microblaze_0_0_MB_MULT_AND is
     \Using_FPGA.Native_0\ : in STD_LOGIC;
     \Using_FPGA.Native_1\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_MB_MULT_AND : entity is "MB_MULT_AND";
 end microblaze_system_microblaze_0_0_MB_MULT_AND;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_MB_MULT_AND is
@@ -25597,8 +25565,6 @@ entity microblaze_system_microblaze_0_0_MB_MUXCY is
     lopt_7 : in STD_LOGIC;
     lopt_8 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_MB_MUXCY : entity is "MB_MUXCY";
 end microblaze_system_microblaze_0_0_MB_MUXCY;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_MB_MUXCY is
@@ -28473,8 +28439,6 @@ entity microblaze_system_microblaze_0_0_MB_MUXCY_XORCY is
     LO : in STD_LOGIC;
     lopt : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_MB_MUXCY_XORCY : entity is "MB_MUXCY_XORCY";
 end microblaze_system_microblaze_0_0_MB_MUXCY_XORCY;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_MB_MUXCY_XORCY is
@@ -31214,8 +31178,6 @@ entity microblaze_system_microblaze_0_0_MB_MUXF7 is
     res_10 : in STD_LOGIC;
     res_11 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_MB_MUXF7 : entity is "MB_MUXF7";
 end microblaze_system_microblaze_0_0_MB_MUXF7;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_MB_MUXF7 is
@@ -32108,8 +32070,6 @@ entity microblaze_system_microblaze_0_0_MB_RAM32X1D is
     \write_Addr_I_reg[0]\ : in STD_LOGIC_VECTOR ( 4 downto 0 );
     reg1_Addr : in STD_LOGIC_VECTOR ( 0 to 4 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_MB_RAM32X1D : entity is "MB_RAM32X1D";
 end microblaze_system_microblaze_0_0_MB_RAM32X1D;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_MB_RAM32X1D is
@@ -35237,8 +35197,6 @@ entity microblaze_system_microblaze_0_0_MB_SRL16E is
     \Using_FPGA.Native_10\ : in STD_LOGIC;
     mul_first136_in : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_MB_SRL16E : entity is "MB_SRL16E";
 end microblaze_system_microblaze_0_0_MB_SRL16E;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_MB_SRL16E is
@@ -40283,8 +40241,6 @@ entity microblaze_system_microblaze_0_0_MB_SRLC16E is
     Dbg_Clk : in STD_LOGIC;
     Dbg_Reg_En : in STD_LOGIC_VECTOR ( 0 to 7 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_MB_SRLC16E : entity is "MB_SRLC16E";
 end microblaze_system_microblaze_0_0_MB_SRLC16E;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_MB_SRLC16E is
@@ -40612,8 +40568,6 @@ entity microblaze_system_microblaze_0_0_mb_sync_bit is
     \reset_temp__0\ : in STD_LOGIC;
     Clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_mb_sync_bit : entity is "mb_sync_bit";
 end microblaze_system_microblaze_0_0_mb_sync_bit;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_mb_sync_bit is
@@ -41730,8 +41684,6 @@ entity microblaze_system_microblaze_0_0_ALU_Bit is
     lopt_2 : out STD_LOGIC;
     lopt_3 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_ALU_Bit : entity is "ALU_Bit";
 end microblaze_system_microblaze_0_0_ALU_Bit;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_ALU_Bit is
@@ -43408,8 +43360,6 @@ entity microblaze_system_microblaze_0_0_MSR_Reg_Bit is
     \Using_FPGA.Native_0\ : in STD_LOGIC;
     Address : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_MSR_Reg_Bit : entity is "MSR_Reg_Bit";
 end microblaze_system_microblaze_0_0_MSR_Reg_Bit;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_MSR_Reg_Bit is
@@ -43536,8 +43486,6 @@ entity microblaze_system_microblaze_0_0_Operand_Select_Bit is
     \Using_FPGA.Native_10\ : in STD_LOGIC;
     \Using_FPGA.Native_11\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_Operand_Select_Bit : entity is "Operand_Select_Bit";
 end microblaze_system_microblaze_0_0_Operand_Select_Bit;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_Operand_Select_Bit is
@@ -45995,8 +45943,6 @@ entity microblaze_system_microblaze_0_0_PC_Bit is
     lopt_2 : out STD_LOGIC;
     lopt_3 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_PC_Bit : entity is "PC_Bit";
 end microblaze_system_microblaze_0_0_PC_Bit;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_PC_Bit is
@@ -49023,8 +48969,6 @@ entity microblaze_system_microblaze_0_0_PreFetch_Buffer is
     lopt_5 : in STD_LOGIC;
     lopt_6 : out STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_PreFetch_Buffer : entity is "PreFetch_Buffer";
 end microblaze_system_microblaze_0_0_PreFetch_Buffer;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_PreFetch_Buffer is
@@ -49873,8 +49817,6 @@ entity microblaze_system_microblaze_0_0_Register_File_Bit is
     reg1_Addr : in STD_LOGIC_VECTOR ( 0 to 4 );
     imm_Value : in STD_LOGIC_VECTOR ( 4 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_Register_File_Bit : entity is "Register_File_Bit";
 end microblaze_system_microblaze_0_0_Register_File_Bit;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_Register_File_Bit is
@@ -51280,8 +51222,6 @@ entity microblaze_system_microblaze_0_0_Result_Mux_Bit is
     Data_Read0_out : in STD_LOGIC_VECTOR ( 0 to 0 );
     Clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_Result_Mux_Bit : entity is "Result_Mux_Bit";
 end microblaze_system_microblaze_0_0_Result_Mux_Bit;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_Result_Mux_Bit is
@@ -52899,8 +52839,6 @@ entity microblaze_system_microblaze_0_0_Shift_Logic_Bit is
     Shift_Oper : in STD_LOGIC;
     Select_Logic : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_Shift_Logic_Bit : entity is "Shift_Logic_Bit";
 end microblaze_system_microblaze_0_0_Shift_Logic_Bit;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_Shift_Logic_Bit is
@@ -54356,8 +54294,6 @@ entity microblaze_system_microblaze_0_0_Zero_Detect is
     lopt_1 : in STD_LOGIC;
     lopt_2 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_Zero_Detect : entity is "Zero_Detect";
 end microblaze_system_microblaze_0_0_Zero_Detect;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_Zero_Detect is
@@ -54537,8 +54473,6 @@ entity microblaze_system_microblaze_0_0_address_hit is
     Q : in STD_LOGIC_VECTOR ( 0 to 0 );
     Single_Step_N : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_address_hit : entity is "address_hit";
 end microblaze_system_microblaze_0_0_address_hit;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_address_hit is
@@ -54848,8 +54782,6 @@ entity microblaze_system_microblaze_0_0_barrel_shift is
     Data_Write : in STD_LOGIC_VECTOR ( 23 downto 0 );
     \Using_FPGA.Native_53\ : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_barrel_shift : entity is "barrel_shift";
 end microblaze_system_microblaze_0_0_barrel_shift;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_barrel_shift is
@@ -57186,8 +57118,6 @@ entity microblaze_system_microblaze_0_0_carry_equal is
     \Using_FPGA.Native_5\ : in STD_LOGIC;
     \Using_FPGA.Native_6\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_carry_equal : entity is "carry_equal";
 end microblaze_system_microblaze_0_0_carry_equal;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_carry_equal is
@@ -57523,8 +57453,6 @@ entity microblaze_system_microblaze_0_0_dsp_module is
     EX_Op2 : in STD_LOGIC_VECTOR ( 16 downto 0 );
     EX_Op1 : in STD_LOGIC_VECTOR ( 16 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_dsp_module : entity is "dsp_module";
 end microblaze_system_microblaze_0_0_dsp_module;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_dsp_module is
@@ -57607,8 +57535,6 @@ entity microblaze_system_microblaze_0_0_mb_sync_vec is
     Dbg_Clk : in STD_LOGIC;
     AR : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_mb_sync_vec : entity is "mb_sync_vec";
 end microblaze_system_microblaze_0_0_mb_sync_vec;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_mb_sync_vec is
@@ -57765,8 +57691,6 @@ entity microblaze_system_microblaze_0_0_mux4_8 is
     \write_Addr_I_reg[0]\ : in STD_LOGIC_VECTOR ( 0 to 31 );
     sel_Write_Mux_MSB : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_mux4_8 : entity is "mux4_8";
 end microblaze_system_microblaze_0_0_mux4_8;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_mux4_8 is
@@ -57862,8 +57786,6 @@ entity microblaze_system_microblaze_0_0_mux_bus is
     Instr : in STD_LOGIC_VECTOR ( 0 to 31 );
     LOCKSTEP_Master_Out : in STD_LOGIC_VECTOR ( 32 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_mux_bus : entity is "mux_bus";
 end microblaze_system_microblaze_0_0_mux_bus;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_mux_bus is
@@ -58083,8 +58005,6 @@ entity microblaze_system_microblaze_0_0_ALU is
     lopt_4 : in STD_LOGIC;
     lopt_5 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_ALU : entity is "ALU";
 end microblaze_system_microblaze_0_0_ALU;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_ALU is
@@ -58751,8 +58671,6 @@ entity microblaze_system_microblaze_0_0_Byte_Doublet_Handle is
     DReady : in STD_LOGIC;
     Data_Read : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_Byte_Doublet_Handle : entity is "Byte_Doublet_Handle";
 end microblaze_system_microblaze_0_0_Byte_Doublet_Handle;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_Byte_Doublet_Handle is
@@ -58947,8 +58865,6 @@ entity microblaze_system_microblaze_0_0_Debug is
     take_Intr_Now_III : in STD_LOGIC;
     S103_out : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_Debug : entity is "Debug";
 end microblaze_system_microblaze_0_0_Debug;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_Debug is
@@ -62951,8 +62867,6 @@ entity microblaze_system_microblaze_0_0_Decode is
     lopt_6 : out STD_LOGIC;
     lopt_7 : out STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_Decode : entity is "Decode";
 end microblaze_system_microblaze_0_0_Decode;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_Decode is
@@ -65674,8 +65588,6 @@ entity microblaze_system_microblaze_0_0_MSR_Reg is
     external_interrupt : in STD_LOGIC;
     jump2_I_reg : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_MSR_Reg : entity is "MSR_Reg";
 end microblaze_system_microblaze_0_0_MSR_Reg;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_MSR_Reg is
@@ -65862,8 +65774,6 @@ entity microblaze_system_microblaze_0_0_Operand_Select is
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
     imm_Value : in STD_LOGIC_VECTOR ( 0 to 15 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_Operand_Select : entity is "Operand_Select";
 end microblaze_system_microblaze_0_0_Operand_Select;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_Operand_Select is
@@ -66844,8 +66754,6 @@ entity microblaze_system_microblaze_0_0_PC_Module is
     raw_Data_Addr : in STD_LOGIC_VECTOR ( 1 downto 0 );
     DI : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_PC_Module : entity is "PC_Module";
 end microblaze_system_microblaze_0_0_PC_Module;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_PC_Module is
@@ -67718,8 +67626,6 @@ entity microblaze_system_microblaze_0_0_Register_File is
     reg1_Addr : in STD_LOGIC_VECTOR ( 0 to 4 );
     imm_Value : in STD_LOGIC_VECTOR ( 4 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_Register_File : entity is "Register_File";
 end microblaze_system_microblaze_0_0_Register_File;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_Register_File is
@@ -68215,8 +68121,6 @@ entity microblaze_system_microblaze_0_0_Result_Mux is
     Select_Logic_reg_20 : in STD_LOGIC;
     Select_Logic_reg_21 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_Result_Mux : entity is "Result_Mux";
 end microblaze_system_microblaze_0_0_Result_Mux;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_Result_Mux is
@@ -68761,8 +68665,6 @@ entity microblaze_system_microblaze_0_0_Shift_Logic_Module is
     \Using_FPGA.Native_68\ : in STD_LOGIC;
     \Using_FPGA.Native_69\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_Shift_Logic_Module : entity is "Shift_Logic_Module";
 end microblaze_system_microblaze_0_0_Shift_Logic_Module;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_Shift_Logic_Module is
@@ -69278,8 +69180,6 @@ entity microblaze_system_microblaze_0_0_instr_mux is
     Instr : in STD_LOGIC_VECTOR ( 0 to 31 );
     LOCKSTEP_Master_Out : in STD_LOGIC_VECTOR ( 32 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_instr_mux : entity is "instr_mux";
 end microblaze_system_microblaze_0_0_instr_mux;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_instr_mux is
@@ -69304,8 +69204,6 @@ entity microblaze_system_microblaze_0_0_mul_unit is
     EX_Op1 : in STD_LOGIC_VECTOR ( 0 to 31 );
     ex_not_mul_op : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_mul_unit : entity is "mul_unit";
 end microblaze_system_microblaze_0_0_mul_unit;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_mul_unit is
@@ -69906,8 +69804,6 @@ entity microblaze_system_microblaze_0_0_Data_Flow is
     lopt_7 : in STD_LOGIC;
     lopt_8 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_Data_Flow : entity is "Data_Flow";
 end microblaze_system_microblaze_0_0_Data_Flow;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_Data_Flow is
@@ -71209,8 +71105,6 @@ entity microblaze_system_microblaze_0_0_MicroBlaze_Area is
     Dbg_TDI : in STD_LOGIC;
     M_AXI_DP_RDATA : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_MicroBlaze_Area : entity is "MicroBlaze_Area";
 end microblaze_system_microblaze_0_0_MicroBlaze_Area;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_MicroBlaze_Area is
@@ -73546,8 +73440,6 @@ entity microblaze_system_microblaze_0_0_MicroBlaze_Core is
     Wakeup : in STD_LOGIC_VECTOR ( 0 to 1 );
     M_AXI_DP_RDATA : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_MicroBlaze_Core : entity is "MicroBlaze_Core";
 end microblaze_system_microblaze_0_0_MicroBlaze_Core;
 
 architecture STRUCTURE of microblaze_system_microblaze_0_0_MicroBlaze_Core is
@@ -74433,8 +74325,6 @@ entity microblaze_system_microblaze_0_0_MicroBlaze is
   attribute C_USE_REORDER_INSTR of microblaze_system_microblaze_0_0_MicroBlaze : entity is 0;
   attribute C_USE_STACK_PROTECTION : integer;
   attribute C_USE_STACK_PROTECTION of microblaze_system_microblaze_0_0_MicroBlaze : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_microblaze_0_0_MicroBlaze : entity is "MicroBlaze";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of microblaze_system_microblaze_0_0_MicroBlaze : entity is "yes";
 end microblaze_system_microblaze_0_0_MicroBlaze;

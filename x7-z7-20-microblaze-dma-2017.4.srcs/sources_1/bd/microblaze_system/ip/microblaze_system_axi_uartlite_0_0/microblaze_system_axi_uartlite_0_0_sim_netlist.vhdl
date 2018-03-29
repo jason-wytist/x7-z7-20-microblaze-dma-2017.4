@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
--- Date        : Thu Mar 29 07:20:48 2018
+-- Date        : Thu Mar 29 07:20:47 2018
 -- Host        : big-ubuntu-for-fpga running 64-bit Ubuntu 16.04.4 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/truemind/work/private/x7-z7-20-microblaze-dma-2017.4/x7-z7-20-microblaze-dma-2017.4.srcs/sources_1/bd/microblaze_system/ip/microblaze_system_axi_uartlite_0_0/microblaze_system_axi_uartlite_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top microblaze_system_axi_uartlite_0_0 -prefix
+--               microblaze_system_axi_uartlite_0_0_ microblaze_system_axi_uartlite_0_0_sim_netlist.vhdl
 -- Design      : microblaze_system_axi_uartlite_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -20,8 +20,6 @@ entity microblaze_system_axi_uartlite_0_0_baudrate is
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_uartlite_0_0_baudrate : entity is "baudrate";
 end microblaze_system_axi_uartlite_0_0_baudrate;
 
 architecture STRUCTURE of microblaze_system_axi_uartlite_0_0_baudrate is
@@ -323,8 +321,6 @@ entity microblaze_system_axi_uartlite_0_0_cdc_sync is
     rx : in STD_LOGIC;
     s_axi_aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_uartlite_0_0_cdc_sync : entity is "cdc_sync";
 end microblaze_system_axi_uartlite_0_0_cdc_sync;
 
 architecture STRUCTURE of microblaze_system_axi_uartlite_0_0_cdc_sync is
@@ -428,8 +424,6 @@ entity microblaze_system_axi_uartlite_0_0_cntr_incr_decr_addn_f is
     tx_Start : in STD_LOGIC;
     s_axi_aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_uartlite_0_0_cntr_incr_decr_addn_f : entity is "cntr_incr_decr_addn_f";
 end microblaze_system_axi_uartlite_0_0_cntr_incr_decr_addn_f;
 
 architecture STRUCTURE of microblaze_system_axi_uartlite_0_0_cntr_incr_decr_addn_f is
@@ -862,8 +856,6 @@ entity microblaze_system_axi_uartlite_0_0_dynshreg_f is
     Q : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s_axi_aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_uartlite_0_0_dynshreg_f : entity is "dynshreg_f";
 end microblaze_system_axi_uartlite_0_0_dynshreg_f;
 
 architecture STRUCTURE of microblaze_system_axi_uartlite_0_0_dynshreg_f is
@@ -1257,8 +1249,6 @@ entity microblaze_system_axi_uartlite_0_0_dynshreg_i_f is
     frame_err_ocrd : in STD_LOGIC;
     running_reg_0 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_uartlite_0_0_dynshreg_i_f : entity is "dynshreg_i_f";
 end microblaze_system_axi_uartlite_0_0_dynshreg_i_f;
 
 architecture STRUCTURE of microblaze_system_axi_uartlite_0_0_dynshreg_i_f is
@@ -1548,8 +1538,6 @@ entity microblaze_system_axi_uartlite_0_0_pselect_f is
     \bus2ip_addr_i_reg[2]\ : in STD_LOGIC;
     \bus2ip_addr_i_reg[3]\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_uartlite_0_0_pselect_f : entity is "pselect_f";
 end microblaze_system_axi_uartlite_0_0_pselect_f;
 
 architecture STRUCTURE of microblaze_system_axi_uartlite_0_0_pselect_f is
@@ -1642,8 +1630,6 @@ entity microblaze_system_axi_uartlite_0_0_address_decoder is
     \bus2ip_addr_i_reg[3]\ : in STD_LOGIC;
     \bus2ip_addr_i_reg[2]\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_uartlite_0_0_address_decoder : entity is "address_decoder";
 end microblaze_system_axi_uartlite_0_0_address_decoder;
 
 architecture STRUCTURE of microblaze_system_axi_uartlite_0_0_address_decoder is
@@ -2098,8 +2084,6 @@ entity microblaze_system_axi_uartlite_0_0_srl_fifo_rbu_f is
     fifo_wr : in STD_LOGIC;
     s_axi_wdata : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_uartlite_0_0_srl_fifo_rbu_f : entity is "srl_fifo_rbu_f";
 end microblaze_system_axi_uartlite_0_0_srl_fifo_rbu_f;
 
 architecture STRUCTURE of microblaze_system_axi_uartlite_0_0_srl_fifo_rbu_f is
@@ -2303,8 +2287,6 @@ entity microblaze_system_axi_uartlite_0_0_slave_attachment is
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_araddr : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_uartlite_0_0_slave_attachment : entity is "slave_attachment";
 end microblaze_system_axi_uartlite_0_0_slave_attachment;
 
 architecture STRUCTURE of microblaze_system_axi_uartlite_0_0_slave_attachment is
@@ -2712,8 +2694,6 @@ entity microblaze_system_axi_uartlite_0_0_srl_fifo_f is
     fifo_wr : in STD_LOGIC;
     s_axi_wdata : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_uartlite_0_0_srl_fifo_f : entity is "srl_fifo_f";
 end microblaze_system_axi_uartlite_0_0_srl_fifo_f;
 
 architecture STRUCTURE of microblaze_system_axi_uartlite_0_0_srl_fifo_f is
@@ -2845,8 +2825,6 @@ entity microblaze_system_axi_uartlite_0_0_axi_lite_ipif is
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_araddr : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_uartlite_0_0_axi_lite_ipif : entity is "axi_lite_ipif";
 end microblaze_system_axi_uartlite_0_0_axi_lite_ipif;
 
 architecture STRUCTURE of microblaze_system_axi_uartlite_0_0_axi_lite_ipif is
@@ -2922,8 +2900,6 @@ entity microblaze_system_axi_uartlite_0_0_uartlite_rx is
     tx_Buffer_Empty_Pre : in STD_LOGIC;
     rx : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_uartlite_0_0_uartlite_rx : entity is "uartlite_rx";
 end microblaze_system_axi_uartlite_0_0_uartlite_rx;
 
 architecture STRUCTURE of microblaze_system_axi_uartlite_0_0_uartlite_rx is
@@ -3275,8 +3251,6 @@ entity microblaze_system_axi_uartlite_0_0_uartlite_tx is
     fifo_wr : in STD_LOGIC;
     s_axi_wdata : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_uartlite_0_0_uartlite_tx : entity is "uartlite_tx";
 end microblaze_system_axi_uartlite_0_0_uartlite_tx;
 
 architecture STRUCTURE of microblaze_system_axi_uartlite_0_0_uartlite_tx is
@@ -3505,8 +3479,6 @@ entity microblaze_system_axi_uartlite_0_0_uartlite_core is
     fifo_wr : in STD_LOGIC;
     s_axi_wdata : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_uartlite_0_0_uartlite_core : entity is "uartlite_core";
 end microblaze_system_axi_uartlite_0_0_uartlite_core;
 
 architecture STRUCTURE of microblaze_system_axi_uartlite_0_0_uartlite_core is
@@ -3699,8 +3671,6 @@ entity microblaze_system_axi_uartlite_0_0_axi_uartlite is
   attribute C_S_AXI_DATA_WIDTH of microblaze_system_axi_uartlite_0_0_axi_uartlite : entity is 32;
   attribute C_USE_PARITY : integer;
   attribute C_USE_PARITY of microblaze_system_axi_uartlite_0_0_axi_uartlite : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_uartlite_0_0_axi_uartlite : entity is "axi_uartlite";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of microblaze_system_axi_uartlite_0_0_axi_uartlite : entity is "yes";
 end microblaze_system_axi_uartlite_0_0_axi_uartlite;

@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
 -- Date        : Thu Mar 29 07:17:05 2018
 -- Host        : big-ubuntu-for-fpga running 64-bit Ubuntu 16.04.4 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/truemind/work/private/x7-z7-20-microblaze-dma-2017.4/x7-z7-20-microblaze-dma-2017.4.srcs/sources_1/bd/microblaze_system/ip/microblaze_system_rst_clk_wiz_1_100M_0/microblaze_system_rst_clk_wiz_1_100M_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top microblaze_system_rst_clk_wiz_1_100M_0 -prefix
+--               microblaze_system_rst_clk_wiz_1_100M_0_ microblaze_system_rst_clk_wiz_1_100M_0_sim_netlist.vhdl
 -- Design      : microblaze_system_rst_clk_wiz_1_100M_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -25,8 +25,6 @@ entity microblaze_system_rst_clk_wiz_1_100M_0_cdc_sync is
     aux_reset_in : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_rst_clk_wiz_1_100M_0_cdc_sync : entity is "cdc_sync";
 end microblaze_system_rst_clk_wiz_1_100M_0_cdc_sync;
 
 architecture STRUCTURE of microblaze_system_rst_clk_wiz_1_100M_0_cdc_sync is
@@ -235,8 +233,6 @@ entity microblaze_system_rst_clk_wiz_1_100M_0_upcnt_n is
     seq_cnt_en : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_rst_clk_wiz_1_100M_0_upcnt_n : entity is "upcnt_n";
 end microblaze_system_rst_clk_wiz_1_100M_0_upcnt_n;
 
 architecture STRUCTURE of microblaze_system_rst_clk_wiz_1_100M_0_upcnt_n is
@@ -401,8 +397,6 @@ entity microblaze_system_rst_clk_wiz_1_100M_0_lpf is
     mb_debug_sys_rst : in STD_LOGIC;
     ext_reset_in : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_rst_clk_wiz_1_100M_0_lpf : entity is "lpf";
 end microblaze_system_rst_clk_wiz_1_100M_0_lpf;
 
 architecture STRUCTURE of microblaze_system_rst_clk_wiz_1_100M_0_lpf is
@@ -584,8 +578,6 @@ entity microblaze_system_rst_clk_wiz_1_100M_0_sequence_psr is
     lpf_int : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_rst_clk_wiz_1_100M_0_sequence_psr : entity is "sequence_psr";
 end microblaze_system_rst_clk_wiz_1_100M_0_sequence_psr;
 
 architecture STRUCTURE of microblaze_system_rst_clk_wiz_1_100M_0_sequence_psr is
@@ -924,8 +916,6 @@ entity microblaze_system_rst_clk_wiz_1_100M_0_proc_sys_reset is
   attribute C_NUM_PERP_ARESETN of microblaze_system_rst_clk_wiz_1_100M_0_proc_sys_reset : entity is 1;
   attribute C_NUM_PERP_RST : integer;
   attribute C_NUM_PERP_RST of microblaze_system_rst_clk_wiz_1_100M_0_proc_sys_reset : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_rst_clk_wiz_1_100M_0_proc_sys_reset : entity is "proc_sys_reset";
 end microblaze_system_rst_clk_wiz_1_100M_0_proc_sys_reset;
 
 architecture STRUCTURE of microblaze_system_rst_clk_wiz_1_100M_0_proc_sys_reset is

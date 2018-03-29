@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
 -- Date        : Thu Mar 29 07:15:19 2018
 -- Host        : big-ubuntu-for-fpga running 64-bit Ubuntu 16.04.4 LTS
--- Command     : write_vhdl -force -mode synth_stub
---               /home/truemind/work/private/x7-z7-20-microblaze-dma-2017.4/x7-z7-20-microblaze-dma-2017.4.srcs/sources_1/bd/microblaze_system/ip/microblaze_system_clk_wiz_1_0/microblaze_system_clk_wiz_1_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top microblaze_system_clk_wiz_1_0 -prefix
+--               microblaze_system_clk_wiz_1_0_ microblaze_system_clk_wiz_1_0_stub.vhdl
 -- Design      : microblaze_system_clk_wiz_1_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1

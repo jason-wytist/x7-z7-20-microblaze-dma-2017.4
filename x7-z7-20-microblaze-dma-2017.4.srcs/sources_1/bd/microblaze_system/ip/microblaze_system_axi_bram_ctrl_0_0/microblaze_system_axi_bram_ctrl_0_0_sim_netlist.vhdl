@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
--- Date        : Thu Mar 29 07:23:59 2018
+-- Date        : Thu Mar 29 07:23:58 2018
 -- Host        : big-ubuntu-for-fpga running 64-bit Ubuntu 16.04.4 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/truemind/work/private/x7-z7-20-microblaze-dma-2017.4/x7-z7-20-microblaze-dma-2017.4.srcs/sources_1/bd/microblaze_system/ip/microblaze_system_axi_bram_ctrl_0_0/microblaze_system_axi_bram_ctrl_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top microblaze_system_axi_bram_ctrl_0_0 -prefix
+--               microblaze_system_axi_bram_ctrl_0_0_ microblaze_system_axi_bram_ctrl_0_0_sim_netlist.vhdl
 -- Design      : microblaze_system_axi_bram_ctrl_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -39,8 +39,6 @@ entity microblaze_system_axi_bram_ctrl_0_0_SRL_FIFO is
     AW2Arb_BVALID_Cnt : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_bid : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_bram_ctrl_0_0_SRL_FIFO : entity is "SRL_FIFO";
 end microblaze_system_axi_bram_ctrl_0_0_SRL_FIFO;
 
 architecture STRUCTURE of microblaze_system_axi_bram_ctrl_0_0_SRL_FIFO is
@@ -430,8 +428,6 @@ entity microblaze_system_axi_bram_ctrl_0_0_sng_port_arb is
     axi_rlast_int_reg_0 : in STD_LOGIC;
     s_axi_rready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_bram_ctrl_0_0_sng_port_arb : entity is "sng_port_arb";
 end microblaze_system_axi_bram_ctrl_0_0_sng_port_arb;
 
 architecture STRUCTURE of microblaze_system_axi_bram_ctrl_0_0_sng_port_arb is
@@ -828,8 +824,6 @@ entity microblaze_system_axi_bram_ctrl_0_0_wrap_brst is
     s_axi_aclk : in STD_LOGIC;
     s_axi_awlen : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_bram_ctrl_0_0_wrap_brst : entity is "wrap_brst";
 end microblaze_system_axi_bram_ctrl_0_0_wrap_brst;
 
 architecture STRUCTURE of microblaze_system_axi_bram_ctrl_0_0_wrap_brst is
@@ -2273,8 +2267,6 @@ entity microblaze_system_axi_bram_ctrl_0_0_rd_chnl is
     s_axi_arlen : in STD_LOGIC_VECTOR ( 7 downto 0 );
     bram_rddata_a : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_bram_ctrl_0_0_rd_chnl : entity is "rd_chnl";
 end microblaze_system_axi_bram_ctrl_0_0_rd_chnl;
 
 architecture STRUCTURE of microblaze_system_axi_bram_ctrl_0_0_rd_chnl is
@@ -5127,8 +5119,6 @@ entity microblaze_system_axi_bram_ctrl_0_0_wr_chnl is
     s_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s_axi_awlen : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_bram_ctrl_0_0_wr_chnl : entity is "wr_chnl";
 end microblaze_system_axi_bram_ctrl_0_0_wr_chnl;
 
 architecture STRUCTURE of microblaze_system_axi_bram_ctrl_0_0_wr_chnl is
@@ -6094,8 +6084,6 @@ entity microblaze_system_axi_bram_ctrl_0_0_full_axi is
     s_axi_arvalid : in STD_LOGIC;
     s_axi_awburst : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_bram_ctrl_0_0_full_axi : entity is "full_axi";
 end microblaze_system_axi_bram_ctrl_0_0_full_axi;
 
 architecture STRUCTURE of microblaze_system_axi_bram_ctrl_0_0_full_axi is
@@ -6473,8 +6461,6 @@ entity microblaze_system_axi_bram_ctrl_0_0_axi_bram_ctrl_top is
     s_axi_arvalid : in STD_LOGIC;
     s_axi_awburst : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_bram_ctrl_0_0_axi_bram_ctrl_top : entity is "axi_bram_ctrl_top";
 end microblaze_system_axi_bram_ctrl_0_0_axi_bram_ctrl_top;
 
 architecture STRUCTURE of microblaze_system_axi_bram_ctrl_0_0_axi_bram_ctrl_top is
@@ -6626,8 +6612,6 @@ entity microblaze_system_axi_bram_ctrl_0_0_axi_bram_ctrl is
   attribute C_S_AXI_PROTOCOL of microblaze_system_axi_bram_ctrl_0_0_axi_bram_ctrl : entity is "AXI4";
   attribute C_S_AXI_SUPPORTS_NARROW_BURST : integer;
   attribute C_S_AXI_SUPPORTS_NARROW_BURST of microblaze_system_axi_bram_ctrl_0_0_axi_bram_ctrl : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_bram_ctrl_0_0_axi_bram_ctrl : entity is "axi_bram_ctrl";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of microblaze_system_axi_bram_ctrl_0_0_axi_bram_ctrl : entity is "yes";
 end microblaze_system_axi_bram_ctrl_0_0_axi_bram_ctrl;

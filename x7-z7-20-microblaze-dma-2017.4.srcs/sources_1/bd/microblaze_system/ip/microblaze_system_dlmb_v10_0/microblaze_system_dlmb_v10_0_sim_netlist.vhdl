@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
--- Date        : Thu Mar 29 07:20:44 2018
+-- Date        : Thu Mar 29 07:20:43 2018
 -- Host        : big-ubuntu-for-fpga running 64-bit Ubuntu 16.04.4 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/truemind/work/private/x7-z7-20-microblaze-dma-2017.4/x7-z7-20-microblaze-dma-2017.4.srcs/sources_1/bd/microblaze_system/ip/microblaze_system_dlmb_v10_0/microblaze_system_dlmb_v10_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top microblaze_system_dlmb_v10_0 -prefix
+--               microblaze_system_dlmb_v10_0_ microblaze_system_dlmb_v10_0_sim_netlist.vhdl
 -- Design      : microblaze_system_dlmb_v10_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -50,8 +50,6 @@ entity microblaze_system_dlmb_v10_0_lmb_v10 is
   attribute C_LMB_DWIDTH of microblaze_system_dlmb_v10_0_lmb_v10 : entity is 32;
   attribute C_LMB_NUM_SLAVES : integer;
   attribute C_LMB_NUM_SLAVES of microblaze_system_dlmb_v10_0_lmb_v10 : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_dlmb_v10_0_lmb_v10 : entity is "lmb_v10";
 end microblaze_system_dlmb_v10_0_lmb_v10;
 
 architecture STRUCTURE of microblaze_system_dlmb_v10_0_lmb_v10 is

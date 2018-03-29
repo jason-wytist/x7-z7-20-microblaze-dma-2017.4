@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
-// Date        : Thu Mar 29 07:11:32 2018
+// Date        : Thu Mar 29 07:11:26 2018
 // Host        : big-ubuntu-for-fpga running 64-bit Ubuntu 16.04.4 LTS
-// Command     : write_verilog -force -mode funcsim
-//               /home/truemind/work/private/x7-z7-20-microblaze-dma-2017.4/x7-z7-20-microblaze-dma-2017.4.srcs/sources_1/bd/microblaze_system/ip/microblaze_system_microblaze_0_0/microblaze_system_microblaze_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top microblaze_system_microblaze_0_0 -prefix
+//               microblaze_system_microblaze_0_0_ microblaze_system_microblaze_0_0_sim_netlist.v
 // Design      : microblaze_system_microblaze_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -1027,7 +1027,6 @@ module microblaze_system_microblaze_0_0
         .Write_Strobe(Write_Strobe));
 endmodule
 
-(* ORIG_REF_NAME = "ALU" *) 
 module microblaze_system_microblaze_0_0_ALU
    (LO,
     \Data_Addr[0] ,
@@ -1744,7 +1743,6 @@ module microblaze_system_microblaze_0_0_ALU
         .op2_C(op2_C[18]));
 endmodule
 
-(* ORIG_REF_NAME = "ALU_Bit" *) 
 module microblaze_system_microblaze_0_0_ALU_Bit
    (EX_CarryOut,
     \Data_Addr[10] ,
@@ -3719,7 +3717,6 @@ module microblaze_system_microblaze_0_0_ALU_Bit__parameterized2
         .lopt_9(lopt_7));
 endmodule
 
-(* ORIG_REF_NAME = "Byte_Doublet_Handle" *) 
 module microblaze_system_microblaze_0_0_Byte_Doublet_Handle
    (D,
     \Using_FPGA.Native ,
@@ -3836,7 +3833,6 @@ module microblaze_system_microblaze_0_0_Byte_Doublet_Handle
         .low_addr_i_1(low_addr_i_1));
 endmodule
 
-(* ORIG_REF_NAME = "DAXI_interface" *) 
 module microblaze_system_microblaze_0_0_DAXI_interface
    (MEM_DAXI_Data_Strobe,
     D,
@@ -4834,7 +4830,6 @@ module microblaze_system_microblaze_0_0_DAXI_interface
         .O(\Using_Ext_Databus.mem_access_reg ));
 endmodule
 
-(* ORIG_REF_NAME = "Data_Flow" *) 
 module microblaze_system_microblaze_0_0_Data_Flow
    (Op1_Low,
     Op2_Low,
@@ -6051,7 +6046,6 @@ module microblaze_system_microblaze_0_0_Data_Flow
         .op2_C({op2_C[0],op2_C[1],op2_C[2],op2_C[3],op2_C[4],op2_C[5],op2_C[6],op2_C[7],op2_C[8],op2_C[9],op2_C[10],op2_C[11],op2_C[12],op2_C[13],op2_C[14],op2_C[15],op2_C[16],op2_C[17],op2_C[18],op2_C[19],op2_C[20],op2_C[21],op2_C[22],op2_C[23],op2_C[24],op2_C[25],op2_C[26],op2_C[27]}));
 endmodule
 
-(* ORIG_REF_NAME = "Debug" *) 
 module microblaze_system_microblaze_0_0_Debug
    (dbg_pause,
     mb_halted_1_reg_0,
@@ -9068,7 +9062,6 @@ module microblaze_system_microblaze_0_0_Debug
         .R(sync_reset));
 endmodule
 
-(* ORIG_REF_NAME = "Decode" *) 
 module microblaze_system_microblaze_0_0_Decode
    (IReady,
     Buffer_Addr,
@@ -11694,7 +11687,6 @@ module microblaze_system_microblaze_0_0_Decode
         .R(sync_reset));
 endmodule
 
-(* ORIG_REF_NAME = "MB_DSP48E1" *) 
 module microblaze_system_microblaze_0_0_MB_DSP48E1
    (P,
     \Using_FPGA.DSP48E1_I1_0 ,
@@ -12268,7 +12260,6 @@ module microblaze_system_microblaze_0_0_MB_DSP48E1__parameterized3
         .UNDERFLOW(\Using_FPGA.DSP48E1_I1_n_5 ));
 endmodule
 
-(* ORIG_REF_NAME = "MB_FD" *) 
 module microblaze_system_microblaze_0_0_MB_FD
    (\LOCKSTEP_Out_reg[3016] ,
     EX_Result,
@@ -12293,7 +12284,6 @@ module microblaze_system_microblaze_0_0_MB_FD
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "MB_FDE" *) 
 module microblaze_system_microblaze_0_0_MB_FDE
    (\trace_pc_i_reg[9] ,
     OF_PipeRun,
@@ -15348,7 +15338,6 @@ module microblaze_system_microblaze_0_0_MB_FDE_919
         .O(S));
 endmodule
 
-(* ORIG_REF_NAME = "MB_FDR" *) 
 module microblaze_system_microblaze_0_0_MB_FDR
    (\Size_17to32.imm_Reg_reg[15] ,
     ex_Valid_reg,
@@ -15471,7 +15460,6 @@ module microblaze_system_microblaze_0_0_MB_FDR
         .O(nonvalid_IFetch_n_reg));
 endmodule
 
-(* ORIG_REF_NAME = "MB_FDRE" *) 
 module microblaze_system_microblaze_0_0_MB_FDRE
    (carry_In,
     sync_reset,
@@ -18563,7 +18551,6 @@ module microblaze_system_microblaze_0_0_MB_FDRE_918
         .R(sync_reset));
 endmodule
 
-(* ORIG_REF_NAME = "MB_FDRSE" *) 
 module microblaze_system_microblaze_0_0_MB_FDRSE
    (\void_bit16_reg[15] ,
     Reg_Write,
@@ -19475,7 +19462,6 @@ module microblaze_system_microblaze_0_0_MB_FDRSE_924
         .O(I3_0));
 endmodule
 
-(* ORIG_REF_NAME = "MB_FDS" *) 
 module microblaze_system_microblaze_0_0_MB_FDS
    (\instr_EX_i_reg[9] ,
     DI,
@@ -19552,7 +19538,6 @@ module microblaze_system_microblaze_0_0_MB_FDS
         .O(buffer_Full));
 endmodule
 
-(* ORIG_REF_NAME = "MB_FDSE" *) 
 module microblaze_system_microblaze_0_0_MB_FDSE
    (Reg_Test_Equal,
     R,
@@ -21502,7 +21487,6 @@ module microblaze_system_microblaze_0_0_MB_FD_453
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "MB_LUT2" *) 
 module microblaze_system_microblaze_0_0_MB_LUT2
    (shift_Logic_Result,
     I0,
@@ -21739,7 +21723,6 @@ module microblaze_system_microblaze_0_0_MB_LUT2__parameterized2
         .O(\Using_FPGA.Native_i_5__4_n_0 ));
 endmodule
 
-(* ORIG_REF_NAME = "MB_LUT3" *) 
 module microblaze_system_microblaze_0_0_MB_LUT3
    (opsel1_SPR_Select_2_2,
     instr_OF,
@@ -21938,7 +21921,6 @@ module microblaze_system_microblaze_0_0_MB_LUT3__parameterized9
         .O(\Using_FPGA.Native_0 ));
 endmodule
 
-(* ORIG_REF_NAME = "MB_LUT4" *) 
 module microblaze_system_microblaze_0_0_MB_LUT4
    (write_Reg_I_S,
     DReady0_out,
@@ -26772,7 +26754,6 @@ module microblaze_system_microblaze_0_0_MB_LUT4__parameterized9
         .O(correct_Carry_Select));
 endmodule
 
-(* ORIG_REF_NAME = "MB_LUT5" *) 
 module microblaze_system_microblaze_0_0_MB_LUT5
    (of_PipeRun_Select,
     mul_Executing,
@@ -26852,7 +26833,6 @@ module microblaze_system_microblaze_0_0_MB_LUT5__parameterized1
         .O(I2104_out));
 endmodule
 
-(* ORIG_REF_NAME = "MB_LUT6" *) 
 module microblaze_system_microblaze_0_0_MB_LUT6
    (alu_AddSub_1,
     op2_C,
@@ -26881,7 +26861,6 @@ module microblaze_system_microblaze_0_0_MB_LUT6
         .O(alu_AddSub_1));
 endmodule
 
-(* ORIG_REF_NAME = "MB_LUT6_2" *) 
 module microblaze_system_microblaze_0_0_MB_LUT6_2
    (op1_Reg,
     op1_I,
@@ -33875,7 +33854,6 @@ module microblaze_system_microblaze_0_0_MB_LUT6__parameterized1_452
         .O(EX_Result));
 endmodule
 
-(* ORIG_REF_NAME = "MB_MULT_AND" *) 
 module microblaze_system_microblaze_0_0_MB_MULT_AND
    (sub_Carry,
     \Using_FPGA.Native_0 ,
@@ -33923,7 +33901,6 @@ module microblaze_system_microblaze_0_0_MB_MULT_AND_1017
         .O(DI));
 endmodule
 
-(* ORIG_REF_NAME = "MB_MUXCY" *) 
 module microblaze_system_microblaze_0_0_MB_MUXCY
    (carry_7,
     SRL16_Sel_7,
@@ -36663,7 +36640,6 @@ module microblaze_system_microblaze_0_0_MB_MUXCY_925
         .S({\^lopt_9 ,\^lopt_6 ,\^lopt_3 ,control_carry}));
 endmodule
 
-(* ORIG_REF_NAME = "MB_MUXCY_XORCY" *) 
 module microblaze_system_microblaze_0_0_MB_MUXCY_XORCY
    (buffer_Addr_S_I_2,
     S_34,
@@ -39267,7 +39243,6 @@ module microblaze_system_microblaze_0_0_MB_MUXCY_XORCY_998
   assign EX_CarryOut = lopt;
 endmodule
 
-(* ORIG_REF_NAME = "MB_MUXF7" *) 
 module microblaze_system_microblaze_0_0_MB_MUXF7
    (res_1x,
     Logic_Oper,
@@ -40059,7 +40034,6 @@ module microblaze_system_microblaze_0_0_MB_MUXF7_330
         .S(Select_Logic));
 endmodule
 
-(* ORIG_REF_NAME = "MB_RAM32X1D" *) 
 module microblaze_system_microblaze_0_0_MB_RAM32X1D
    (Reg1_Data,
     Data_Write,
@@ -43243,7 +43217,6 @@ module microblaze_system_microblaze_0_0_MB_RAM32X1D_548
         .O(\Using_FPGA.Native_0 ));
 endmodule
 
-(* ORIG_REF_NAME = "MB_SRL16E" *) 
 module microblaze_system_microblaze_0_0_MB_SRL16E
    (\Result_Sel_reg[0] ,
     jump2_I_reg,
@@ -48382,7 +48355,6 @@ module microblaze_system_microblaze_0_0_MB_SRL16E__parameterized8_23
         .Q(Q1_out));
 endmodule
 
-(* ORIG_REF_NAME = "MB_SRLC16E" *) 
 module microblaze_system_microblaze_0_0_MB_SRLC16E
    (SRL16_Sel_7,
     which_pc,
@@ -48707,7 +48679,6 @@ module microblaze_system_microblaze_0_0_MB_SRLC16E_46
         .Q15(SRL16_MC15_1));
 endmodule
 
-(* ORIG_REF_NAME = "MSR_Reg" *) 
 module microblaze_system_microblaze_0_0_MSR_Reg
    (\trace_msr_reg_i_reg[11] ,
     \trace_msr_reg_i_reg[12] ,
@@ -48803,7 +48774,6 @@ module microblaze_system_microblaze_0_0_MSR_Reg
         .\trace_msr_reg_i_reg[13] (\trace_msr_reg_i_reg[13] ));
 endmodule
 
-(* ORIG_REF_NAME = "MSR_Reg_Bit" *) 
 module microblaze_system_microblaze_0_0_MSR_Reg_Bit
    (\trace_msr_reg_i_reg[11] ,
     I3_0,
@@ -48986,8 +48956,7 @@ endmodule
 (* C_USE_EXT_NM_BRK = "0" *) (* C_USE_FPU = "0" *) (* C_USE_HW_MUL = "1" *) 
 (* C_USE_ICACHE = "0" *) (* C_USE_INTERRUPT = "1" *) (* C_USE_MMU = "0" *) 
 (* C_USE_MSR_INSTR = "1" *) (* C_USE_NON_SECURE = "0" *) (* C_USE_PCMP_INSTR = "1" *) 
-(* C_USE_REORDER_INSTR = "0" *) (* C_USE_STACK_PROTECTION = "0" *) (* ORIG_REF_NAME = "MicroBlaze" *) 
-(* downgradeipidentifiedwarnings = "yes" *) 
+(* C_USE_REORDER_INSTR = "0" *) (* C_USE_STACK_PROTECTION = "0" *) (* downgradeipidentifiedwarnings = "yes" *) 
 module microblaze_system_microblaze_0_0_MicroBlaze
    (RAM_Static,
     RAM_To,
@@ -77719,7 +77688,6 @@ module microblaze_system_microblaze_0_0_MicroBlaze
        (.P(\<const1> ));
 endmodule
 
-(* ORIG_REF_NAME = "MicroBlaze_Area" *) 
 module microblaze_system_microblaze_0_0_MicroBlaze_Area
    (D,
     \Using_FPGA.Native ,
@@ -79434,7 +79402,6 @@ module microblaze_system_microblaze_0_0_MicroBlaze_Area
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "MicroBlaze_Core" *) 
 module microblaze_system_microblaze_0_0_MicroBlaze_Core
    (D,
     \Using_FPGA.Native ,
@@ -79660,7 +79627,6 @@ module microblaze_system_microblaze_0_0_MicroBlaze_Core
         .O(reset_temp__0));
 endmodule
 
-(* ORIG_REF_NAME = "Operand_Select" *) 
 module microblaze_system_microblaze_0_0_Operand_Select
    (Op1_Logic,
     EX_Op1,
@@ -80838,7 +80804,6 @@ module microblaze_system_microblaze_0_0_Operand_Select
         .R(sync_reset));
 endmodule
 
-(* ORIG_REF_NAME = "Operand_Select_Bit" *) 
 module microblaze_system_microblaze_0_0_Operand_Select_Bit
    (\Add_Output_DFFs.M_AXI_DP_AWADDR_reg[7] ,
     EX_Op1,
@@ -84012,7 +83977,6 @@ module microblaze_system_microblaze_0_0_Operand_Select_Bit__parameterized8_780
         .of_PipeRun(of_PipeRun));
 endmodule
 
-(* ORIG_REF_NAME = "PC_Bit" *) 
 module microblaze_system_microblaze_0_0_PC_Bit
    (LO,
     \Instr_Addr[30] ,
@@ -87292,7 +87256,6 @@ module microblaze_system_microblaze_0_0_PC_Bit__parameterized2_578
         .sync_reset(sync_reset));
 endmodule
 
-(* ORIG_REF_NAME = "PC_Module" *) 
 module microblaze_system_microblaze_0_0_PC_Module
    (I3,
     Address,
@@ -88123,7 +88086,6 @@ module microblaze_system_microblaze_0_0_PC_Module
         .\trace_pc_i_reg[9] (\trace_pc_i_reg[0] [22]));
 endmodule
 
-(* ORIG_REF_NAME = "PreFetch_Buffer" *) 
 module microblaze_system_microblaze_0_0_PreFetch_Buffer
    (of_Valid_Raw,
     instr_OF,
@@ -89358,7 +89320,6 @@ module microblaze_system_microblaze_0_0_PreFetch_Buffer
         .trace_jump_taken_i_reg(trace_jump_taken_i_reg));
 endmodule
 
-(* ORIG_REF_NAME = "Register_File" *) 
 module microblaze_system_microblaze_0_0_Register_File
    (\Using_FPGA.Native ,
     \Using_FPGA.Native_0 ,
@@ -89800,7 +89761,6 @@ module microblaze_system_microblaze_0_0_Register_File
         .\write_Addr_I_reg[0] (\write_Addr_I_reg[0] ));
 endmodule
 
-(* ORIG_REF_NAME = "Register_File_Bit" *) 
 module microblaze_system_microblaze_0_0_Register_File_Bit
    (\Using_FPGA.Native ,
     Reg1_Data,
@@ -91464,7 +91424,6 @@ module microblaze_system_microblaze_0_0_Register_File_Bit_485
         .\write_Addr_I_reg[0] (\write_Addr_I_reg[0] ));
 endmodule
 
-(* ORIG_REF_NAME = "Result_Mux" *) 
 module microblaze_system_microblaze_0_0_Result_Mux
    (\data_rd_reg_reg[28] ,
     \LOCKSTEP_Out_reg[3007] ,
@@ -92033,7 +91992,6 @@ module microblaze_system_microblaze_0_0_Result_Mux
         .mul_Result(mul_Result[9]));
 endmodule
 
-(* ORIG_REF_NAME = "Result_Mux_Bit" *) 
 module microblaze_system_microblaze_0_0_Result_Mux_Bit
    (EX_Result,
     \LOCKSTEP_Out_reg[3007] ,
@@ -93801,7 +93759,6 @@ module microblaze_system_microblaze_0_0_Result_Mux_Bit_361
         .mul_Result(mul_Result));
 endmodule
 
-(* ORIG_REF_NAME = "Shift_Logic_Bit" *) 
 module microblaze_system_microblaze_0_0_Shift_Logic_Bit
    (\Using_FPGA.Native ,
     EX_Op2,
@@ -95311,7 +95268,6 @@ module microblaze_system_microblaze_0_0_Shift_Logic_Bit_211
         .shift_Res(shift_Res));
 endmodule
 
-(* ORIG_REF_NAME = "Shift_Logic_Module" *) 
 module microblaze_system_microblaze_0_0_Shift_Logic_Module
    (\Using_FPGA.Native ,
     \Using_FPGA.Native_0 ,
@@ -96041,7 +95997,6 @@ module microblaze_system_microblaze_0_0_Shift_Logic_Module
         .shift_Logic_Result(shift_Logic_Result[0]));
 endmodule
 
-(* ORIG_REF_NAME = "Zero_Detect" *) 
 module microblaze_system_microblaze_0_0_Zero_Detect
    (Reg_zero,
     Reg_Test_Equal,
@@ -96192,7 +96147,6 @@ module microblaze_system_microblaze_0_0_Zero_Detect
         .O(\Zero_Detecting[5].nibble_Zero_reg ));
 endmodule
 
-(* ORIG_REF_NAME = "address_hit" *) 
 module microblaze_system_microblaze_0_0_address_hit
    (\Using_FPGA.Native ,
     Hit,
@@ -96405,7 +96359,6 @@ module microblaze_system_microblaze_0_0_address_hit
         .normal_stop_cmd_i(normal_stop_cmd_i));
 endmodule
 
-(* ORIG_REF_NAME = "barrel_shift" *) 
 module microblaze_system_microblaze_0_0_barrel_shift
    (\C_reg[30]_0 ,
     \Using_FPGA.Native ,
@@ -98367,7 +98320,6 @@ module microblaze_system_microblaze_0_0_barrel_shift
         .R(SR));
 endmodule
 
-(* ORIG_REF_NAME = "carry_equal" *) 
 module microblaze_system_microblaze_0_0_carry_equal
    (byte1,
     \Using_FPGA.Native ,
@@ -98731,7 +98683,6 @@ module microblaze_system_microblaze_0_0_carry_equal_214
         .lopt_8(\Use_The_PCMP_instr.PCMP_Instr_reg ));
 endmodule
 
-(* ORIG_REF_NAME = "dsp_module" *) 
 module microblaze_system_microblaze_0_0_dsp_module
    (P,
     \Using_FPGA.DSP48E1_I1 ,
@@ -98820,7 +98771,6 @@ module microblaze_system_microblaze_0_0_dsp_module__parameterized3
         .op2_C(op2_C));
 endmodule
 
-(* ORIG_REF_NAME = "instr_mux" *) 
 module microblaze_system_microblaze_0_0_instr_mux
    (Y,
     Instr,
@@ -98839,7 +98789,6 @@ module microblaze_system_microblaze_0_0_instr_mux
         .Y(Y));
 endmodule
 
-(* ORIG_REF_NAME = "mb_sync_bit" *) 
 module microblaze_system_microblaze_0_0_mb_sync_bit
    (out,
     reset_temp__0,
@@ -99800,7 +99749,6 @@ module microblaze_system_microblaze_0_0_mb_sync_bit__parameterized4_58
         .Q(D));
 endmodule
 
-(* ORIG_REF_NAME = "mb_sync_vec" *) 
 module microblaze_system_microblaze_0_0_mb_sync_vec
    (D,
     Raw,
@@ -99979,7 +99927,6 @@ module microblaze_system_microblaze_0_0_mb_sync_vec__parameterized1
         .sync_reset(sync_reset));
 endmodule
 
-(* ORIG_REF_NAME = "mul_unit" *) 
 module microblaze_system_microblaze_0_0_mul_unit
    (mul_Result,
     Clk,
@@ -100128,7 +100075,6 @@ module microblaze_system_microblaze_0_0_mul_unit
         .\Using_FPGA.DSP48E1_I1 ({mem_bd_pout[0],mem_bd_pout[1],mem_bd_pout[2],mem_bd_pout[3],mem_bd_pout[4],mem_bd_pout[5],mem_bd_pout[6],mem_bd_pout[7],mem_bd_pout[8],mem_bd_pout[9],mem_bd_pout[10],mem_bd_pout[11],mem_bd_pout[12],mem_bd_pout[13],mem_bd_pout[14],mem_bd_pout[15],mem_bd_pout[16],mem_bd_pout[17],mem_bd_pout[18],mem_bd_pout[19],mem_bd_pout[20],mem_bd_pout[21],mem_bd_pout[22],mem_bd_pout[23],mem_bd_pout[24],mem_bd_pout[25],mem_bd_pout[26],mem_bd_pout[27],mem_bd_pout[28],mem_bd_pout[29],mem_bd_pout[30],mem_bd_pout[31],mem_bd_pout[32],mem_bd_pout[33],mem_bd_pout[34],mem_bd_pout[35],mem_bd_pout[36],mem_bd_pout[37],mem_bd_pout[38],mem_bd_pout[39],mem_bd_pout[40],mem_bd_pout[41],mem_bd_pout[42],mem_bd_pout[43],mem_bd_pout[44],mem_bd_pout[45],mem_bd_pout[46],mem_bd_pout[47]}));
 endmodule
 
-(* ORIG_REF_NAME = "mux4_8" *) 
 module microblaze_system_microblaze_0_0_mux4_8
    (D,
     \write_Addr_I_reg[0] ,
@@ -100175,7 +100121,6 @@ module microblaze_system_microblaze_0_0_mux4_8
         .\write_Addr_I_reg[0] ({\write_Addr_I_reg[0] [7],\write_Addr_I_reg[0] [15],\write_Addr_I_reg[0] [23],\write_Addr_I_reg[0] [31]}));
 endmodule
 
-(* ORIG_REF_NAME = "mux_bus" *) 
 module microblaze_system_microblaze_0_0_mux_bus
    (Y,
     Instr,

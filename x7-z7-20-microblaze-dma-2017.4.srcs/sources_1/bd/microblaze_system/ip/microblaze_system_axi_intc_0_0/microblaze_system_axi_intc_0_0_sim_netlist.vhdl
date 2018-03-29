@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
--- Date        : Thu Mar 29 07:20:41 2018
+-- Date        : Thu Mar 29 07:20:40 2018
 -- Host        : big-ubuntu-for-fpga running 64-bit Ubuntu 16.04.4 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/truemind/work/private/x7-z7-20-microblaze-dma-2017.4/x7-z7-20-microblaze-dma-2017.4.srcs/sources_1/bd/microblaze_system/ip/microblaze_system_axi_intc_0_0/microblaze_system_axi_intc_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top microblaze_system_axi_intc_0_0 -prefix
+--               microblaze_system_axi_intc_0_0_ microblaze_system_axi_intc_0_0_sim_netlist.vhdl
 -- Design      : microblaze_system_axi_intc_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -82,8 +82,6 @@ entity microblaze_system_axi_intc_0_0_address_decoder is
     \REG_GEN[0].IAR_NORMAL_MODE_GEN.iar_reg[0]_0\ : in STD_LOGIC;
     bus2ip_rnw_i_reg : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_intc_0_0_address_decoder : entity is "address_decoder";
 end microblaze_system_axi_intc_0_0_address_decoder;
 
 architecture STRUCTURE of microblaze_system_axi_intc_0_0_address_decoder is
@@ -1036,8 +1034,6 @@ entity microblaze_system_axi_intc_0_0_intc_core is
     Bus_RNW_reg : in STD_LOGIC;
     p_17_in : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_intc_0_0_intc_core : entity is "intc_core";
 end microblaze_system_axi_intc_0_0_intc_core;
 
 architecture STRUCTURE of microblaze_system_axi_intc_0_0_intc_core is
@@ -2098,8 +2094,6 @@ entity microblaze_system_axi_intc_0_0_slave_attachment is
     p_0_in37_in : in STD_LOGIC;
     \REG_GEN[0].IAR_NORMAL_MODE_GEN.iar_reg[0]_0\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_intc_0_0_slave_attachment : entity is "slave_attachment";
 end microblaze_system_axi_intc_0_0_slave_attachment;
 
 architecture STRUCTURE of microblaze_system_axi_intc_0_0_slave_attachment is
@@ -2910,8 +2904,6 @@ entity microblaze_system_axi_intc_0_0_axi_lite_ipif is
     p_0_in37_in : in STD_LOGIC;
     \REG_GEN[0].IAR_NORMAL_MODE_GEN.iar_reg[0]_0\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_intc_0_0_axi_lite_ipif : entity is "axi_lite_ipif";
 end microblaze_system_axi_intc_0_0_axi_lite_ipif;
 
 architecture STRUCTURE of microblaze_system_axi_intc_0_0_axi_lite_ipif is
@@ -3077,8 +3069,6 @@ entity microblaze_system_axi_intc_0_0_axi_intc is
   attribute C_S_AXI_ADDR_WIDTH of microblaze_system_axi_intc_0_0_axi_intc : entity is 9;
   attribute C_S_AXI_DATA_WIDTH : integer;
   attribute C_S_AXI_DATA_WIDTH of microblaze_system_axi_intc_0_0_axi_intc : entity is 32;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_axi_intc_0_0_axi_intc : entity is "axi_intc";
   attribute hdl : string;
   attribute hdl of microblaze_system_axi_intc_0_0_axi_intc : entity is "VHDL";
   attribute imp_netlist : string;

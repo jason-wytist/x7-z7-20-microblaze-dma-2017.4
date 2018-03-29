@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
-// Date        : Thu Mar 29 07:15:20 2018
+// Date        : Thu Mar 29 07:15:19 2018
 // Host        : big-ubuntu-for-fpga running 64-bit Ubuntu 16.04.4 LTS
-// Command     : write_verilog -force -mode funcsim
-//               /home/truemind/work/private/x7-z7-20-microblaze-dma-2017.4/x7-z7-20-microblaze-dma-2017.4.srcs/sources_1/bd/microblaze_system/ip/microblaze_system_clk_wiz_1_0/microblaze_system_clk_wiz_1_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top microblaze_system_clk_wiz_1_0 -prefix
+//               microblaze_system_clk_wiz_1_0_ microblaze_system_clk_wiz_1_0_sim_netlist.v
 // Design      : microblaze_system_clk_wiz_1_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -31,7 +31,6 @@ module microblaze_system_clk_wiz_1_0
         .locked(locked));
 endmodule
 
-(* ORIG_REF_NAME = "microblaze_system_clk_wiz_1_0_clk_wiz" *) 
 module microblaze_system_clk_wiz_1_0_microblaze_system_clk_wiz_1_0_clk_wiz
    (clk_out1,
     locked,

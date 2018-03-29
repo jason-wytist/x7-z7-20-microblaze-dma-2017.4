@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
-// Date        : Thu Mar 29 07:30:44 2018
+// Date        : Thu Mar 29 07:30:42 2018
 // Host        : big-ubuntu-for-fpga running 64-bit Ubuntu 16.04.4 LTS
-// Command     : write_verilog -force -mode funcsim
-//               /home/truemind/work/private/x7-z7-20-microblaze-dma-2017.4/x7-z7-20-microblaze-dma-2017.4.srcs/sources_1/bd/microblaze_system/ip/microblaze_system_axi_cdma_0_0/microblaze_system_axi_cdma_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top microblaze_system_axi_cdma_0_0 -prefix
+//               microblaze_system_axi_cdma_0_0_ microblaze_system_axi_cdma_0_0_sim_netlist.v
 // Design      : microblaze_system_axi_cdma_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,288 +12,12 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "microblaze_system_axi_cdma_0_0,axi_cdma,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "axi_cdma,Vivado 2017.4" *) 
-(* NotValidForBitStream *)
-module microblaze_system_axi_cdma_0_0
-   (m_axi_aclk,
-    s_axi_lite_aclk,
-    s_axi_lite_aresetn,
-    cdma_introut,
-    s_axi_lite_awready,
-    s_axi_lite_awvalid,
-    s_axi_lite_awaddr,
-    s_axi_lite_wready,
-    s_axi_lite_wvalid,
-    s_axi_lite_wdata,
-    s_axi_lite_bready,
-    s_axi_lite_bvalid,
-    s_axi_lite_bresp,
-    s_axi_lite_arready,
-    s_axi_lite_arvalid,
-    s_axi_lite_araddr,
-    s_axi_lite_rready,
-    s_axi_lite_rvalid,
-    s_axi_lite_rdata,
-    s_axi_lite_rresp,
-    m_axi_arready,
-    m_axi_arvalid,
-    m_axi_araddr,
-    m_axi_arlen,
-    m_axi_arsize,
-    m_axi_arburst,
-    m_axi_arprot,
-    m_axi_arcache,
-    m_axi_rready,
-    m_axi_rvalid,
-    m_axi_rdata,
-    m_axi_rresp,
-    m_axi_rlast,
-    m_axi_awready,
-    m_axi_awvalid,
-    m_axi_awaddr,
-    m_axi_awlen,
-    m_axi_awsize,
-    m_axi_awburst,
-    m_axi_awprot,
-    m_axi_awcache,
-    m_axi_wready,
-    m_axi_wvalid,
-    m_axi_wdata,
-    m_axi_wstrb,
-    m_axi_wlast,
-    m_axi_bready,
-    m_axi_bvalid,
-    m_axi_bresp,
-    cdma_tvect_out);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 M_AXI_ACLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME M_AXI_ACLK, ASSOCIATED_BUSIF M_AXI:M_AXI_SG, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1" *) input m_axi_aclk;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 S_AXI_LITE_ACLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI_LITE_ACLK, ASSOCIATED_BUSIF S_AXI_LITE, ASSOCIATED_RESET s_axi_lite_aresetn, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1" *) input s_axi_lite_aclk;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 AXI_RESETN RST" *) (* x_interface_parameter = "XIL_INTERFACENAME AXI_RESETN, POLARITY ACTIVE_LOW" *) input s_axi_lite_aresetn;
-  (* x_interface_info = "xilinx.com:signal:interrupt:1.0 CDMA_INTERRUPT INTERRUPT" *) (* x_interface_parameter = "XIL_INTERFACENAME CDMA_INTERRUPT, SENSITIVITY LEVEL_HIGH, PortWidth 1" *) output cdma_introut;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI_LITE AWREADY" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI_LITE, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 6, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 0, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) output s_axi_lite_awready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI_LITE AWVALID" *) input s_axi_lite_awvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI_LITE AWADDR" *) input [5:0]s_axi_lite_awaddr;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI_LITE WREADY" *) output s_axi_lite_wready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI_LITE WVALID" *) input s_axi_lite_wvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI_LITE WDATA" *) input [31:0]s_axi_lite_wdata;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI_LITE BREADY" *) input s_axi_lite_bready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI_LITE BVALID" *) output s_axi_lite_bvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI_LITE BRESP" *) output [1:0]s_axi_lite_bresp;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI_LITE ARREADY" *) output s_axi_lite_arready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI_LITE ARVALID" *) input s_axi_lite_arvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI_LITE ARADDR" *) input [5:0]s_axi_lite_araddr;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI_LITE RREADY" *) input s_axi_lite_rready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI_LITE RVALID" *) output s_axi_lite_rvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI_LITE RDATA" *) output [31:0]s_axi_lite_rdata;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI_LITE RRESP" *) output [1:0]s_axi_lite_rresp;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI ARREADY" *) (* x_interface_parameter = "XIL_INTERFACENAME M_AXI, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, MAX_BURST_LENGTH 16, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) input m_axi_arready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI ARVALID" *) output m_axi_arvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI ARADDR" *) output [31:0]m_axi_araddr;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI ARLEN" *) output [7:0]m_axi_arlen;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI ARSIZE" *) output [2:0]m_axi_arsize;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI ARBURST" *) output [1:0]m_axi_arburst;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI ARPROT" *) output [2:0]m_axi_arprot;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI ARCACHE" *) output [3:0]m_axi_arcache;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI RREADY" *) output m_axi_rready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI RVALID" *) input m_axi_rvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI RDATA" *) input [31:0]m_axi_rdata;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI RRESP" *) input [1:0]m_axi_rresp;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI RLAST" *) input m_axi_rlast;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI AWREADY" *) input m_axi_awready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI AWVALID" *) output m_axi_awvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI AWADDR" *) output [31:0]m_axi_awaddr;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI AWLEN" *) output [7:0]m_axi_awlen;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI AWSIZE" *) output [2:0]m_axi_awsize;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI AWBURST" *) output [1:0]m_axi_awburst;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI AWPROT" *) output [2:0]m_axi_awprot;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI AWCACHE" *) output [3:0]m_axi_awcache;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI WREADY" *) input m_axi_wready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI WVALID" *) output m_axi_wvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI WDATA" *) output [31:0]m_axi_wdata;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI WSTRB" *) output [3:0]m_axi_wstrb;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI WLAST" *) output m_axi_wlast;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI BREADY" *) output m_axi_bready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI BVALID" *) input m_axi_bvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI BRESP" *) input [1:0]m_axi_bresp;
-  output [31:0]cdma_tvect_out;
-
-  wire cdma_introut;
-  wire [31:0]cdma_tvect_out;
-  wire m_axi_aclk;
-  wire [31:0]m_axi_araddr;
-  wire [1:0]m_axi_arburst;
-  wire [3:0]m_axi_arcache;
-  wire [7:0]m_axi_arlen;
-  wire [2:0]m_axi_arprot;
-  wire m_axi_arready;
-  wire [2:0]m_axi_arsize;
-  wire m_axi_arvalid;
-  wire [31:0]m_axi_awaddr;
-  wire [1:0]m_axi_awburst;
-  wire [3:0]m_axi_awcache;
-  wire [7:0]m_axi_awlen;
-  wire [2:0]m_axi_awprot;
-  wire m_axi_awready;
-  wire [2:0]m_axi_awsize;
-  wire m_axi_awvalid;
-  wire m_axi_bready;
-  wire [1:0]m_axi_bresp;
-  wire m_axi_bvalid;
-  wire [31:0]m_axi_rdata;
-  wire m_axi_rlast;
-  wire m_axi_rready;
-  wire [1:0]m_axi_rresp;
-  wire m_axi_rvalid;
-  wire [31:0]m_axi_wdata;
-  wire m_axi_wlast;
-  wire m_axi_wready;
-  wire [3:0]m_axi_wstrb;
-  wire m_axi_wvalid;
-  wire s_axi_lite_aclk;
-  wire [5:0]s_axi_lite_araddr;
-  wire s_axi_lite_aresetn;
-  wire s_axi_lite_arready;
-  wire s_axi_lite_arvalid;
-  wire [5:0]s_axi_lite_awaddr;
-  wire s_axi_lite_awready;
-  wire s_axi_lite_awvalid;
-  wire s_axi_lite_bready;
-  wire [1:0]s_axi_lite_bresp;
-  wire s_axi_lite_bvalid;
-  wire [31:0]s_axi_lite_rdata;
-  wire s_axi_lite_rready;
-  wire [1:0]s_axi_lite_rresp;
-  wire s_axi_lite_rvalid;
-  wire [31:0]s_axi_lite_wdata;
-  wire s_axi_lite_wready;
-  wire s_axi_lite_wvalid;
-  wire NLW_U0_m_axi_sg_arvalid_UNCONNECTED;
-  wire NLW_U0_m_axi_sg_awvalid_UNCONNECTED;
-  wire NLW_U0_m_axi_sg_bready_UNCONNECTED;
-  wire NLW_U0_m_axi_sg_rready_UNCONNECTED;
-  wire NLW_U0_m_axi_sg_wlast_UNCONNECTED;
-  wire NLW_U0_m_axi_sg_wvalid_UNCONNECTED;
-  wire [31:0]NLW_U0_m_axi_sg_araddr_UNCONNECTED;
-  wire [1:0]NLW_U0_m_axi_sg_arburst_UNCONNECTED;
-  wire [3:0]NLW_U0_m_axi_sg_arcache_UNCONNECTED;
-  wire [7:0]NLW_U0_m_axi_sg_arlen_UNCONNECTED;
-  wire [2:0]NLW_U0_m_axi_sg_arprot_UNCONNECTED;
-  wire [2:0]NLW_U0_m_axi_sg_arsize_UNCONNECTED;
-  wire [31:0]NLW_U0_m_axi_sg_awaddr_UNCONNECTED;
-  wire [1:0]NLW_U0_m_axi_sg_awburst_UNCONNECTED;
-  wire [3:0]NLW_U0_m_axi_sg_awcache_UNCONNECTED;
-  wire [7:0]NLW_U0_m_axi_sg_awlen_UNCONNECTED;
-  wire [2:0]NLW_U0_m_axi_sg_awprot_UNCONNECTED;
-  wire [2:0]NLW_U0_m_axi_sg_awsize_UNCONNECTED;
-  wire [31:0]NLW_U0_m_axi_sg_wdata_UNCONNECTED;
-  wire [3:0]NLW_U0_m_axi_sg_wstrb_UNCONNECTED;
-
-  (* C_AXI_LITE_IS_ASYNC = "0" *) 
-  (* C_DLYTMR_RESOLUTION = "256" *) 
-  (* C_FAMILY = "zynq" *) 
-  (* C_INCLUDE_DRE = "0" *) 
-  (* C_INCLUDE_SF = "0" *) 
-  (* C_INCLUDE_SG = "0" *) 
-  (* C_INSTANCE = "axi_cdma" *) 
-  (* C_M_AXI_ADDR_WIDTH = "32" *) 
-  (* C_M_AXI_DATA_WIDTH = "32" *) 
-  (* C_M_AXI_MAX_BURST_LEN = "16" *) 
-  (* C_M_AXI_SG_ADDR_WIDTH = "32" *) 
-  (* C_M_AXI_SG_DATA_WIDTH = "32" *) 
-  (* C_READ_ADDR_PIPE_DEPTH = "4" *) 
-  (* C_S_AXI_LITE_ADDR_WIDTH = "6" *) 
-  (* C_S_AXI_LITE_DATA_WIDTH = "32" *) 
-  (* C_USE_DATAMOVER_LITE = "0" *) 
-  (* C_WRITE_ADDR_PIPE_DEPTH = "4" *) 
-  (* downgradeipidentifiedwarnings = "yes" *) 
-  microblaze_system_axi_cdma_0_0_axi_cdma U0
-       (.cdma_introut(cdma_introut),
-        .cdma_tvect_out(cdma_tvect_out),
-        .m_axi_aclk(m_axi_aclk),
-        .m_axi_araddr(m_axi_araddr),
-        .m_axi_arburst(m_axi_arburst),
-        .m_axi_arcache(m_axi_arcache),
-        .m_axi_arlen(m_axi_arlen),
-        .m_axi_arprot(m_axi_arprot),
-        .m_axi_arready(m_axi_arready),
-        .m_axi_arsize(m_axi_arsize),
-        .m_axi_arvalid(m_axi_arvalid),
-        .m_axi_awaddr(m_axi_awaddr),
-        .m_axi_awburst(m_axi_awburst),
-        .m_axi_awcache(m_axi_awcache),
-        .m_axi_awlen(m_axi_awlen),
-        .m_axi_awprot(m_axi_awprot),
-        .m_axi_awready(m_axi_awready),
-        .m_axi_awsize(m_axi_awsize),
-        .m_axi_awvalid(m_axi_awvalid),
-        .m_axi_bready(m_axi_bready),
-        .m_axi_bresp(m_axi_bresp),
-        .m_axi_bvalid(m_axi_bvalid),
-        .m_axi_rdata(m_axi_rdata),
-        .m_axi_rlast(m_axi_rlast),
-        .m_axi_rready(m_axi_rready),
-        .m_axi_rresp(m_axi_rresp),
-        .m_axi_rvalid(m_axi_rvalid),
-        .m_axi_sg_araddr(NLW_U0_m_axi_sg_araddr_UNCONNECTED[31:0]),
-        .m_axi_sg_arburst(NLW_U0_m_axi_sg_arburst_UNCONNECTED[1:0]),
-        .m_axi_sg_arcache(NLW_U0_m_axi_sg_arcache_UNCONNECTED[3:0]),
-        .m_axi_sg_arlen(NLW_U0_m_axi_sg_arlen_UNCONNECTED[7:0]),
-        .m_axi_sg_arprot(NLW_U0_m_axi_sg_arprot_UNCONNECTED[2:0]),
-        .m_axi_sg_arready(1'b0),
-        .m_axi_sg_arsize(NLW_U0_m_axi_sg_arsize_UNCONNECTED[2:0]),
-        .m_axi_sg_arvalid(NLW_U0_m_axi_sg_arvalid_UNCONNECTED),
-        .m_axi_sg_awaddr(NLW_U0_m_axi_sg_awaddr_UNCONNECTED[31:0]),
-        .m_axi_sg_awburst(NLW_U0_m_axi_sg_awburst_UNCONNECTED[1:0]),
-        .m_axi_sg_awcache(NLW_U0_m_axi_sg_awcache_UNCONNECTED[3:0]),
-        .m_axi_sg_awlen(NLW_U0_m_axi_sg_awlen_UNCONNECTED[7:0]),
-        .m_axi_sg_awprot(NLW_U0_m_axi_sg_awprot_UNCONNECTED[2:0]),
-        .m_axi_sg_awready(1'b0),
-        .m_axi_sg_awsize(NLW_U0_m_axi_sg_awsize_UNCONNECTED[2:0]),
-        .m_axi_sg_awvalid(NLW_U0_m_axi_sg_awvalid_UNCONNECTED),
-        .m_axi_sg_bready(NLW_U0_m_axi_sg_bready_UNCONNECTED),
-        .m_axi_sg_bresp({1'b0,1'b0}),
-        .m_axi_sg_bvalid(1'b0),
-        .m_axi_sg_rdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .m_axi_sg_rlast(1'b0),
-        .m_axi_sg_rready(NLW_U0_m_axi_sg_rready_UNCONNECTED),
-        .m_axi_sg_rresp({1'b0,1'b0}),
-        .m_axi_sg_rvalid(1'b0),
-        .m_axi_sg_wdata(NLW_U0_m_axi_sg_wdata_UNCONNECTED[31:0]),
-        .m_axi_sg_wlast(NLW_U0_m_axi_sg_wlast_UNCONNECTED),
-        .m_axi_sg_wready(1'b0),
-        .m_axi_sg_wstrb(NLW_U0_m_axi_sg_wstrb_UNCONNECTED[3:0]),
-        .m_axi_sg_wvalid(NLW_U0_m_axi_sg_wvalid_UNCONNECTED),
-        .m_axi_wdata(m_axi_wdata),
-        .m_axi_wlast(m_axi_wlast),
-        .m_axi_wready(m_axi_wready),
-        .m_axi_wstrb(m_axi_wstrb),
-        .m_axi_wvalid(m_axi_wvalid),
-        .s_axi_lite_aclk(s_axi_lite_aclk),
-        .s_axi_lite_araddr(s_axi_lite_araddr),
-        .s_axi_lite_aresetn(s_axi_lite_aresetn),
-        .s_axi_lite_arready(s_axi_lite_arready),
-        .s_axi_lite_arvalid(s_axi_lite_arvalid),
-        .s_axi_lite_awaddr(s_axi_lite_awaddr),
-        .s_axi_lite_awready(s_axi_lite_awready),
-        .s_axi_lite_awvalid(s_axi_lite_awvalid),
-        .s_axi_lite_bready(s_axi_lite_bready),
-        .s_axi_lite_bresp(s_axi_lite_bresp),
-        .s_axi_lite_bvalid(s_axi_lite_bvalid),
-        .s_axi_lite_rdata(s_axi_lite_rdata),
-        .s_axi_lite_rready(s_axi_lite_rready),
-        .s_axi_lite_rresp(s_axi_lite_rresp),
-        .s_axi_lite_rvalid(s_axi_lite_rvalid),
-        .s_axi_lite_wdata(s_axi_lite_wdata),
-        .s_axi_lite_wready(s_axi_lite_wready),
-        .s_axi_lite_wvalid(s_axi_lite_wvalid));
-endmodule
-
 (* C_AXI_LITE_IS_ASYNC = "0" *) (* C_DLYTMR_RESOLUTION = "256" *) (* C_FAMILY = "zynq" *) 
 (* C_INCLUDE_DRE = "0" *) (* C_INCLUDE_SF = "0" *) (* C_INCLUDE_SG = "0" *) 
 (* C_INSTANCE = "axi_cdma" *) (* C_M_AXI_ADDR_WIDTH = "32" *) (* C_M_AXI_DATA_WIDTH = "32" *) 
 (* C_M_AXI_MAX_BURST_LEN = "16" *) (* C_M_AXI_SG_ADDR_WIDTH = "32" *) (* C_M_AXI_SG_DATA_WIDTH = "32" *) 
 (* C_READ_ADDR_PIPE_DEPTH = "4" *) (* C_S_AXI_LITE_ADDR_WIDTH = "6" *) (* C_S_AXI_LITE_DATA_WIDTH = "32" *) 
-(* C_USE_DATAMOVER_LITE = "0" *) (* C_WRITE_ADDR_PIPE_DEPTH = "4" *) (* ORIG_REF_NAME = "axi_cdma" *) 
-(* downgradeipidentifiedwarnings = "yes" *) 
+(* C_USE_DATAMOVER_LITE = "0" *) (* C_WRITE_ADDR_PIPE_DEPTH = "4" *) (* downgradeipidentifiedwarnings = "yes" *) 
 module microblaze_system_axi_cdma_0_0_axi_cdma
    (m_axi_aclk,
     s_axi_lite_aclk,
@@ -761,7 +485,6 @@ module microblaze_system_axi_cdma_0_0_axi_cdma
        (.P(\<const1> ));
 endmodule
 
-(* ORIG_REF_NAME = "axi_cdma_lite_if" *) 
 module microblaze_system_axi_cdma_0_0_axi_cdma_lite_if
    (s_axi_lite_wready,
     \GEN_SYNC_WRITE.wready_i_reg_0 ,
@@ -2325,7 +2048,6 @@ module microblaze_system_axi_cdma_0_0_axi_cdma_lite_if
         .R(out));
 endmodule
 
-(* ORIG_REF_NAME = "axi_cdma_pulse_gen" *) 
 module microblaze_system_axi_cdma_0_0_axi_cdma_pulse_gen
    (\GEN_AXI_LITE_SYNC2AXI.sig_composite_sg_reset_n_reg ,
     Q,
@@ -2664,7 +2386,6 @@ module microblaze_system_axi_cdma_0_0_axi_cdma_pulse_gen__parameterized1
         .R(sig_local_hw_reset_reg));
 endmodule
 
-(* ORIG_REF_NAME = "axi_cdma_reg_module" *) 
 module microblaze_system_axi_cdma_0_0_axi_cdma_reg_module
    (sig_reg2rst_soft_reset,
     s_axi_lite_wready,
@@ -2950,7 +2671,6 @@ module microblaze_system_axi_cdma_0_0_axi_cdma_reg_module
         .O(sig_ip2axi_rddata__3_n_0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_cdma_register" *) 
 module microblaze_system_axi_cdma_0_0_axi_cdma_register
    (sig_reg2rst_soft_reset,
     cdma_introut,
@@ -3976,7 +3696,6 @@ module microblaze_system_axi_cdma_0_0_axi_cdma_register
         .R(\GEN_AXI_LITE_SYNC2AXI.sig_composite_reg_reset_reg ));
 endmodule
 
-(* ORIG_REF_NAME = "axi_cdma_reset" *) 
 module microblaze_system_axi_cdma_0_0_axi_cdma_reset
    (out,
     \GEN_DMACR_SIMPLE.dmacr_i_reg[14] ,
@@ -4467,7 +4186,6 @@ module microblaze_system_axi_cdma_0_0_axi_cdma_reset
         .O(SR));
 endmodule
 
-(* ORIG_REF_NAME = "axi_cdma_simple_cntlr" *) 
 module microblaze_system_axi_cdma_0_0_axi_cdma_simple_cntlr
    (idle_reg,
     cdma_tvect_out,
@@ -4955,7 +4673,6 @@ module microblaze_system_axi_cdma_0_0_axi_cdma_simple_cntlr
         .R(SR));
 endmodule
 
-(* ORIG_REF_NAME = "axi_cdma_simple_wrap" *) 
 module microblaze_system_axi_cdma_0_0_axi_cdma_simple_wrap
    (s_axi_lite_wready,
     s_axi_lite_arready,
@@ -5303,7 +5020,6 @@ module microblaze_system_axi_cdma_0_0_axi_cdma_simple_wrap
         .sig_to_edge_detect_reg(\I_SOFT_RST_POS_EDGE_DTCT/sig_to_edge_detect_reg ));
 endmodule
 
-(* ORIG_REF_NAME = "axi_datamover" *) 
 module microblaze_system_axi_cdma_0_0_axi_datamover
    (m_axi_wvalid,
     m_axi_arsize,
@@ -5613,7 +5329,6 @@ module microblaze_system_axi_cdma_0_0_axi_datamover
         .sig_tlast_error(\I_WR_DATA_CNTL/sig_tlast_error ));
 endmodule
 
-(* ORIG_REF_NAME = "axi_datamover_addr_cntl" *) 
 module microblaze_system_axi_cdma_0_0_axi_datamover_addr_cntl
    (out,
     sig_addr_reg_empty,
@@ -6528,7 +6243,6 @@ module microblaze_system_axi_cdma_0_0_axi_datamover_addr_cntl__parameterized0
         .R(sig_stream_rst));
 endmodule
 
-(* ORIG_REF_NAME = "axi_datamover_cmd_status" *) 
 module microblaze_system_axi_cdma_0_0_axi_datamover_cmd_status
    (sig_init_reg2,
     sig_init_done,
@@ -6744,7 +6458,6 @@ module microblaze_system_axi_cdma_0_0_axi_datamover_cmd_status_2
         .sig_sm_state_ns1(sig_sm_state_ns1));
 endmodule
 
-(* ORIG_REF_NAME = "axi_datamover_fifo" *) 
 module microblaze_system_axi_cdma_0_0_axi_datamover_fifo
    (sig_init_reg2,
     sig_init_done,
@@ -8974,7 +8687,6 @@ module microblaze_system_axi_cdma_0_0_axi_datamover_fifo__parameterized5
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_datamover_mm2s_full_wrap" *) 
 module microblaze_system_axi_cdma_0_0_axi_datamover_mm2s_full_wrap
    (sig_cmd_stat_rst_user_reg_n_cdc_from_reg,
     sig_init_reg,
@@ -9382,7 +9094,6 @@ module microblaze_system_axi_cdma_0_0_axi_datamover_mm2s_full_wrap
         .sig_s_h_halt_reg_reg_1(sig_stream_rst));
 endmodule
 
-(* ORIG_REF_NAME = "axi_datamover_pcc" *) 
 module microblaze_system_axi_cdma_0_0_axi_datamover_pcc
    (\sig_addr_cntr_im0_msh_reg[15]_0 ,
     in,
@@ -17127,7 +16838,6 @@ module microblaze_system_axi_cdma_0_0_axi_datamover_pcc__parameterized0
         .R(sig_init_reg));
 endmodule
 
-(* ORIG_REF_NAME = "axi_datamover_rd_status_cntl" *) 
 module microblaze_system_axi_cdma_0_0_axi_datamover_rd_status_cntl
    (sig_rsc2stat_status,
     sig_rsc2stat_status_valid,
@@ -17214,7 +16924,6 @@ module microblaze_system_axi_cdma_0_0_axi_datamover_rd_status_cntl
         .R(\USE_SINGLE_REG.sig_regfifo_empty_reg_reg ));
 endmodule
 
-(* ORIG_REF_NAME = "axi_datamover_rddata_cntl" *) 
 module microblaze_system_axi_cdma_0_0_axi_datamover_rddata_cntl
    (\INFERRED_GEN.cnt_i_reg[0] ,
     sig_data2rsc_calc_err,
@@ -17984,7 +17693,6 @@ module microblaze_system_axi_cdma_0_0_axi_datamover_rddata_cntl
         .O(sig_push_rd_sts_reg));
 endmodule
 
-(* ORIG_REF_NAME = "axi_datamover_reset" *) 
 module microblaze_system_axi_cdma_0_0_axi_datamover_reset
    (p_18_out,
     sig_stream_rst,
@@ -18081,7 +17789,6 @@ module microblaze_system_axi_cdma_0_0_axi_datamover_reset_3
         .O(sig_s_h_halt_reg_reg_1));
 endmodule
 
-(* ORIG_REF_NAME = "axi_datamover_s2mm_full_wrap" *) 
 module microblaze_system_axi_cdma_0_0_axi_datamover_s2mm_full_wrap
    (m_axi_wvalid,
     sig_init_reg2,
@@ -18559,7 +18266,6 @@ module microblaze_system_axi_cdma_0_0_axi_datamover_s2mm_full_wrap
         .sig_wsc2stat_status_valid(sig_wsc2stat_status_valid));
 endmodule
 
-(* ORIG_REF_NAME = "axi_datamover_skid2mm_buf" *) 
 module microblaze_system_axi_cdma_0_0_axi_datamover_skid2mm_buf
    (out,
     \sig_dbeat_cntr_reg[0] ,
@@ -19512,7 +19218,6 @@ module microblaze_system_axi_cdma_0_0_axi_datamover_skid2mm_buf
         .R(sig_stream_rst));
 endmodule
 
-(* ORIG_REF_NAME = "axi_datamover_wr_status_cntl" *) 
 module microblaze_system_axi_cdma_0_0_axi_datamover_wr_status_cntl
    (sig_wsc2stat_status,
     \INFERRED_GEN.cnt_i_reg[0] ,
@@ -19802,7 +19507,6 @@ module microblaze_system_axi_cdma_0_0_axi_datamover_wr_status_cntl
         .R(sig_stream_rst));
 endmodule
 
-(* ORIG_REF_NAME = "axi_datamover_wrdata_cntl" *) 
 module microblaze_system_axi_cdma_0_0_axi_datamover_wrdata_cntl
    (sig_halt_reg_dly3,
     \INFERRED_GEN.cnt_i_reg[0] ,
@@ -20673,7 +20377,6 @@ module microblaze_system_axi_cdma_0_0_axi_datamover_wrdata_cntl
         .O(D[3]));
 endmodule
 
-(* ORIG_REF_NAME = "cntr_incr_decr_addn_f" *) 
 module microblaze_system_axi_cdma_0_0_cntr_incr_decr_addn_f
    (D,
     sig_dqual_reg_empty_reg,
@@ -21631,7 +21334,6 @@ module microblaze_system_axi_cdma_0_0_cntr_incr_decr_addn_f__parameterized0_0
         .S(sig_stream_rst));
 endmodule
 
-(* ORIG_REF_NAME = "dynshreg_f" *) 
 module microblaze_system_axi_cdma_0_0_dynshreg_f
    (sig_calc_error_reg_reg,
     sig_addr_valid_reg_reg,
@@ -23677,7 +23379,281 @@ module microblaze_system_axi_cdma_0_0_dynshreg_f__parameterized3
         .O(sig_last_dbeat_i_3__0_n_0));
 endmodule
 
-(* ORIG_REF_NAME = "srl_fifo_f" *) 
+(* CHECK_LICENSE_TYPE = "microblaze_system_axi_cdma_0_0,axi_cdma,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "axi_cdma,Vivado 2017.4" *) 
+(* NotValidForBitStream *)
+module microblaze_system_axi_cdma_0_0
+   (m_axi_aclk,
+    s_axi_lite_aclk,
+    s_axi_lite_aresetn,
+    cdma_introut,
+    s_axi_lite_awready,
+    s_axi_lite_awvalid,
+    s_axi_lite_awaddr,
+    s_axi_lite_wready,
+    s_axi_lite_wvalid,
+    s_axi_lite_wdata,
+    s_axi_lite_bready,
+    s_axi_lite_bvalid,
+    s_axi_lite_bresp,
+    s_axi_lite_arready,
+    s_axi_lite_arvalid,
+    s_axi_lite_araddr,
+    s_axi_lite_rready,
+    s_axi_lite_rvalid,
+    s_axi_lite_rdata,
+    s_axi_lite_rresp,
+    m_axi_arready,
+    m_axi_arvalid,
+    m_axi_araddr,
+    m_axi_arlen,
+    m_axi_arsize,
+    m_axi_arburst,
+    m_axi_arprot,
+    m_axi_arcache,
+    m_axi_rready,
+    m_axi_rvalid,
+    m_axi_rdata,
+    m_axi_rresp,
+    m_axi_rlast,
+    m_axi_awready,
+    m_axi_awvalid,
+    m_axi_awaddr,
+    m_axi_awlen,
+    m_axi_awsize,
+    m_axi_awburst,
+    m_axi_awprot,
+    m_axi_awcache,
+    m_axi_wready,
+    m_axi_wvalid,
+    m_axi_wdata,
+    m_axi_wstrb,
+    m_axi_wlast,
+    m_axi_bready,
+    m_axi_bvalid,
+    m_axi_bresp,
+    cdma_tvect_out);
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 M_AXI_ACLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME M_AXI_ACLK, ASSOCIATED_BUSIF M_AXI:M_AXI_SG, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1" *) input m_axi_aclk;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 S_AXI_LITE_ACLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI_LITE_ACLK, ASSOCIATED_BUSIF S_AXI_LITE, ASSOCIATED_RESET s_axi_lite_aresetn, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1" *) input s_axi_lite_aclk;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 AXI_RESETN RST" *) (* x_interface_parameter = "XIL_INTERFACENAME AXI_RESETN, POLARITY ACTIVE_LOW" *) input s_axi_lite_aresetn;
+  (* x_interface_info = "xilinx.com:signal:interrupt:1.0 CDMA_INTERRUPT INTERRUPT" *) (* x_interface_parameter = "XIL_INTERFACENAME CDMA_INTERRUPT, SENSITIVITY LEVEL_HIGH, PortWidth 1" *) output cdma_introut;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI_LITE AWREADY" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI_LITE, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 6, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 0, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) output s_axi_lite_awready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI_LITE AWVALID" *) input s_axi_lite_awvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI_LITE AWADDR" *) input [5:0]s_axi_lite_awaddr;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI_LITE WREADY" *) output s_axi_lite_wready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI_LITE WVALID" *) input s_axi_lite_wvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI_LITE WDATA" *) input [31:0]s_axi_lite_wdata;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI_LITE BREADY" *) input s_axi_lite_bready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI_LITE BVALID" *) output s_axi_lite_bvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI_LITE BRESP" *) output [1:0]s_axi_lite_bresp;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI_LITE ARREADY" *) output s_axi_lite_arready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI_LITE ARVALID" *) input s_axi_lite_arvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI_LITE ARADDR" *) input [5:0]s_axi_lite_araddr;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI_LITE RREADY" *) input s_axi_lite_rready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI_LITE RVALID" *) output s_axi_lite_rvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI_LITE RDATA" *) output [31:0]s_axi_lite_rdata;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI_LITE RRESP" *) output [1:0]s_axi_lite_rresp;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI ARREADY" *) (* x_interface_parameter = "XIL_INTERFACENAME M_AXI, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, MAX_BURST_LENGTH 16, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) input m_axi_arready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI ARVALID" *) output m_axi_arvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI ARADDR" *) output [31:0]m_axi_araddr;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI ARLEN" *) output [7:0]m_axi_arlen;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI ARSIZE" *) output [2:0]m_axi_arsize;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI ARBURST" *) output [1:0]m_axi_arburst;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI ARPROT" *) output [2:0]m_axi_arprot;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI ARCACHE" *) output [3:0]m_axi_arcache;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI RREADY" *) output m_axi_rready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI RVALID" *) input m_axi_rvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI RDATA" *) input [31:0]m_axi_rdata;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI RRESP" *) input [1:0]m_axi_rresp;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI RLAST" *) input m_axi_rlast;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI AWREADY" *) input m_axi_awready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI AWVALID" *) output m_axi_awvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI AWADDR" *) output [31:0]m_axi_awaddr;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI AWLEN" *) output [7:0]m_axi_awlen;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI AWSIZE" *) output [2:0]m_axi_awsize;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI AWBURST" *) output [1:0]m_axi_awburst;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI AWPROT" *) output [2:0]m_axi_awprot;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI AWCACHE" *) output [3:0]m_axi_awcache;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI WREADY" *) input m_axi_wready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI WVALID" *) output m_axi_wvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI WDATA" *) output [31:0]m_axi_wdata;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI WSTRB" *) output [3:0]m_axi_wstrb;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI WLAST" *) output m_axi_wlast;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI BREADY" *) output m_axi_bready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI BVALID" *) input m_axi_bvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI BRESP" *) input [1:0]m_axi_bresp;
+  output [31:0]cdma_tvect_out;
+
+  wire cdma_introut;
+  wire [31:0]cdma_tvect_out;
+  wire m_axi_aclk;
+  wire [31:0]m_axi_araddr;
+  wire [1:0]m_axi_arburst;
+  wire [3:0]m_axi_arcache;
+  wire [7:0]m_axi_arlen;
+  wire [2:0]m_axi_arprot;
+  wire m_axi_arready;
+  wire [2:0]m_axi_arsize;
+  wire m_axi_arvalid;
+  wire [31:0]m_axi_awaddr;
+  wire [1:0]m_axi_awburst;
+  wire [3:0]m_axi_awcache;
+  wire [7:0]m_axi_awlen;
+  wire [2:0]m_axi_awprot;
+  wire m_axi_awready;
+  wire [2:0]m_axi_awsize;
+  wire m_axi_awvalid;
+  wire m_axi_bready;
+  wire [1:0]m_axi_bresp;
+  wire m_axi_bvalid;
+  wire [31:0]m_axi_rdata;
+  wire m_axi_rlast;
+  wire m_axi_rready;
+  wire [1:0]m_axi_rresp;
+  wire m_axi_rvalid;
+  wire [31:0]m_axi_wdata;
+  wire m_axi_wlast;
+  wire m_axi_wready;
+  wire [3:0]m_axi_wstrb;
+  wire m_axi_wvalid;
+  wire s_axi_lite_aclk;
+  wire [5:0]s_axi_lite_araddr;
+  wire s_axi_lite_aresetn;
+  wire s_axi_lite_arready;
+  wire s_axi_lite_arvalid;
+  wire [5:0]s_axi_lite_awaddr;
+  wire s_axi_lite_awready;
+  wire s_axi_lite_awvalid;
+  wire s_axi_lite_bready;
+  wire [1:0]s_axi_lite_bresp;
+  wire s_axi_lite_bvalid;
+  wire [31:0]s_axi_lite_rdata;
+  wire s_axi_lite_rready;
+  wire [1:0]s_axi_lite_rresp;
+  wire s_axi_lite_rvalid;
+  wire [31:0]s_axi_lite_wdata;
+  wire s_axi_lite_wready;
+  wire s_axi_lite_wvalid;
+  wire NLW_U0_m_axi_sg_arvalid_UNCONNECTED;
+  wire NLW_U0_m_axi_sg_awvalid_UNCONNECTED;
+  wire NLW_U0_m_axi_sg_bready_UNCONNECTED;
+  wire NLW_U0_m_axi_sg_rready_UNCONNECTED;
+  wire NLW_U0_m_axi_sg_wlast_UNCONNECTED;
+  wire NLW_U0_m_axi_sg_wvalid_UNCONNECTED;
+  wire [31:0]NLW_U0_m_axi_sg_araddr_UNCONNECTED;
+  wire [1:0]NLW_U0_m_axi_sg_arburst_UNCONNECTED;
+  wire [3:0]NLW_U0_m_axi_sg_arcache_UNCONNECTED;
+  wire [7:0]NLW_U0_m_axi_sg_arlen_UNCONNECTED;
+  wire [2:0]NLW_U0_m_axi_sg_arprot_UNCONNECTED;
+  wire [2:0]NLW_U0_m_axi_sg_arsize_UNCONNECTED;
+  wire [31:0]NLW_U0_m_axi_sg_awaddr_UNCONNECTED;
+  wire [1:0]NLW_U0_m_axi_sg_awburst_UNCONNECTED;
+  wire [3:0]NLW_U0_m_axi_sg_awcache_UNCONNECTED;
+  wire [7:0]NLW_U0_m_axi_sg_awlen_UNCONNECTED;
+  wire [2:0]NLW_U0_m_axi_sg_awprot_UNCONNECTED;
+  wire [2:0]NLW_U0_m_axi_sg_awsize_UNCONNECTED;
+  wire [31:0]NLW_U0_m_axi_sg_wdata_UNCONNECTED;
+  wire [3:0]NLW_U0_m_axi_sg_wstrb_UNCONNECTED;
+
+  (* C_AXI_LITE_IS_ASYNC = "0" *) 
+  (* C_DLYTMR_RESOLUTION = "256" *) 
+  (* C_FAMILY = "zynq" *) 
+  (* C_INCLUDE_DRE = "0" *) 
+  (* C_INCLUDE_SF = "0" *) 
+  (* C_INCLUDE_SG = "0" *) 
+  (* C_INSTANCE = "axi_cdma" *) 
+  (* C_M_AXI_ADDR_WIDTH = "32" *) 
+  (* C_M_AXI_DATA_WIDTH = "32" *) 
+  (* C_M_AXI_MAX_BURST_LEN = "16" *) 
+  (* C_M_AXI_SG_ADDR_WIDTH = "32" *) 
+  (* C_M_AXI_SG_DATA_WIDTH = "32" *) 
+  (* C_READ_ADDR_PIPE_DEPTH = "4" *) 
+  (* C_S_AXI_LITE_ADDR_WIDTH = "6" *) 
+  (* C_S_AXI_LITE_DATA_WIDTH = "32" *) 
+  (* C_USE_DATAMOVER_LITE = "0" *) 
+  (* C_WRITE_ADDR_PIPE_DEPTH = "4" *) 
+  (* downgradeipidentifiedwarnings = "yes" *) 
+  microblaze_system_axi_cdma_0_0_axi_cdma U0
+       (.cdma_introut(cdma_introut),
+        .cdma_tvect_out(cdma_tvect_out),
+        .m_axi_aclk(m_axi_aclk),
+        .m_axi_araddr(m_axi_araddr),
+        .m_axi_arburst(m_axi_arburst),
+        .m_axi_arcache(m_axi_arcache),
+        .m_axi_arlen(m_axi_arlen),
+        .m_axi_arprot(m_axi_arprot),
+        .m_axi_arready(m_axi_arready),
+        .m_axi_arsize(m_axi_arsize),
+        .m_axi_arvalid(m_axi_arvalid),
+        .m_axi_awaddr(m_axi_awaddr),
+        .m_axi_awburst(m_axi_awburst),
+        .m_axi_awcache(m_axi_awcache),
+        .m_axi_awlen(m_axi_awlen),
+        .m_axi_awprot(m_axi_awprot),
+        .m_axi_awready(m_axi_awready),
+        .m_axi_awsize(m_axi_awsize),
+        .m_axi_awvalid(m_axi_awvalid),
+        .m_axi_bready(m_axi_bready),
+        .m_axi_bresp(m_axi_bresp),
+        .m_axi_bvalid(m_axi_bvalid),
+        .m_axi_rdata(m_axi_rdata),
+        .m_axi_rlast(m_axi_rlast),
+        .m_axi_rready(m_axi_rready),
+        .m_axi_rresp(m_axi_rresp),
+        .m_axi_rvalid(m_axi_rvalid),
+        .m_axi_sg_araddr(NLW_U0_m_axi_sg_araddr_UNCONNECTED[31:0]),
+        .m_axi_sg_arburst(NLW_U0_m_axi_sg_arburst_UNCONNECTED[1:0]),
+        .m_axi_sg_arcache(NLW_U0_m_axi_sg_arcache_UNCONNECTED[3:0]),
+        .m_axi_sg_arlen(NLW_U0_m_axi_sg_arlen_UNCONNECTED[7:0]),
+        .m_axi_sg_arprot(NLW_U0_m_axi_sg_arprot_UNCONNECTED[2:0]),
+        .m_axi_sg_arready(1'b0),
+        .m_axi_sg_arsize(NLW_U0_m_axi_sg_arsize_UNCONNECTED[2:0]),
+        .m_axi_sg_arvalid(NLW_U0_m_axi_sg_arvalid_UNCONNECTED),
+        .m_axi_sg_awaddr(NLW_U0_m_axi_sg_awaddr_UNCONNECTED[31:0]),
+        .m_axi_sg_awburst(NLW_U0_m_axi_sg_awburst_UNCONNECTED[1:0]),
+        .m_axi_sg_awcache(NLW_U0_m_axi_sg_awcache_UNCONNECTED[3:0]),
+        .m_axi_sg_awlen(NLW_U0_m_axi_sg_awlen_UNCONNECTED[7:0]),
+        .m_axi_sg_awprot(NLW_U0_m_axi_sg_awprot_UNCONNECTED[2:0]),
+        .m_axi_sg_awready(1'b0),
+        .m_axi_sg_awsize(NLW_U0_m_axi_sg_awsize_UNCONNECTED[2:0]),
+        .m_axi_sg_awvalid(NLW_U0_m_axi_sg_awvalid_UNCONNECTED),
+        .m_axi_sg_bready(NLW_U0_m_axi_sg_bready_UNCONNECTED),
+        .m_axi_sg_bresp({1'b0,1'b0}),
+        .m_axi_sg_bvalid(1'b0),
+        .m_axi_sg_rdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .m_axi_sg_rlast(1'b0),
+        .m_axi_sg_rready(NLW_U0_m_axi_sg_rready_UNCONNECTED),
+        .m_axi_sg_rresp({1'b0,1'b0}),
+        .m_axi_sg_rvalid(1'b0),
+        .m_axi_sg_wdata(NLW_U0_m_axi_sg_wdata_UNCONNECTED[31:0]),
+        .m_axi_sg_wlast(NLW_U0_m_axi_sg_wlast_UNCONNECTED),
+        .m_axi_sg_wready(1'b0),
+        .m_axi_sg_wstrb(NLW_U0_m_axi_sg_wstrb_UNCONNECTED[3:0]),
+        .m_axi_sg_wvalid(NLW_U0_m_axi_sg_wvalid_UNCONNECTED),
+        .m_axi_wdata(m_axi_wdata),
+        .m_axi_wlast(m_axi_wlast),
+        .m_axi_wready(m_axi_wready),
+        .m_axi_wstrb(m_axi_wstrb),
+        .m_axi_wvalid(m_axi_wvalid),
+        .s_axi_lite_aclk(s_axi_lite_aclk),
+        .s_axi_lite_araddr(s_axi_lite_araddr),
+        .s_axi_lite_aresetn(s_axi_lite_aresetn),
+        .s_axi_lite_arready(s_axi_lite_arready),
+        .s_axi_lite_arvalid(s_axi_lite_arvalid),
+        .s_axi_lite_awaddr(s_axi_lite_awaddr),
+        .s_axi_lite_awready(s_axi_lite_awready),
+        .s_axi_lite_awvalid(s_axi_lite_awvalid),
+        .s_axi_lite_bready(s_axi_lite_bready),
+        .s_axi_lite_bresp(s_axi_lite_bresp),
+        .s_axi_lite_bvalid(s_axi_lite_bvalid),
+        .s_axi_lite_rdata(s_axi_lite_rdata),
+        .s_axi_lite_rready(s_axi_lite_rready),
+        .s_axi_lite_rresp(s_axi_lite_rresp),
+        .s_axi_lite_rvalid(s_axi_lite_rvalid),
+        .s_axi_lite_wdata(s_axi_lite_wdata),
+        .s_axi_lite_wready(s_axi_lite_wready),
+        .s_axi_lite_wvalid(s_axi_lite_wvalid));
+endmodule
+
 module microblaze_system_axi_cdma_0_0_srl_fifo_f
    (sig_calc_error_reg_reg,
     sig_calc_error_reg_reg_0,
@@ -24259,7 +24235,6 @@ module microblaze_system_axi_cdma_0_0_srl_fifo_f__parameterized3
         .sig_wsc2stat_status_valid(sig_wsc2stat_status_valid));
 endmodule
 
-(* ORIG_REF_NAME = "srl_fifo_rbu_f" *) 
 module microblaze_system_axi_cdma_0_0_srl_fifo_rbu_f
    (sig_calc_error_reg_reg,
     sel,

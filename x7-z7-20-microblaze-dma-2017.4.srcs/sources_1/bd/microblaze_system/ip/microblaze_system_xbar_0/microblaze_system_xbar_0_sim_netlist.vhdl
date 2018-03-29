@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
--- Date        : Thu Mar 29 07:27:04 2018
+-- Date        : Thu Mar 29 07:27:03 2018
 -- Host        : big-ubuntu-for-fpga running 64-bit Ubuntu 16.04.4 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/truemind/work/private/x7-z7-20-microblaze-dma-2017.4/x7-z7-20-microblaze-dma-2017.4.srcs/sources_1/bd/microblaze_system/ip/microblaze_system_xbar_0/microblaze_system_xbar_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top microblaze_system_xbar_0 -prefix
+--               microblaze_system_xbar_0_ microblaze_system_xbar_0_sim_netlist.vhdl
 -- Design      : microblaze_system_xbar_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -81,8 +81,6 @@ entity microblaze_system_xbar_0_axi_crossbar_v2_1_16_addr_arbiter_sasd is
     \m_ready_d_reg[1]_1\ : in STD_LOGIC;
     aa_awready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_xbar_0_axi_crossbar_v2_1_16_addr_arbiter_sasd : entity is "axi_crossbar_v2_1_16_addr_arbiter_sasd";
 end microblaze_system_xbar_0_axi_crossbar_v2_1_16_addr_arbiter_sasd;
 
 architecture STRUCTURE of microblaze_system_xbar_0_axi_crossbar_v2_1_16_addr_arbiter_sasd is
@@ -1851,8 +1849,6 @@ entity microblaze_system_xbar_0_axi_crossbar_v2_1_16_decerr_slave is
     \gen_no_arbiter.grant_rnw_reg_1\ : in STD_LOGIC;
     p_4_in : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_xbar_0_axi_crossbar_v2_1_16_decerr_slave : entity is "axi_crossbar_v2_1_16_decerr_slave";
 end microblaze_system_xbar_0_axi_crossbar_v2_1_16_decerr_slave;
 
 architecture STRUCTURE of microblaze_system_xbar_0_axi_crossbar_v2_1_16_decerr_slave is
@@ -2071,8 +2067,6 @@ entity microblaze_system_xbar_0_axi_crossbar_v2_1_16_splitter is
     aresetn_d : in STD_LOGIC;
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_xbar_0_axi_crossbar_v2_1_16_splitter : entity is "axi_crossbar_v2_1_16_splitter";
 end microblaze_system_xbar_0_axi_crossbar_v2_1_16_splitter;
 
 architecture STRUCTURE of microblaze_system_xbar_0_axi_crossbar_v2_1_16_splitter is
@@ -2456,8 +2450,6 @@ entity microblaze_system_xbar_0_axi_register_slice_v2_1_15_axic_register_slice i
     \m_atarget_hot_reg[5]\ : in STD_LOGIC_VECTOR ( 5 downto 0 );
     reset : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_xbar_0_axi_register_slice_v2_1_15_axic_register_slice : entity is "axi_register_slice_v2_1_15_axic_register_slice";
 end microblaze_system_xbar_0_axi_register_slice_v2_1_15_axic_register_slice;
 
 architecture STRUCTURE of microblaze_system_xbar_0_axi_register_slice_v2_1_15_axic_register_slice is
@@ -4965,8 +4957,6 @@ entity microblaze_system_xbar_0_axi_crossbar_v2_1_16_crossbar_sasd is
     s_axi_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_xbar_0_axi_crossbar_v2_1_16_crossbar_sasd : entity is "axi_crossbar_v2_1_16_crossbar_sasd";
 end microblaze_system_xbar_0_axi_crossbar_v2_1_16_crossbar_sasd;
 
 architecture STRUCTURE of microblaze_system_xbar_0_axi_crossbar_v2_1_16_crossbar_sasd is
@@ -5550,8 +5540,6 @@ entity microblaze_system_xbar_0_axi_crossbar_v2_1_16_axi_crossbar is
   attribute C_S_AXI_WRITE_ACCEPTANCE of microblaze_system_xbar_0_axi_crossbar_v2_1_16_axi_crossbar : entity is 1;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of microblaze_system_xbar_0_axi_crossbar_v2_1_16_axi_crossbar : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_system_xbar_0_axi_crossbar_v2_1_16_axi_crossbar : entity is "axi_crossbar_v2_1_16_axi_crossbar";
   attribute P_ADDR_DECODE : integer;
   attribute P_ADDR_DECODE of microblaze_system_xbar_0_axi_crossbar_v2_1_16_axi_crossbar : entity is 1;
   attribute P_AXI3 : integer;

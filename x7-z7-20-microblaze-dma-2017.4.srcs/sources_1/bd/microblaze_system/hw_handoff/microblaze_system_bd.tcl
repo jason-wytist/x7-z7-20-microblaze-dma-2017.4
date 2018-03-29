@@ -325,11 +325,16 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.C_ADDR_TAG_BITS {0} \
    CONFIG.C_AREA_OPTIMIZED {1} \
+   CONFIG.C_CACHE_BYTE_SIZE {4096} \
    CONFIG.C_DCACHE_ADDR_TAG {0} \
+   CONFIG.C_DCACHE_BYTE_SIZE {4096} \
    CONFIG.C_DEBUG_ENABLED {1} \
    CONFIG.C_D_AXI {1} \
    CONFIG.C_D_LMB {1} \
    CONFIG.C_I_LMB {1} \
+   CONFIG.C_MMU_DTLB_SIZE {2} \
+   CONFIG.C_MMU_ITLB_SIZE {1} \
+   CONFIG.C_MMU_ZONES {2} \
    CONFIG.C_USE_BARREL {1} \
    CONFIG.C_USE_HW_MUL {1} \
    CONFIG.C_USE_MSR_INSTR {1} \
