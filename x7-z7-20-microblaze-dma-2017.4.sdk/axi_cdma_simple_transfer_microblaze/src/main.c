@@ -11,20 +11,13 @@
 #include "xparameters.h"
 
 //#define FOR_SIM
-
-//// no simulation printf
-//void ns_printf(char *str, ...){
-//#ifndef FOR_SIM
-//	printf(str);
-//#endif
-//}
-
 #define BRAM_SIZE_IN_BYTE (XPAR_AXI_BRAM_CTRL_0_S_AXI_HIGHADDR - XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR + 1)
+
+XAxiCdma xAxiCdma0Instance;
+XAxiCdma_Config *xAxiCdma0_CfgPtr;
 
 int main()
 {
-	XAxiCdma xAxiCdma0Instance;
-	XAxiCdma_Config *xAxiCdma0_CfgPtr;
 	int status;
 	int transferSizeInWord = BRAM_SIZE_IN_BYTE / (sizeof(32) * 2);
 	u32 *bramBaseAddr = (u32 *)XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR;
@@ -33,7 +26,6 @@ int main()
 	int printJump = 8;
 
 #ifndef FOR_SIM
-	printf("XAxiCdma size = %d", sizeof(XAxiCdma));
 	printf("Hello Microblaze CDMA\n\r");
 #endif
 
@@ -91,7 +83,7 @@ int main()
     }
 #endif
 
-    status = memcmp((u32 *)srcMemPtr, (u32 *)destMemPtr, 32);
+    status = memcmp((u32 *)srcMemPtr, (u32 *)destMemPtr, transferSizeInWord*sizeof(u32));
 #ifndef FOR_SIM
     if(status == XST_SUCCESS) {
     	printf("\n\rResult Compare Success\n\r");
