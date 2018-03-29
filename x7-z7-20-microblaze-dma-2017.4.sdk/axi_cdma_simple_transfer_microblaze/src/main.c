@@ -6,7 +6,6 @@
  */
 
 #include <stdio.h>
-#include "platform.h"
 #include "xil_printf.h"
 #include "xaxicdma.h"
 #include "xparameters.h"
@@ -26,7 +25,7 @@ int main()
 {
 	XAxiCdma xAxiCdma0Instance;
 	XAxiCdma_Config *xAxiCdma0_CfgPtr;
-	int Status;
+	int status;
 	int transferSizeInWord = BRAM_SIZE_IN_BYTE / (sizeof(32) * 2);
 	u32 *bramBaseAddr = (u32 *)XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR;
 	u32 *srcMemPtr = (u32 *)(bramBaseAddr + 0);
@@ -41,10 +40,10 @@ int main()
     	return XST_FAILURE;
     }
 
-    Status = XAxiCdma_CfgInitialize(&xAxiCdma0Instance, xAxiCdma0_CfgPtr, xAxiCdma0_CfgPtr->BaseAddress);
-    if(Status == XST_FAILURE) {
+    status = XAxiCdma_CfgInitialize(&xAxiCdma0Instance, xAxiCdma0_CfgPtr, xAxiCdma0_CfgPtr->BaseAddress);
+    if(status == XST_FAILURE) {
     	ns_printf("AXI CDMA 0 Initialization Failed\n\r");
-        return Status;
+        return status;
     }
 
     // disable interrupt
@@ -64,27 +63,27 @@ int main()
     }
 
     // Simple Transfer using CDMA
-    Status = XAxiCdma_SimpleTransfer(&xAxiCdma0Instance, (UINTPTR)srcMemPtr, (UINTPTR)destMemPtr, transferSizeInWord*sizeof(u32), NULL, NULL);
+    status = XAxiCdma_SimpleTransfer(&xAxiCdma0Instance, (UINTPTR)srcMemPtr, (UINTPTR)destMemPtr, transferSizeInWord*sizeof(u32), NULL, NULL);
+    if(status == XST_FAILURE) {
+    	ns_printf("AXI CDMA 0 Transfer Failed\n\r");
+    	return status;
+    }
 
     // wait;
     while(XAxiCdma_IsBusy(&xAxiCdma0Instance));
-
-    if(Status == XST_FAILURE) {
-    	ns_printf("AXI CDMA 0 Transfer Failed\n\r");
-    	return Status;
-    }
 
     // compare result
     for(int i=0; i<transferSizeInWord; i++) {
     	if(i % printJump == 0)
     		ns_printf("srcMem[%d] = %d : destMem[%d] = %d\n\r", i, (int)srcMemPtr[i], i, (int)destMemPtr[i]);
     }
-    Status = memcmp((u32 *)srcMemPtr, (u32 *)destMemPtr, 32);
-    if(Status == XST_SUCCESS) {
+
+    status = memcmp((u32 *)srcMemPtr, (u32 *)destMemPtr, 32);
+    if(status == XST_SUCCESS) {
     	printf("\n\rResult Compare Success\n\r");
     } else {
     	printf("\n\rResult Compare Failed\n\r");
     }
 
-    return Status;
+    return status;
 }
