@@ -2,11 +2,22 @@
 <Root MajorVersion="0" MinorVersion="33">
   <CompositeFile CompositeFileTopName="bd_d131" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1522316277"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1522316277"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1522316277"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1522316277"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1522321711"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1522321711"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1522321711"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1522321711"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
+      <File Name="synth/bd_d131.v" Type="Verilog">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+      </File>
+      <File Name="sim/bd_d131.v" Type="Verilog">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
       <File Name="ip/ip_10/bd_d131_s00a2s_0.xci" Type="IP">
         <Instance HierarchyPath="s00_axi2sc"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
@@ -365,17 +376,6 @@
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="synth/bd_d131.v" Type="Verilog">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-      </File>
-      <File Name="sim/bd_d131.v" Type="Verilog">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="hw_handoff/microblaze_system_axi_smc_0.hwh" Type="HwHandoff">
