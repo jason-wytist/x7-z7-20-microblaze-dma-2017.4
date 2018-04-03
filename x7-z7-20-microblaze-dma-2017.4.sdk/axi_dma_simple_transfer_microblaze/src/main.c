@@ -20,7 +20,7 @@ int main()
 {
 	int status;
 #ifndef FOR_SIM
-	int BRAM_SIZE_IN_BYTE / (sizeof(32) * 2);
+	int transferSizeInWord = BRAM_SIZE_IN_BYTE / (sizeof(32) * 2);
 #else
 	int transferSizeInWord = 8;
 #endif
@@ -42,11 +42,11 @@ int main()
     }
 
     status = XAxiDma_CfgInitialize(&xAxiDma0Instance, xAxiDma0_CftPtr);
-    if(status == XST_FAILURE) {
+    if(status != XST_SUCCESS) {
 #ifndef FOR_SIM
     	printf("AXI CDMA 0 Initialization Failed\n\r");
 #endif
-        return status;
+        return XST_FAILURE;
     }
 
     // disable interrupt
@@ -78,14 +78,14 @@ int main()
     	return XST_FAILURE;
     }
     status = XAxiDma_SimpleTransfer(&xAxiDma0Instance, (UINTPTR)srcMemPtr, transferSizeInWord*sizeof(u32), XAXIDMA_DMA_TO_DEVICE);
-    if(status == XST_SUCCESS) {
+    if(status != XST_SUCCESS) {
 #ifndef FOR_SIM
     	printf("AXI DMA DMA-to-Device Transfer Failed\n\r");
 #endif
     	return XST_FAILURE;
     }
-    while(XAxiDma_Busy(&xAxiDma0Instance, XAXIDMA_DMA_TO_DEVICE));
-    while(XAxiDma_Busy(&xAxiDma0Instance, XAXIDMA_DEVICE_TO_DMA));
+    while(XAxiDma_Busy(&xAxiDma0Instance, XAXIDMA_DMA_TO_DEVICE)
+    		|| XAxiDma_Busy(&xAxiDma0Instance, XAXIDMA_DEVICE_TO_DMA));
 
     // compare result
 #ifndef FOR_SIM
