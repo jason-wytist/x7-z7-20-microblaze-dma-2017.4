@@ -37,6 +37,7 @@
 								<option id="xilinx.gnu.compiler.inferred.swplatform.includes.568156767" name="Software Platform Include Path" superClass="xilinx.gnu.compiler.inferred.swplatform.includes" valueType="includePath">
 									<listOptionValue builtIn="false" value="../../microblaze_standalone_bsp_0/microblaze_0/include"/>
 								</option>
+								<option id="xilinx.gnu.compiler.inferred.swplatform.flags.286187400" superClass="xilinx.gnu.compiler.inferred.swplatform.flags" value=" " valueType="string"/>
 								<inputType id="xilinx.gnu.compiler.input.1160858803" name="C source files" superClass="xilinx.gnu.compiler.input"/>
 							</tool>
 							<tool id="xilinx.gnu.mb.cxx.toolchain.compiler.debug.1833884558" name="MicroBlaze g++ compiler" superClass="xilinx.gnu.mb.cxx.toolchain.compiler.debug">
@@ -53,6 +54,7 @@
 								<option id="xilinx.gnu.compiler.inferred.swplatform.includes.1932738561" name="Software Platform Include Path" superClass="xilinx.gnu.compiler.inferred.swplatform.includes" valueType="includePath">
 									<listOptionValue builtIn="false" value="../../microblaze_standalone_bsp_0/microblaze_0/include"/>
 								</option>
+								<option id="xilinx.gnu.compiler.inferred.swplatform.flags.564402600" superClass="xilinx.gnu.compiler.inferred.swplatform.flags" value=" " valueType="string"/>
 							</tool>
 							<tool id="xilinx.gnu.mb.toolchain.archiver.1250779000" name="MicroBlaze archiver" superClass="xilinx.gnu.mb.toolchain.archiver"/>
 							<tool id="xilinx.gnu.mb.c.toolchain.linker.debug.432722884" name="MicroBlaze gcc linker" superClass="xilinx.gnu.mb.c.toolchain.linker.debug">
@@ -68,6 +70,7 @@
 								</option>
 								<option id="xilinx.gnu.linker.inferred.swplatform.flags.1130367153" name="Software Platform Inferred Flags" superClass="xilinx.gnu.linker.inferred.swplatform.flags" valueType="libs">
 									<listOptionValue builtIn="false" value="-Wl,--start-group,-lxil,-lgcc,-lc,--end-group"/>
+									<listOptionValue builtIn="false" value="-Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group"/>
 								</option>
 								<option id="xilinx.gnu.c.linker.option.lscript.861402681" name="Linker Script" superClass="xilinx.gnu.c.linker.option.lscript" value="../src/lscript.ld" valueType="string"/>
 								<inputType id="xilinx.gnu.linker.input.1059953919" superClass="xilinx.gnu.linker.input">
@@ -89,6 +92,7 @@
 								</option>
 								<option id="xilinx.gnu.linker.inferred.swplatform.flags.1178013342" name="Software Platform Inferred Flags" superClass="xilinx.gnu.linker.inferred.swplatform.flags" valueType="libs">
 									<listOptionValue builtIn="false" value="-Wl,--start-group,-lxil,-lgcc,-lc,--end-group"/>
+									<listOptionValue builtIn="false" value="-Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group"/>
 								</option>
 								<option id="xilinx.gnu.c.linker.option.lscript.475389542" name="Linker Script" superClass="xilinx.gnu.c.linker.option.lscript" value="../src/lscript.ld" valueType="string"/>
 							</tool>
@@ -135,6 +139,7 @@
 								<option id="xilinx.gnu.compiler.inferred.swplatform.includes.503964615" name="Software Platform Include Path" superClass="xilinx.gnu.compiler.inferred.swplatform.includes" valueType="includePath">
 									<listOptionValue builtIn="false" value="../../microblaze_standalone_bsp_0/microblaze_0/include"/>
 								</option>
+								<option id="xilinx.gnu.compiler.inferred.swplatform.flags.1780333047" superClass="xilinx.gnu.compiler.inferred.swplatform.flags" value=" " valueType="string"/>
 								<inputType id="xilinx.gnu.compiler.input.173066919" name="C source files" superClass="xilinx.gnu.compiler.input"/>
 							</tool>
 							<tool id="xilinx.gnu.mb.cxx.toolchain.compiler.release.1864573087" name="MicroBlaze g++ compiler" superClass="xilinx.gnu.mb.cxx.toolchain.compiler.release">
@@ -151,6 +156,7 @@
 								<option id="xilinx.gnu.compiler.inferred.swplatform.includes.889363960" name="Software Platform Include Path" superClass="xilinx.gnu.compiler.inferred.swplatform.includes" valueType="includePath">
 									<listOptionValue builtIn="false" value="../../microblaze_standalone_bsp_0/microblaze_0/include"/>
 								</option>
+								<option id="xilinx.gnu.compiler.inferred.swplatform.flags.141417370" superClass="xilinx.gnu.compiler.inferred.swplatform.flags" value=" " valueType="string"/>
 							</tool>
 							<tool id="xilinx.gnu.mb.toolchain.archiver.2098564157" name="MicroBlaze archiver" superClass="xilinx.gnu.mb.toolchain.archiver"/>
 							<tool id="xilinx.gnu.mb.c.toolchain.linker.release.1691225757" name="MicroBlaze gcc linker" superClass="xilinx.gnu.mb.c.toolchain.linker.release">
@@ -166,6 +172,7 @@
 								</option>
 								<option id="xilinx.gnu.linker.inferred.swplatform.flags.926946842" name="Software Platform Inferred Flags" superClass="xilinx.gnu.linker.inferred.swplatform.flags" valueType="libs">
 									<listOptionValue builtIn="false" value="-Wl,--start-group,-lxil,-lgcc,-lc,--end-group"/>
+									<listOptionValue builtIn="false" value="-Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group"/>
 								</option>
 								<option id="xilinx.gnu.c.linker.option.lscript.867697649" name="Linker Script" superClass="xilinx.gnu.c.linker.option.lscript" value="../src/lscript.ld" valueType="string"/>
 								<inputType id="xilinx.gnu.linker.input.1634051819" superClass="xilinx.gnu.linker.input">
@@ -187,6 +194,7 @@
 								</option>
 								<option id="xilinx.gnu.linker.inferred.swplatform.flags.669714606" name="Software Platform Inferred Flags" superClass="xilinx.gnu.linker.inferred.swplatform.flags" valueType="libs">
 									<listOptionValue builtIn="false" value="-Wl,--start-group,-lxil,-lgcc,-lc,--end-group"/>
+									<listOptionValue builtIn="false" value="-Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group"/>
 								</option>
 								<option id="xilinx.gnu.c.linker.option.lscript.121072646" name="Linker Script" superClass="xilinx.gnu.c.linker.option.lscript" value="../src/lscript.ld" valueType="string"/>
 							</tool>

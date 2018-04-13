@@ -459,8 +459,8 @@
 
 /******************************************************************/
 
-#define STDIN_BASEADDRESS 0x40600000
-#define STDOUT_BASEADDRESS 0x40600000
+#define STDIN_BASEADDRESS 0xE0001000
+#define STDOUT_BASEADDRESS 0xE0001000
 
 /******************************************************************/
 
@@ -576,8 +576,8 @@
 #define XPAR_MICROBLAZE_0_LOCAL_MEMORY_DLMB_BRAM_IF_CNTLR_ECC_ONOFF_REGISTER 0U
 #define XPAR_MICROBLAZE_0_LOCAL_MEMORY_DLMB_BRAM_IF_CNTLR_ECC_ONOFF_RESET_VALUE 1U
 #define XPAR_MICROBLAZE_0_LOCAL_MEMORY_DLMB_BRAM_IF_CNTLR_WRITE_ACCESS 2U
-#define XPAR_MICROBLAZE_0_LOCAL_MEMORY_DLMB_BRAM_IF_CNTLR_BASEADDR 0x00000000U
-#define XPAR_MICROBLAZE_0_LOCAL_MEMORY_DLMB_BRAM_IF_CNTLR_HIGHADDR 0x0001FFFFU
+#define XPAR_MICROBLAZE_0_LOCAL_MEMORY_DLMB_BRAM_IF_CNTLR_BASEADDR 0xF0000000U
+#define XPAR_MICROBLAZE_0_LOCAL_MEMORY_DLMB_BRAM_IF_CNTLR_HIGHADDR 0xF001FFFFU
 #define XPAR_MICROBLAZE_0_LOCAL_MEMORY_DLMB_BRAM_IF_CNTLR_S_AXI_CTRL_BASEADDR 0xFFFFFFFFU 
 #define XPAR_MICROBLAZE_0_LOCAL_MEMORY_DLMB_BRAM_IF_CNTLR_S_AXI_CTRL_HIGHADDR 0xFFFFFFFFU 
 
@@ -594,8 +594,8 @@
 #define XPAR_MICROBLAZE_0_LOCAL_MEMORY_ILMB_BRAM_IF_CNTLR_ECC_ONOFF_REGISTER 0U
 #define XPAR_MICROBLAZE_0_LOCAL_MEMORY_ILMB_BRAM_IF_CNTLR_ECC_ONOFF_RESET_VALUE 1U
 #define XPAR_MICROBLAZE_0_LOCAL_MEMORY_ILMB_BRAM_IF_CNTLR_WRITE_ACCESS 2U
-#define XPAR_MICROBLAZE_0_LOCAL_MEMORY_ILMB_BRAM_IF_CNTLR_BASEADDR 0x00000000U
-#define XPAR_MICROBLAZE_0_LOCAL_MEMORY_ILMB_BRAM_IF_CNTLR_HIGHADDR 0x0001FFFFU
+#define XPAR_MICROBLAZE_0_LOCAL_MEMORY_ILMB_BRAM_IF_CNTLR_BASEADDR 0xF0000000U
+#define XPAR_MICROBLAZE_0_LOCAL_MEMORY_ILMB_BRAM_IF_CNTLR_HIGHADDR 0xF001FFFFU
 #define XPAR_MICROBLAZE_0_LOCAL_MEMORY_ILMB_BRAM_IF_CNTLR_S_AXI_CTRL_BASEADDR 0xFFFFFFFFU 
 #define XPAR_MICROBLAZE_0_LOCAL_MEMORY_ILMB_BRAM_IF_CNTLR_S_AXI_CTRL_HIGHADDR 0xFFFFFFFFU 
 
@@ -629,8 +629,8 @@
 #define XPAR_BRAM_1_ECC_ONOFF_REGISTER 0U
 #define XPAR_BRAM_1_ECC_ONOFF_RESET_VALUE 1U
 #define XPAR_BRAM_1_WRITE_ACCESS 2U
-#define XPAR_BRAM_1_BASEADDR 0x00000000U
-#define XPAR_BRAM_1_HIGHADDR 0x0001FFFFU
+#define XPAR_BRAM_1_BASEADDR 0xF0000000U
+#define XPAR_BRAM_1_HIGHADDR 0xF001FFFFU
 
 /* Canonical definitions for peripheral MICROBLAZE_0_LOCAL_MEMORY_ILMB_BRAM_IF_CNTLR */
 #define XPAR_BRAM_2_DEVICE_ID XPAR_MICROBLAZE_0_LOCAL_MEMORY_ILMB_BRAM_IF_CNTLR_DEVICE_ID
@@ -644,8 +644,82 @@
 #define XPAR_BRAM_2_ECC_ONOFF_REGISTER 0U
 #define XPAR_BRAM_2_ECC_ONOFF_RESET_VALUE 1U
 #define XPAR_BRAM_2_WRITE_ACCESS 2U
-#define XPAR_BRAM_2_BASEADDR 0x00000000U
-#define XPAR_BRAM_2_HIGHADDR 0x0001FFFFU
+#define XPAR_BRAM_2_BASEADDR 0xF0000000U
+#define XPAR_BRAM_2_HIGHADDR 0xF001FFFFU
+
+
+/******************************************************************/
+
+
+/* Definitions for peripheral PS7_DDR_0 */
+#define XPAR_PS7_DDR_0_ACP_AXI_BASENAME 0x00100000
+#define XPAR_PS7_DDR_0_ACP_AXI_HIGHNAME 0x3FFFFFFF
+
+
+/******************************************************************/
+
+/* Definitions for driver EMACPS */
+#define XPAR_XEMACPS_NUM_INSTANCES 1
+
+/* Definitions for peripheral PS7_ETHERNET_0 */
+#define XPAR_PS7_ETHERNET_0_DEVICE_ID 0
+#define XPAR_PS7_ETHERNET_0_BASEADDR 0xE000B000
+#define XPAR_PS7_ETHERNET_0_HIGHADDR 0xE000BFFF
+#define XPAR_PS7_ETHERNET_0_ENET_CLK_FREQ_HZ 125000000
+#define XPAR_PS7_ETHERNET_0_ENET_SLCR_1000MBPS_DIV0 8
+#define XPAR_PS7_ETHERNET_0_ENET_SLCR_1000MBPS_DIV1 1
+#define XPAR_PS7_ETHERNET_0_ENET_SLCR_100MBPS_DIV0 8
+#define XPAR_PS7_ETHERNET_0_ENET_SLCR_100MBPS_DIV1 5
+#define XPAR_PS7_ETHERNET_0_ENET_SLCR_10MBPS_DIV0 8
+#define XPAR_PS7_ETHERNET_0_ENET_SLCR_10MBPS_DIV1 50
+
+
+/******************************************************************/
+
+#define XPAR_PS7_ETHERNET_0_IS_CACHE_COHERENT 0
+/* Canonical definitions for peripheral PS7_ETHERNET_0 */
+#define XPAR_XEMACPS_0_DEVICE_ID XPAR_PS7_ETHERNET_0_DEVICE_ID
+#define XPAR_XEMACPS_0_BASEADDR 0xE000B000
+#define XPAR_XEMACPS_0_HIGHADDR 0xE000BFFF
+#define XPAR_XEMACPS_0_ENET_CLK_FREQ_HZ 125000000
+#define XPAR_XEMACPS_0_ENET_SLCR_1000Mbps_DIV0 8
+#define XPAR_XEMACPS_0_ENET_SLCR_1000Mbps_DIV1 1
+#define XPAR_XEMACPS_0_ENET_SLCR_100Mbps_DIV0 8
+#define XPAR_XEMACPS_0_ENET_SLCR_100Mbps_DIV1 5
+#define XPAR_XEMACPS_0_ENET_SLCR_10Mbps_DIV0 8
+#define XPAR_XEMACPS_0_ENET_SLCR_10Mbps_DIV1 50
+
+
+/******************************************************************/
+
+
+/* Definitions for peripheral PS7_QSPI_LINEAR_0 */
+#define XPAR_PS7_QSPI_LINEAR_0_S_AXI_BASEADDR 0xFC000000
+#define XPAR_PS7_QSPI_LINEAR_0_S_AXI_HIGHADDR 0xFCFFFFFF
+
+
+/* Definitions for peripheral PS7_RAM_0 */
+#define XPAR_PS7_RAM_0_S_AXI_BASEADDR 0x00000000
+#define XPAR_PS7_RAM_0_S_AXI_HIGHADDR 0x0003FFFF
+
+
+/******************************************************************/
+
+/* Definitions for driver GPIOPS */
+#define XPAR_XGPIOPS_NUM_INSTANCES 1
+
+/* Definitions for peripheral PS7_GPIO_0 */
+#define XPAR_PS7_GPIO_0_DEVICE_ID 0
+#define XPAR_PS7_GPIO_0_BASEADDR 0xE000A000
+#define XPAR_PS7_GPIO_0_HIGHADDR 0xE000AFFF
+
+
+/******************************************************************/
+
+/* Canonical definitions for peripheral PS7_GPIO_0 */
+#define XPAR_XGPIOPS_0_DEVICE_ID XPAR_PS7_GPIO_0_DEVICE_ID
+#define XPAR_XGPIOPS_0_BASEADDR 0xE000A000
+#define XPAR_XGPIOPS_0_HIGHADDR 0xE000AFFF
 
 
 /******************************************************************/
@@ -705,6 +779,63 @@
 
 /******************************************************************/
 
+/* Definitions for driver QSPIPS */
+#define XPAR_XQSPIPS_NUM_INSTANCES 1
+
+/* Definitions for peripheral PS7_QSPI_0 */
+#define XPAR_PS7_QSPI_0_DEVICE_ID 0
+#define XPAR_PS7_QSPI_0_BASEADDR 0xE000D000
+#define XPAR_PS7_QSPI_0_HIGHADDR 0xE000DFFF
+#define XPAR_PS7_QSPI_0_QSPI_CLK_FREQ_HZ 200000000
+#define XPAR_PS7_QSPI_0_QSPI_MODE 0
+#define XPAR_PS7_QSPI_0_QSPI_BUS_WIDTH 2
+
+
+/******************************************************************/
+
+/* Canonical definitions for peripheral PS7_QSPI_0 */
+#define XPAR_XQSPIPS_0_DEVICE_ID XPAR_PS7_QSPI_0_DEVICE_ID
+#define XPAR_XQSPIPS_0_BASEADDR 0xE000D000
+#define XPAR_XQSPIPS_0_HIGHADDR 0xE000DFFF
+#define XPAR_XQSPIPS_0_QSPI_CLK_FREQ_HZ 200000000
+#define XPAR_XQSPIPS_0_QSPI_MODE 0
+#define XPAR_XQSPIPS_0_QSPI_BUS_WIDTH 2
+
+
+/******************************************************************/
+
+/* Definitions for driver SDPS */
+#define XPAR_XSDPS_NUM_INSTANCES 1
+
+/* Definitions for peripheral PS7_SD_0 */
+#define XPAR_PS7_SD_0_DEVICE_ID 0
+#define XPAR_PS7_SD_0_BASEADDR 0xE0100000
+#define XPAR_PS7_SD_0_HIGHADDR 0xE0100FFF
+#define XPAR_PS7_SD_0_SDIO_CLK_FREQ_HZ 50000000
+#define XPAR_PS7_SD_0_HAS_CD 1
+#define XPAR_PS7_SD_0_HAS_WP 0
+#define XPAR_PS7_SD_0_BUS_WIDTH 0
+#define XPAR_PS7_SD_0_MIO_BANK 0
+#define XPAR_PS7_SD_0_HAS_EMIO 0
+
+
+/******************************************************************/
+
+#define XPAR_PS7_SD_0_IS_CACHE_COHERENT 0
+/* Canonical definitions for peripheral PS7_SD_0 */
+#define XPAR_XSDPS_0_DEVICE_ID XPAR_PS7_SD_0_DEVICE_ID
+#define XPAR_XSDPS_0_BASEADDR 0xE0100000
+#define XPAR_XSDPS_0_HIGHADDR 0xE0100FFF
+#define XPAR_XSDPS_0_SDIO_CLK_FREQ_HZ 50000000
+#define XPAR_XSDPS_0_HAS_CD 1
+#define XPAR_XSDPS_0_HAS_WP 0
+#define XPAR_XSDPS_0_BUS_WIDTH 0
+#define XPAR_XSDPS_0_MIO_BANK 0
+#define XPAR_XSDPS_0_HAS_EMIO 0
+
+
+/******************************************************************/
+
 /* Definitions for driver UARTLITE */
 #define XPAR_XUARTLITE_NUM_INSTANCES 2
 
@@ -712,7 +843,7 @@
 #define XPAR_AXI_UARTLITE_0_BASEADDR 0x40600000
 #define XPAR_AXI_UARTLITE_0_HIGHADDR 0x4060FFFF
 #define XPAR_AXI_UARTLITE_0_DEVICE_ID 0
-#define XPAR_AXI_UARTLITE_0_BAUDRATE 9600
+#define XPAR_AXI_UARTLITE_0_BAUDRATE 115200
 #define XPAR_AXI_UARTLITE_0_USE_PARITY 0
 #define XPAR_AXI_UARTLITE_0_ODD_PARITY 0
 #define XPAR_AXI_UARTLITE_0_DATA_BITS 8
@@ -734,7 +865,7 @@
 #define XPAR_UARTLITE_0_DEVICE_ID XPAR_AXI_UARTLITE_0_DEVICE_ID
 #define XPAR_UARTLITE_0_BASEADDR 0x40600000
 #define XPAR_UARTLITE_0_HIGHADDR 0x4060FFFF
-#define XPAR_UARTLITE_0_BAUDRATE 9600
+#define XPAR_UARTLITE_0_BAUDRATE 115200
 #define XPAR_UARTLITE_0_USE_PARITY 0
 #define XPAR_UARTLITE_0_ODD_PARITY 0
 #define XPAR_UARTLITE_0_DATA_BITS 8
@@ -751,4 +882,53 @@
 
 /******************************************************************/
 
+/* Definitions for driver UARTPS */
+#define XPAR_XUARTPS_NUM_INSTANCES 1
+
+/* Definitions for peripheral PS7_UART_1 */
+#define XPAR_PS7_UART_1_DEVICE_ID 0
+#define XPAR_PS7_UART_1_BASEADDR 0xE0001000
+#define XPAR_PS7_UART_1_HIGHADDR 0xE0001FFF
+#define XPAR_PS7_UART_1_UART_CLK_FREQ_HZ 100000000
+#define XPAR_PS7_UART_1_HAS_MODEM 0
+
+
+/******************************************************************/
+
+/* Canonical definitions for peripheral PS7_UART_1 */
+#define XPAR_XUARTPS_0_DEVICE_ID XPAR_PS7_UART_1_DEVICE_ID
+#define XPAR_XUARTPS_0_BASEADDR 0xE0001000
+#define XPAR_XUARTPS_0_HIGHADDR 0xE0001FFF
+#define XPAR_XUARTPS_0_UART_CLK_FREQ_HZ 100000000
+#define XPAR_XUARTPS_0_HAS_MODEM 0
+
+
+/******************************************************************/
+
+/* Definitions for driver USBPS */
+#define XPAR_XUSBPS_NUM_INSTANCES 1
+
+/* Definitions for peripheral PS7_USB_0 */
+#define XPAR_PS7_USB_0_DEVICE_ID 0
+#define XPAR_PS7_USB_0_BASEADDR 0xE0002000
+#define XPAR_PS7_USB_0_HIGHADDR 0xE0002FFF
+
+
+/******************************************************************/
+
+/* Canonical definitions for peripheral PS7_USB_0 */
+#define XPAR_XUSBPS_0_DEVICE_ID XPAR_PS7_USB_0_DEVICE_ID
+#define XPAR_XUSBPS_0_BASEADDR 0xE0002000
+#define XPAR_XUSBPS_0_HIGHADDR 0xE0002FFF
+
+
+/******************************************************************/
+
 #endif  /* end of protection macro */
+/* Xilinx FAT File System Library (XilFFs) User Settings */
+#define FILE_SYSTEM_INTERFACE_SD
+#define FILE_SYSTEM_USE_MKFS
+#define FILE_SYSTEM_NUM_LOGIC_VOL 2
+#define FILE_SYSTEM_USE_STRFUNC 0
+#define FILE_SYSTEM_SET_FS_RPATH 0
+#define FILE_SYSTEM_WORD_ACCESS

@@ -77,15 +77,15 @@ input wire s_sc_aclk;
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 aresetn RST" *)
 input wire s_sc_aresetn;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC REQ" *)
-input wire [0 : 0] s_sc_req;
+input wire [1 : 0] s_sc_req;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC INFO" *)
-input wire [0 : 0] s_sc_info;
+input wire [1 : 0] s_sc_info;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC SEND" *)
-input wire [0 : 0] s_sc_send;
+input wire [1 : 0] s_sc_send;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC RECV" *)
-output wire [0 : 0] s_sc_recv;
+output wire [1 : 0] s_sc_recv;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC PAYLD" *)
-input wire [54 : 0] s_sc_payld;
+input wire [86 : 0] s_sc_payld;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_sc_aclk, ASSOCIATED_BUSIF M_SC, ASSOCIATED_RESET m_sc_aresetn, ASSOCIATED_CLKEN m_sc_aclken, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 m_sc_aclk CLK" *)
 input wire m_sc_aclk;
@@ -101,7 +101,7 @@ output wire [0 : 0] m_sc_req;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 M_SC INFO" *)
 output wire [0 : 0] m_sc_info;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 M_SC PAYLD" *)
-output wire [54 : 0] m_sc_payld;
+output wire [86 : 0] m_sc_payld;
 
   sc_node_v1_0_7_top #(
     .C_FAMILY("zynq"),
@@ -111,11 +111,11 @@ output wire [54 : 0] m_sc_payld;
     .C_FIFO_TYPE(0),
     .C_ENABLE_PIPELINING(8'H01),
     .C_SYNCHRONIZATION_STAGES(3),
-    .C_NUM_SI(1),
+    .C_NUM_SI(2),
     .C_NUM_MI(1),
     .C_CHANNEL(0),
-    .C_PAYLD_WIDTH(55),
-    .C_S_NUM_BYTES_ARRAY(32'H00000004),
+    .C_PAYLD_WIDTH(87),
+    .C_S_NUM_BYTES_ARRAY(64'H0000000800000008),
     .C_M_NUM_BYTES_ARRAY(64'H0000000400000004),
     .C_USER_BITS_PER_BYTE(0),
     .C_ARBITER_MODE(1),
@@ -123,7 +123,7 @@ output wire [54 : 0] m_sc_payld;
     .C_ID_WIDTH(2),
     .C_ADDR_WIDTH(32),
     .C_USER_WIDTH(512),
-    .C_MAX_PAYLD_BYTES(4),
+    .C_MAX_PAYLD_BYTES(8),
     .C_S_PIPELINE(0),
     .C_M_PIPELINE(0),
     .C_M_SEND_PIPELINE(0),

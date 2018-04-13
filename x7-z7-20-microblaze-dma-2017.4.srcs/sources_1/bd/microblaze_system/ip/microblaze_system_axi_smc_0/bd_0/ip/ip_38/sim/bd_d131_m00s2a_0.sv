@@ -132,7 +132,7 @@ output wire m_sc_r_send;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 M_SC_R RECV" *)
 input wire m_sc_r_recv;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 M_SC_R PAYLD" *)
-output wire [54 : 0] m_sc_r_payld;
+output wire [86 : 0] m_sc_r_payld;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 M_SC_B REQ" *)
 output wire m_sc_b_req;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 M_SC_B INFO" *)
@@ -152,7 +152,7 @@ input wire s_sc_ar_send;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC_AR RECV" *)
 output wire s_sc_ar_recv;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC_AR PAYLD" *)
-input wire [139 : 0] s_sc_ar_payld;
+input wire [140 : 0] s_sc_ar_payld;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC_AW REQ" *)
 input wire s_sc_aw_req;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC_AW INFO" *)
@@ -162,7 +162,7 @@ input wire s_sc_aw_send;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC_AW RECV" *)
 output wire s_sc_aw_recv;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC_AW PAYLD" *)
-input wire [139 : 0] s_sc_aw_payld;
+input wire [140 : 0] s_sc_aw_payld;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC_W REQ" *)
 input wire s_sc_w_req;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC_W INFO" *)
@@ -172,7 +172,7 @@ input wire s_sc_w_send;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC_W RECV" *)
 output wire s_sc_w_recv;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC_W PAYLD" *)
-input wire [51 : 0] s_sc_w_payld;
+input wire [88 : 0] s_sc_w_payld;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI AWID" *)
 output wire [1 : 0] m_axi_awid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI AWADDR" *)
@@ -258,19 +258,19 @@ output wire m_axi_rready;
     .C_AXI_WDATA_WIDTH(32),
     .C_SC_ADDR_WIDTH(32),
     .C_SC_ID_WIDTH(2),
-    .C_SC_RDATA_WIDTH(32),
-    .C_SC_WDATA_WIDTH(32),
+    .C_SC_RDATA_WIDTH(64),
+    .C_SC_WDATA_WIDTH(64),
     .C_SC_RUSER_BITS_PER_BYTE(0),
     .C_SC_WUSER_BITS_PER_BYTE(0),
     .C_SC_ARUSER_WIDTH(0),
     .C_SC_AWUSER_WIDTH(0),
     .C_SC_BUSER_WIDTH(0),
-    .C_MSC_ROUTE_WIDTH(1),
+    .C_MSC_ROUTE_WIDTH(2),
     .C_SSC_ROUTE_WIDTH(4),
-    .C_AWPAYLD_WIDTH(140),
-    .C_ARPAYLD_WIDTH(140),
-    .C_WPAYLD_WIDTH(52),
-    .C_RPAYLD_WIDTH(55),
+    .C_AWPAYLD_WIDTH(141),
+    .C_ARPAYLD_WIDTH(141),
+    .C_WPAYLD_WIDTH(89),
+    .C_RPAYLD_WIDTH(87),
     .C_BPAYLD_WIDTH(9)
   ) inst (
     .aclk(aclk),

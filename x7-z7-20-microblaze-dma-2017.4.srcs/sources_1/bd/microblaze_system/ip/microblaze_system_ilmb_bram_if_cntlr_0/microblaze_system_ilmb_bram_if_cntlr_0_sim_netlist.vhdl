@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
--- Date        : Thu Mar 29 07:20:33 2018
+-- Date        : Fri Apr 13 23:55:25 2018
 -- Host        : big-ubuntu-for-fpga running 64-bit Ubuntu 16.04.4 LTS
--- Command     : write_vhdl -force -mode funcsim -rename_top microblaze_system_ilmb_bram_if_cntlr_0 -prefix
---               microblaze_system_ilmb_bram_if_cntlr_0_ microblaze_system_ilmb_bram_if_cntlr_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               /home/truemind/work/private/x7-z7-20-microblaze-dma-2017.4/x7-z7-20-microblaze-dma-2017.4.srcs/sources_1/bd/microblaze_system/ip/microblaze_system_ilmb_bram_if_cntlr_0/microblaze_system_ilmb_bram_if_cntlr_0_sim_netlist.vhdl
 -- Design      : microblaze_system_ilmb_bram_if_cntlr_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -93,7 +93,7 @@ entity microblaze_system_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr is
     Interrupt : out STD_LOGIC
   );
   attribute C_BASEADDR : string;
-  attribute C_BASEADDR of microblaze_system_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr : entity is "64'b0000000000000000000000000000000000000000000000000000000000000000";
+  attribute C_BASEADDR of microblaze_system_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr : entity is "64'b0000000000000000000000000000000011110000000000000000000000000000";
   attribute C_BRAM_AWIDTH : integer;
   attribute C_BRAM_AWIDTH of microblaze_system_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr : entity is 32;
   attribute C_CE_COUNTER_WIDTH : integer;
@@ -113,7 +113,7 @@ entity microblaze_system_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr is
   attribute C_FAULT_INJECT : integer;
   attribute C_FAULT_INJECT of microblaze_system_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr : entity is 0;
   attribute C_HIGHADDR : string;
-  attribute C_HIGHADDR of microblaze_system_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr : entity is "64'b0000000000000000000000000000000000000000000000011111111111111111";
+  attribute C_HIGHADDR of microblaze_system_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr : entity is "64'b0000000000000000000000000000000011110000000000011111111111111111";
   attribute C_INTERCONNECT : integer;
   attribute C_INTERCONNECT of microblaze_system_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr : entity is 0;
   attribute C_LMB_AWIDTH : integer;
@@ -121,7 +121,7 @@ entity microblaze_system_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr is
   attribute C_LMB_DWIDTH : integer;
   attribute C_LMB_DWIDTH of microblaze_system_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr : entity is 32;
   attribute C_MASK : string;
-  attribute C_MASK of microblaze_system_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr : entity is "64'b0000000000000000000000000000000000000000000000000000000000000000";
+  attribute C_MASK of microblaze_system_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr : entity is "64'b0000000000000000000000000000000000010000000000000000000000000000";
   attribute C_MASK1 : string;
   attribute C_MASK1 of microblaze_system_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr : entity is "64'b0000000000000000000000000000000000000000100000000000000000000000";
   attribute C_MASK2 : string;
@@ -142,6 +142,8 @@ entity microblaze_system_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr is
   attribute C_UE_FAILING_REGISTERS of microblaze_system_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr : entity is 0;
   attribute C_WRITE_ACCESS : integer;
   attribute C_WRITE_ACCESS of microblaze_system_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr : entity is 2;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of microblaze_system_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr : entity is "lmb_bram_if_cntlr";
 end microblaze_system_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr;
 
 architecture STRUCTURE of microblaze_system_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr is
@@ -157,9 +159,9 @@ architecture STRUCTURE of microblaze_system_ilmb_bram_if_cntlr_0_lmb_bram_if_cnt
   signal lmb_as : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
   attribute SOFT_HLUTNM of \BRAM_WEN_A[0]_INST_0\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \BRAM_WEN_A[1]_INST_0\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \BRAM_WEN_A[1]_INST_0\ : label is "soft_lutpair0";
   attribute SOFT_HLUTNM of \BRAM_WEN_A[2]_INST_0\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \BRAM_WEN_A[3]_INST_0\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \BRAM_WEN_A[3]_INST_0\ : label is "soft_lutpair1";
   attribute SOFT_HLUTNM of \No_ECC.Sl_Rdy_i_1\ : label is "soft_lutpair2";
   attribute SOFT_HLUTNM of \No_ECC.lmb_as_i_1\ : label is "soft_lutpair2";
 begin
@@ -329,52 +331,57 @@ begin
   \^lmb_addrstrobe\ <= LMB_AddrStrobe;
   \^lmb_clk\ <= LMB_Clk;
   \^lmb_writedbus\(0 to 31) <= LMB_WriteDBus(0 to 31);
-\BRAM_WEN_A[0]_INST_0\: unisim.vcomponents.LUT2
+\BRAM_WEN_A[0]_INST_0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"8"
+      INIT => X"80"
     )
         port map (
       I0 => LMB_WriteStrobe,
       I1 => LMB_BE(0),
+      I2 => \^lmb_abus\(3),
       O => BRAM_WEN_A(0)
     );
-\BRAM_WEN_A[1]_INST_0\: unisim.vcomponents.LUT2
+\BRAM_WEN_A[1]_INST_0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"8"
+      INIT => X"80"
     )
         port map (
-      I0 => LMB_WriteStrobe,
-      I1 => LMB_BE(1),
+      I0 => \^lmb_abus\(3),
+      I1 => LMB_WriteStrobe,
+      I2 => LMB_BE(1),
       O => BRAM_WEN_A(1)
     );
-\BRAM_WEN_A[2]_INST_0\: unisim.vcomponents.LUT2
+\BRAM_WEN_A[2]_INST_0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"8"
+      INIT => X"80"
     )
         port map (
-      I0 => LMB_WriteStrobe,
-      I1 => LMB_BE(2),
+      I0 => \^lmb_abus\(3),
+      I1 => LMB_WriteStrobe,
+      I2 => LMB_BE(2),
       O => BRAM_WEN_A(2)
     );
-\BRAM_WEN_A[3]_INST_0\: unisim.vcomponents.LUT2
+\BRAM_WEN_A[3]_INST_0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"8"
+      INIT => X"80"
     )
         port map (
-      I0 => LMB_WriteStrobe,
-      I1 => LMB_BE(3),
+      I0 => \^lmb_abus\(3),
+      I1 => LMB_WriteStrobe,
+      I2 => LMB_BE(3),
       O => BRAM_WEN_A(3)
     );
 GND: unisim.vcomponents.GND
      port map (
       G => \<const0>\
     );
-\No_ECC.Sl_Rdy_i_1\: unisim.vcomponents.LUT1
+\No_ECC.Sl_Rdy_i_1\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"1"
+      INIT => X"2"
     )
         port map (
-      I0 => LMB_Rst,
+      I0 => \^lmb_abus\(3),
+      I1 => LMB_Rst,
       O => \No_ECC.Sl_Rdy_i_1_n_0\
     );
 \No_ECC.Sl_Rdy_reg\: unisim.vcomponents.FDRE
@@ -477,7 +484,7 @@ architecture STRUCTURE of microblaze_system_ilmb_bram_if_cntlr_0 is
   signal NLW_U0_Sl2_DBus_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 31 );
   signal NLW_U0_Sl3_DBus_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 31 );
   attribute C_BASEADDR : string;
-  attribute C_BASEADDR of U0 : label is "64'b0000000000000000000000000000000000000000000000000000000000000000";
+  attribute C_BASEADDR of U0 : label is "64'b0000000000000000000000000000000011110000000000000000000000000000";
   attribute C_BRAM_AWIDTH : integer;
   attribute C_BRAM_AWIDTH of U0 : label is 32;
   attribute C_CE_COUNTER_WIDTH : integer;
@@ -497,7 +504,7 @@ architecture STRUCTURE of microblaze_system_ilmb_bram_if_cntlr_0 is
   attribute C_FAULT_INJECT : integer;
   attribute C_FAULT_INJECT of U0 : label is 0;
   attribute C_HIGHADDR : string;
-  attribute C_HIGHADDR of U0 : label is "64'b0000000000000000000000000000000000000000000000011111111111111111";
+  attribute C_HIGHADDR of U0 : label is "64'b0000000000000000000000000000000011110000000000011111111111111111";
   attribute C_INTERCONNECT : integer;
   attribute C_INTERCONNECT of U0 : label is 0;
   attribute C_LMB_AWIDTH : integer;
@@ -505,7 +512,7 @@ architecture STRUCTURE of microblaze_system_ilmb_bram_if_cntlr_0 is
   attribute C_LMB_DWIDTH : integer;
   attribute C_LMB_DWIDTH of U0 : label is 32;
   attribute C_MASK : string;
-  attribute C_MASK of U0 : label is "64'b0000000000000000000000000000000000000000000000000000000000000000";
+  attribute C_MASK of U0 : label is "64'b0000000000000000000000000000000000010000000000000000000000000000";
   attribute C_MASK1 : string;
   attribute C_MASK1 of U0 : label is "64'b0000000000000000000000000000000000000000100000000000000000000000";
   attribute C_MASK2 : string;

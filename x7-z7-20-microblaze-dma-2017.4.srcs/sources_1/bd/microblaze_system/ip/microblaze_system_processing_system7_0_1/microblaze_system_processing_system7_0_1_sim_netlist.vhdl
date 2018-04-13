@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
--- Date        : Thu Mar 29 07:26:17 2018
+-- Date        : Fri Apr 13 23:55:39 2018
 -- Host        : big-ubuntu-for-fpga running 64-bit Ubuntu 16.04.4 LTS
--- Command     : write_vhdl -force -mode funcsim -rename_top microblaze_system_processing_system7_0_1 -prefix
---               microblaze_system_processing_system7_0_1_ microblaze_system_processing_system7_0_1_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               /home/truemind/work/private/x7-z7-20-microblaze-dma-2017.4/x7-z7-20-microblaze-dma-2017.4.srcs/sources_1/bd/microblaze_system/ip/microblaze_system_processing_system7_0_1/microblaze_system_processing_system7_0_1_sim_netlist.vhdl
 -- Design      : microblaze_system_processing_system7_0_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -799,7 +799,7 @@ entity microblaze_system_processing_system7_0_1_processing_system7_v5_5_processi
   attribute C_USE_M_AXI_GP1 : integer;
   attribute C_USE_M_AXI_GP1 of microblaze_system_processing_system7_0_1_processing_system7_v5_5_processing_system7 : entity is 0;
   attribute C_USE_S_AXI_ACP : integer;
-  attribute C_USE_S_AXI_ACP of microblaze_system_processing_system7_0_1_processing_system7_v5_5_processing_system7 : entity is 0;
+  attribute C_USE_S_AXI_ACP of microblaze_system_processing_system7_0_1_processing_system7_v5_5_processing_system7 : entity is 1;
   attribute C_USE_S_AXI_GP0 : integer;
   attribute C_USE_S_AXI_GP0 of microblaze_system_processing_system7_0_1_processing_system7_v5_5_processing_system7 : entity is 0;
   attribute C_USE_S_AXI_GP1 : integer;
@@ -814,8 +814,10 @@ entity microblaze_system_processing_system7_0_1_processing_system7_v5_5_processi
   attribute C_USE_S_AXI_HP3 of microblaze_system_processing_system7_0_1_processing_system7_v5_5_processing_system7 : entity is 0;
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of microblaze_system_processing_system7_0_1_processing_system7_v5_5_processing_system7 : entity is "microblaze_system_processing_system7_0_1.hwdef";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of microblaze_system_processing_system7_0_1_processing_system7_v5_5_processing_system7 : entity is "processing_system7_v5_5_processing_system7";
   attribute POWER : string;
-  attribute POWER of microblaze_system_processing_system7_0_1_processing_system7_v5_5_processing_system7 : entity is "<PROCESSOR name={system} numA9Cores={2} clockFreq={667} load={0.5} /><MEMORY name={code} memType={DDR3(LowVoltage)} dataWidth={32} clockFreq={533.333333} readRate={0.5} writeRate={0.5} /><IO interface={GPIO_Bank_1} ioStandard={LVCMOS18} bidis={2} ioBank={Vcco_p1} clockFreq={1} usageRate={0.5} /><IO interface={GPIO_Bank_0} ioStandard={LVCMOS33} bidis={9} ioBank={Vcco_p0} clockFreq={1} usageRate={0.5} /><IO interface={UART} ioStandard={LVCMOS18} bidis={2} ioBank={Vcco_p1} clockFreq={100.000000} usageRate={0.5} /><IO interface={SD} ioStandard={LVCMOS18} bidis={7} ioBank={Vcco_p1} clockFreq={50.000000} usageRate={0.5} /><IO interface={USB} ioStandard={LVCMOS18} bidis={12} ioBank={Vcco_p1} clockFreq={60} usageRate={0.5} /><IO interface={GigE} ioStandard={LVCMOS18} bidis={14} ioBank={Vcco_p1} clockFreq={125.000000} usageRate={0.5} /><IO interface={QSPI} ioStandard={LVCMOS33} bidis={7} ioBank={Vcco_p0} clockFreq={200} usageRate={0.5} /><PLL domain={Processor} vco={1333.333} /><PLL domain={Memory} vco={1066.667} /><PLL domain={IO} vco={1000.000} />/>";
+  attribute POWER of microblaze_system_processing_system7_0_1_processing_system7_v5_5_processing_system7 : entity is "<PROCESSOR name={system} numA9Cores={2} clockFreq={667} load={0.5} /><MEMORY name={code} memType={DDR3(LowVoltage)} dataWidth={32} clockFreq={533.333333} readRate={0.5} writeRate={0.5} /><IO interface={GPIO_Bank_1} ioStandard={LVCMOS18} bidis={2} ioBank={Vcco_p1} clockFreq={1} usageRate={0.5} /><IO interface={GPIO_Bank_0} ioStandard={LVCMOS33} bidis={9} ioBank={Vcco_p0} clockFreq={1} usageRate={0.5} /><IO interface={UART} ioStandard={LVCMOS18} bidis={2} ioBank={Vcco_p1} clockFreq={100.000000} usageRate={0.5} /><IO interface={SD} ioStandard={LVCMOS18} bidis={7} ioBank={Vcco_p1} clockFreq={50.000000} usageRate={0.5} /><IO interface={USB} ioStandard={LVCMOS18} bidis={12} ioBank={Vcco_p1} clockFreq={60} usageRate={0.5} /><IO interface={GigE} ioStandard={LVCMOS18} bidis={14} ioBank={Vcco_p1} clockFreq={125.000000} usageRate={0.5} /><IO interface={QSPI} ioStandard={LVCMOS33} bidis={7} ioBank={Vcco_p0} clockFreq={200} usageRate={0.5} /><PLL domain={Processor} vco={1333.333} /><PLL domain={Memory} vco={1066.667} /><PLL domain={IO} vco={1000.000} /><AXI interface={S_AXI_ACP} dataWidth={32} clockFreq={100} usageRate={0.5} />/>";
   attribute USE_TRACE_DATA_EDGE_DETECTOR : integer;
   attribute USE_TRACE_DATA_EDGE_DETECTOR of microblaze_system_processing_system7_0_1_processing_system7_v5_5_processing_system7 : entity is 0;
 end microblaze_system_processing_system7_0_1_processing_system7_v5_5_processing_system7;
@@ -3353,6 +3355,47 @@ entity microblaze_system_processing_system7_0_1 is
     USB0_PORT_INDCTL : out STD_LOGIC_VECTOR ( 1 downto 0 );
     USB0_VBUS_PWRSELECT : out STD_LOGIC;
     USB0_VBUS_PWRFAULT : in STD_LOGIC;
+    S_AXI_ACP_ARREADY : out STD_LOGIC;
+    S_AXI_ACP_AWREADY : out STD_LOGIC;
+    S_AXI_ACP_BVALID : out STD_LOGIC;
+    S_AXI_ACP_RLAST : out STD_LOGIC;
+    S_AXI_ACP_RVALID : out STD_LOGIC;
+    S_AXI_ACP_WREADY : out STD_LOGIC;
+    S_AXI_ACP_BRESP : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    S_AXI_ACP_RRESP : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    S_AXI_ACP_BID : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    S_AXI_ACP_RID : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    S_AXI_ACP_RDATA : out STD_LOGIC_VECTOR ( 63 downto 0 );
+    S_AXI_ACP_ACLK : in STD_LOGIC;
+    S_AXI_ACP_ARVALID : in STD_LOGIC;
+    S_AXI_ACP_AWVALID : in STD_LOGIC;
+    S_AXI_ACP_BREADY : in STD_LOGIC;
+    S_AXI_ACP_RREADY : in STD_LOGIC;
+    S_AXI_ACP_WLAST : in STD_LOGIC;
+    S_AXI_ACP_WVALID : in STD_LOGIC;
+    S_AXI_ACP_ARID : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    S_AXI_ACP_ARPROT : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    S_AXI_ACP_AWID : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    S_AXI_ACP_AWPROT : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    S_AXI_ACP_WID : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    S_AXI_ACP_ARADDR : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    S_AXI_ACP_AWADDR : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    S_AXI_ACP_ARCACHE : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    S_AXI_ACP_ARLEN : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    S_AXI_ACP_ARQOS : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    S_AXI_ACP_AWCACHE : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    S_AXI_ACP_AWLEN : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    S_AXI_ACP_AWQOS : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    S_AXI_ACP_ARBURST : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    S_AXI_ACP_ARLOCK : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    S_AXI_ACP_ARSIZE : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    S_AXI_ACP_AWBURST : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    S_AXI_ACP_AWLOCK : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    S_AXI_ACP_AWSIZE : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    S_AXI_ACP_ARUSER : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    S_AXI_ACP_AWUSER : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    S_AXI_ACP_WDATA : in STD_LOGIC_VECTOR ( 63 downto 0 );
+    S_AXI_ACP_WSTRB : in STD_LOGIC_VECTOR ( 7 downto 0 );
     MIO : inout STD_LOGIC_VECTOR ( 53 downto 0 );
     DDR_CAS_n : inout STD_LOGIC;
     DDR_CKE : inout STD_LOGIC;
@@ -3530,12 +3573,6 @@ architecture STRUCTURE of microblaze_system_processing_system7_0_1 is
   signal NLW_inst_SPI1_SS_O_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_SPI1_SS_T_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_S_AXI_ACP_ARESETN_UNCONNECTED : STD_LOGIC;
-  signal NLW_inst_S_AXI_ACP_ARREADY_UNCONNECTED : STD_LOGIC;
-  signal NLW_inst_S_AXI_ACP_AWREADY_UNCONNECTED : STD_LOGIC;
-  signal NLW_inst_S_AXI_ACP_BVALID_UNCONNECTED : STD_LOGIC;
-  signal NLW_inst_S_AXI_ACP_RLAST_UNCONNECTED : STD_LOGIC;
-  signal NLW_inst_S_AXI_ACP_RVALID_UNCONNECTED : STD_LOGIC;
-  signal NLW_inst_S_AXI_ACP_WREADY_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_S_AXI_GP0_ARESETN_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_S_AXI_GP0_ARREADY_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_S_AXI_GP0_AWREADY_UNCONNECTED : STD_LOGIC;
@@ -3653,11 +3690,6 @@ architecture STRUCTURE of microblaze_system_processing_system7_0_1 is
   signal NLW_inst_SDIO1_BUSVOLT_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal NLW_inst_SDIO1_DATA_O_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_inst_SDIO1_DATA_T_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal NLW_inst_S_AXI_ACP_BID_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal NLW_inst_S_AXI_ACP_BRESP_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal NLW_inst_S_AXI_ACP_RDATA_UNCONNECTED : STD_LOGIC_VECTOR ( 63 downto 0 );
-  signal NLW_inst_S_AXI_ACP_RID_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal NLW_inst_S_AXI_ACP_RRESP_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal NLW_inst_S_AXI_GP0_BID_UNCONNECTED : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal NLW_inst_S_AXI_GP0_BRESP_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal NLW_inst_S_AXI_GP0_RDATA_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -3803,7 +3835,7 @@ architecture STRUCTURE of microblaze_system_processing_system7_0_1 is
   attribute C_USE_M_AXI_GP1 : integer;
   attribute C_USE_M_AXI_GP1 of inst : label is 0;
   attribute C_USE_S_AXI_ACP : integer;
-  attribute C_USE_S_AXI_ACP of inst : label is 0;
+  attribute C_USE_S_AXI_ACP of inst : label is 1;
   attribute C_USE_S_AXI_GP0 : integer;
   attribute C_USE_S_AXI_GP0 of inst : label is 0;
   attribute C_USE_S_AXI_GP1 : integer;
@@ -3819,7 +3851,7 @@ architecture STRUCTURE of microblaze_system_processing_system7_0_1 is
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of inst : label is "microblaze_system_processing_system7_0_1.hwdef";
   attribute POWER : string;
-  attribute POWER of inst : label is "<PROCESSOR name={system} numA9Cores={2} clockFreq={667} load={0.5} /><MEMORY name={code} memType={DDR3(LowVoltage)} dataWidth={32} clockFreq={533.333333} readRate={0.5} writeRate={0.5} /><IO interface={GPIO_Bank_1} ioStandard={LVCMOS18} bidis={2} ioBank={Vcco_p1} clockFreq={1} usageRate={0.5} /><IO interface={GPIO_Bank_0} ioStandard={LVCMOS33} bidis={9} ioBank={Vcco_p0} clockFreq={1} usageRate={0.5} /><IO interface={UART} ioStandard={LVCMOS18} bidis={2} ioBank={Vcco_p1} clockFreq={100.000000} usageRate={0.5} /><IO interface={SD} ioStandard={LVCMOS18} bidis={7} ioBank={Vcco_p1} clockFreq={50.000000} usageRate={0.5} /><IO interface={USB} ioStandard={LVCMOS18} bidis={12} ioBank={Vcco_p1} clockFreq={60} usageRate={0.5} /><IO interface={GigE} ioStandard={LVCMOS18} bidis={14} ioBank={Vcco_p1} clockFreq={125.000000} usageRate={0.5} /><IO interface={QSPI} ioStandard={LVCMOS33} bidis={7} ioBank={Vcco_p0} clockFreq={200} usageRate={0.5} /><PLL domain={Processor} vco={1333.333} /><PLL domain={Memory} vco={1066.667} /><PLL domain={IO} vco={1000.000} />/>";
+  attribute POWER of inst : label is "<PROCESSOR name={system} numA9Cores={2} clockFreq={667} load={0.5} /><MEMORY name={code} memType={DDR3(LowVoltage)} dataWidth={32} clockFreq={533.333333} readRate={0.5} writeRate={0.5} /><IO interface={GPIO_Bank_1} ioStandard={LVCMOS18} bidis={2} ioBank={Vcco_p1} clockFreq={1} usageRate={0.5} /><IO interface={GPIO_Bank_0} ioStandard={LVCMOS33} bidis={9} ioBank={Vcco_p0} clockFreq={1} usageRate={0.5} /><IO interface={UART} ioStandard={LVCMOS18} bidis={2} ioBank={Vcco_p1} clockFreq={100.000000} usageRate={0.5} /><IO interface={SD} ioStandard={LVCMOS18} bidis={7} ioBank={Vcco_p1} clockFreq={50.000000} usageRate={0.5} /><IO interface={USB} ioStandard={LVCMOS18} bidis={12} ioBank={Vcco_p1} clockFreq={60} usageRate={0.5} /><IO interface={GigE} ioStandard={LVCMOS18} bidis={14} ioBank={Vcco_p1} clockFreq={125.000000} usageRate={0.5} /><IO interface={QSPI} ioStandard={LVCMOS33} bidis={7} ioBank={Vcco_p0} clockFreq={200} usageRate={0.5} /><PLL domain={Processor} vco={1333.333} /><PLL domain={Memory} vco={1066.667} /><PLL domain={IO} vco={1000.000} /><AXI interface={S_AXI_ACP} dataWidth={32} clockFreq={100} usageRate={0.5} />/>";
   attribute USE_TRACE_DATA_EDGE_DETECTOR : integer;
   attribute USE_TRACE_DATA_EDGE_DETECTOR of inst : label is 0;
   attribute X_INTERFACE_INFO : string;
@@ -3839,6 +3871,20 @@ architecture STRUCTURE of microblaze_system_processing_system7_0_1 is
   attribute X_INTERFACE_PARAMETER : string;
   attribute X_INTERFACE_PARAMETER of PS_PORB : signal is "XIL_INTERFACENAME FIXED_IO, CAN_DEBUG false";
   attribute X_INTERFACE_INFO of PS_SRSTB : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB";
+  attribute X_INTERFACE_INFO of S_AXI_ACP_ACLK : signal is "xilinx.com:signal:clock:1.0 S_AXI_ACP_ACLK CLK";
+  attribute X_INTERFACE_PARAMETER of S_AXI_ACP_ACLK : signal is "XIL_INTERFACENAME S_AXI_ACP_ACLK, ASSOCIATED_BUSIF S_AXI_ACP, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1";
+  attribute X_INTERFACE_INFO of S_AXI_ACP_ARREADY : signal is "xilinx.com:interface:aximm:1.0 S_AXI_ACP ARREADY";
+  attribute X_INTERFACE_INFO of S_AXI_ACP_ARVALID : signal is "xilinx.com:interface:aximm:1.0 S_AXI_ACP ARVALID";
+  attribute X_INTERFACE_INFO of S_AXI_ACP_AWREADY : signal is "xilinx.com:interface:aximm:1.0 S_AXI_ACP AWREADY";
+  attribute X_INTERFACE_INFO of S_AXI_ACP_AWVALID : signal is "xilinx.com:interface:aximm:1.0 S_AXI_ACP AWVALID";
+  attribute X_INTERFACE_INFO of S_AXI_ACP_BREADY : signal is "xilinx.com:interface:aximm:1.0 S_AXI_ACP BREADY";
+  attribute X_INTERFACE_INFO of S_AXI_ACP_BVALID : signal is "xilinx.com:interface:aximm:1.0 S_AXI_ACP BVALID";
+  attribute X_INTERFACE_INFO of S_AXI_ACP_RLAST : signal is "xilinx.com:interface:aximm:1.0 S_AXI_ACP RLAST";
+  attribute X_INTERFACE_INFO of S_AXI_ACP_RREADY : signal is "xilinx.com:interface:aximm:1.0 S_AXI_ACP RREADY";
+  attribute X_INTERFACE_INFO of S_AXI_ACP_RVALID : signal is "xilinx.com:interface:aximm:1.0 S_AXI_ACP RVALID";
+  attribute X_INTERFACE_INFO of S_AXI_ACP_WLAST : signal is "xilinx.com:interface:aximm:1.0 S_AXI_ACP WLAST";
+  attribute X_INTERFACE_INFO of S_AXI_ACP_WREADY : signal is "xilinx.com:interface:aximm:1.0 S_AXI_ACP WREADY";
+  attribute X_INTERFACE_INFO of S_AXI_ACP_WVALID : signal is "xilinx.com:interface:aximm:1.0 S_AXI_ACP WVALID";
   attribute X_INTERFACE_INFO of USB0_VBUS_PWRFAULT : signal is "xilinx.com:display_processing_system7:usbctrl:1.0 USBIND_0 VBUS_PWRFAULT";
   attribute X_INTERFACE_INFO of USB0_VBUS_PWRSELECT : signal is "xilinx.com:display_processing_system7:usbctrl:1.0 USBIND_0 VBUS_PWRSELECT";
   attribute X_INTERFACE_INFO of DDR_Addr : signal is "xilinx.com:interface:ddrx:1.0 DDR ADDR";
@@ -3849,6 +3895,35 @@ architecture STRUCTURE of microblaze_system_processing_system7_0_1 is
   attribute X_INTERFACE_PARAMETER of DDR_DQS : signal is "XIL_INTERFACENAME DDR, CAN_DEBUG false, TIMEPERIOD_PS 1250, MEMORY_TYPE COMPONENTS, DATA_WIDTH 8, CS_ENABLED true, DATA_MASK_ENABLED true, SLOT Single, MEM_ADDR_MAP ROW_COLUMN_BANK, BURST_LENGTH 8, AXI_ARBITRATION_SCHEME TDM, CAS_LATENCY 11, CAS_WRITE_LATENCY 11";
   attribute X_INTERFACE_INFO of DDR_DQS_n : signal is "xilinx.com:interface:ddrx:1.0 DDR DQS_N";
   attribute X_INTERFACE_INFO of MIO : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO MIO";
+  attribute X_INTERFACE_INFO of S_AXI_ACP_ARADDR : signal is "xilinx.com:interface:aximm:1.0 S_AXI_ACP ARADDR";
+  attribute X_INTERFACE_INFO of S_AXI_ACP_ARBURST : signal is "xilinx.com:interface:aximm:1.0 S_AXI_ACP ARBURST";
+  attribute X_INTERFACE_INFO of S_AXI_ACP_ARCACHE : signal is "xilinx.com:interface:aximm:1.0 S_AXI_ACP ARCACHE";
+  attribute X_INTERFACE_INFO of S_AXI_ACP_ARID : signal is "xilinx.com:interface:aximm:1.0 S_AXI_ACP ARID";
+  attribute X_INTERFACE_INFO of S_AXI_ACP_ARLEN : signal is "xilinx.com:interface:aximm:1.0 S_AXI_ACP ARLEN";
+  attribute X_INTERFACE_INFO of S_AXI_ACP_ARLOCK : signal is "xilinx.com:interface:aximm:1.0 S_AXI_ACP ARLOCK";
+  attribute X_INTERFACE_INFO of S_AXI_ACP_ARPROT : signal is "xilinx.com:interface:aximm:1.0 S_AXI_ACP ARPROT";
+  attribute X_INTERFACE_INFO of S_AXI_ACP_ARQOS : signal is "xilinx.com:interface:aximm:1.0 S_AXI_ACP ARQOS";
+  attribute X_INTERFACE_INFO of S_AXI_ACP_ARSIZE : signal is "xilinx.com:interface:aximm:1.0 S_AXI_ACP ARSIZE";
+  attribute X_INTERFACE_INFO of S_AXI_ACP_ARUSER : signal is "xilinx.com:interface:aximm:1.0 S_AXI_ACP ARUSER";
+  attribute X_INTERFACE_INFO of S_AXI_ACP_AWADDR : signal is "xilinx.com:interface:aximm:1.0 S_AXI_ACP AWADDR";
+  attribute X_INTERFACE_INFO of S_AXI_ACP_AWBURST : signal is "xilinx.com:interface:aximm:1.0 S_AXI_ACP AWBURST";
+  attribute X_INTERFACE_INFO of S_AXI_ACP_AWCACHE : signal is "xilinx.com:interface:aximm:1.0 S_AXI_ACP AWCACHE";
+  attribute X_INTERFACE_INFO of S_AXI_ACP_AWID : signal is "xilinx.com:interface:aximm:1.0 S_AXI_ACP AWID";
+  attribute X_INTERFACE_INFO of S_AXI_ACP_AWLEN : signal is "xilinx.com:interface:aximm:1.0 S_AXI_ACP AWLEN";
+  attribute X_INTERFACE_INFO of S_AXI_ACP_AWLOCK : signal is "xilinx.com:interface:aximm:1.0 S_AXI_ACP AWLOCK";
+  attribute X_INTERFACE_INFO of S_AXI_ACP_AWPROT : signal is "xilinx.com:interface:aximm:1.0 S_AXI_ACP AWPROT";
+  attribute X_INTERFACE_INFO of S_AXI_ACP_AWQOS : signal is "xilinx.com:interface:aximm:1.0 S_AXI_ACP AWQOS";
+  attribute X_INTERFACE_INFO of S_AXI_ACP_AWSIZE : signal is "xilinx.com:interface:aximm:1.0 S_AXI_ACP AWSIZE";
+  attribute X_INTERFACE_INFO of S_AXI_ACP_AWUSER : signal is "xilinx.com:interface:aximm:1.0 S_AXI_ACP AWUSER";
+  attribute X_INTERFACE_INFO of S_AXI_ACP_BID : signal is "xilinx.com:interface:aximm:1.0 S_AXI_ACP BID";
+  attribute X_INTERFACE_INFO of S_AXI_ACP_BRESP : signal is "xilinx.com:interface:aximm:1.0 S_AXI_ACP BRESP";
+  attribute X_INTERFACE_INFO of S_AXI_ACP_RDATA : signal is "xilinx.com:interface:aximm:1.0 S_AXI_ACP RDATA";
+  attribute X_INTERFACE_INFO of S_AXI_ACP_RID : signal is "xilinx.com:interface:aximm:1.0 S_AXI_ACP RID";
+  attribute X_INTERFACE_INFO of S_AXI_ACP_RRESP : signal is "xilinx.com:interface:aximm:1.0 S_AXI_ACP RRESP";
+  attribute X_INTERFACE_INFO of S_AXI_ACP_WDATA : signal is "xilinx.com:interface:aximm:1.0 S_AXI_ACP WDATA";
+  attribute X_INTERFACE_INFO of S_AXI_ACP_WID : signal is "xilinx.com:interface:aximm:1.0 S_AXI_ACP WID";
+  attribute X_INTERFACE_INFO of S_AXI_ACP_WSTRB : signal is "xilinx.com:interface:aximm:1.0 S_AXI_ACP WSTRB";
+  attribute X_INTERFACE_PARAMETER of S_AXI_ACP_WSTRB : signal is "XIL_INTERFACENAME S_AXI_ACP, NUM_WRITE_OUTSTANDING 8, NUM_READ_OUTSTANDING 8, DATA_WIDTH 64, PROTOCOL AXI3, FREQ_HZ 100000000, ID_WIDTH 3, ADDR_WIDTH 32, AWUSER_WIDTH 5, ARUSER_WIDTH 5, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, MAX_BURST_LENGTH 8, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0";
   attribute X_INTERFACE_INFO of USB0_PORT_INDCTL : signal is "xilinx.com:display_processing_system7:usbctrl:1.0 USBIND_0 PORT_INDCTL";
 begin
 inst: entity work.microblaze_system_processing_system7_0_1_processing_system7_v5_5_processing_system7
@@ -4192,48 +4267,48 @@ inst: entity work.microblaze_system_processing_system7_0_1_processing_system7_v5
       SPI1_SS_O => NLW_inst_SPI1_SS_O_UNCONNECTED,
       SPI1_SS_T => NLW_inst_SPI1_SS_T_UNCONNECTED,
       SRAM_INTIN => '0',
-      S_AXI_ACP_ACLK => '0',
-      S_AXI_ACP_ARADDR(31 downto 0) => B"00000000000000000000000000000000",
-      S_AXI_ACP_ARBURST(1 downto 0) => B"00",
-      S_AXI_ACP_ARCACHE(3 downto 0) => B"0000",
+      S_AXI_ACP_ACLK => S_AXI_ACP_ACLK,
+      S_AXI_ACP_ARADDR(31 downto 0) => S_AXI_ACP_ARADDR(31 downto 0),
+      S_AXI_ACP_ARBURST(1 downto 0) => S_AXI_ACP_ARBURST(1 downto 0),
+      S_AXI_ACP_ARCACHE(3 downto 0) => S_AXI_ACP_ARCACHE(3 downto 0),
       S_AXI_ACP_ARESETN => NLW_inst_S_AXI_ACP_ARESETN_UNCONNECTED,
-      S_AXI_ACP_ARID(2 downto 0) => B"000",
-      S_AXI_ACP_ARLEN(3 downto 0) => B"0000",
-      S_AXI_ACP_ARLOCK(1 downto 0) => B"00",
-      S_AXI_ACP_ARPROT(2 downto 0) => B"000",
-      S_AXI_ACP_ARQOS(3 downto 0) => B"0000",
-      S_AXI_ACP_ARREADY => NLW_inst_S_AXI_ACP_ARREADY_UNCONNECTED,
-      S_AXI_ACP_ARSIZE(2 downto 0) => B"000",
-      S_AXI_ACP_ARUSER(4 downto 0) => B"00000",
-      S_AXI_ACP_ARVALID => '0',
-      S_AXI_ACP_AWADDR(31 downto 0) => B"00000000000000000000000000000000",
-      S_AXI_ACP_AWBURST(1 downto 0) => B"00",
-      S_AXI_ACP_AWCACHE(3 downto 0) => B"0000",
-      S_AXI_ACP_AWID(2 downto 0) => B"000",
-      S_AXI_ACP_AWLEN(3 downto 0) => B"0000",
-      S_AXI_ACP_AWLOCK(1 downto 0) => B"00",
-      S_AXI_ACP_AWPROT(2 downto 0) => B"000",
-      S_AXI_ACP_AWQOS(3 downto 0) => B"0000",
-      S_AXI_ACP_AWREADY => NLW_inst_S_AXI_ACP_AWREADY_UNCONNECTED,
-      S_AXI_ACP_AWSIZE(2 downto 0) => B"000",
-      S_AXI_ACP_AWUSER(4 downto 0) => B"00000",
-      S_AXI_ACP_AWVALID => '0',
-      S_AXI_ACP_BID(2 downto 0) => NLW_inst_S_AXI_ACP_BID_UNCONNECTED(2 downto 0),
-      S_AXI_ACP_BREADY => '0',
-      S_AXI_ACP_BRESP(1 downto 0) => NLW_inst_S_AXI_ACP_BRESP_UNCONNECTED(1 downto 0),
-      S_AXI_ACP_BVALID => NLW_inst_S_AXI_ACP_BVALID_UNCONNECTED,
-      S_AXI_ACP_RDATA(63 downto 0) => NLW_inst_S_AXI_ACP_RDATA_UNCONNECTED(63 downto 0),
-      S_AXI_ACP_RID(2 downto 0) => NLW_inst_S_AXI_ACP_RID_UNCONNECTED(2 downto 0),
-      S_AXI_ACP_RLAST => NLW_inst_S_AXI_ACP_RLAST_UNCONNECTED,
-      S_AXI_ACP_RREADY => '0',
-      S_AXI_ACP_RRESP(1 downto 0) => NLW_inst_S_AXI_ACP_RRESP_UNCONNECTED(1 downto 0),
-      S_AXI_ACP_RVALID => NLW_inst_S_AXI_ACP_RVALID_UNCONNECTED,
-      S_AXI_ACP_WDATA(63 downto 0) => B"0000000000000000000000000000000000000000000000000000000000000000",
-      S_AXI_ACP_WID(2 downto 0) => B"000",
-      S_AXI_ACP_WLAST => '0',
-      S_AXI_ACP_WREADY => NLW_inst_S_AXI_ACP_WREADY_UNCONNECTED,
-      S_AXI_ACP_WSTRB(7 downto 0) => B"00000000",
-      S_AXI_ACP_WVALID => '0',
+      S_AXI_ACP_ARID(2 downto 0) => S_AXI_ACP_ARID(2 downto 0),
+      S_AXI_ACP_ARLEN(3 downto 0) => S_AXI_ACP_ARLEN(3 downto 0),
+      S_AXI_ACP_ARLOCK(1 downto 0) => S_AXI_ACP_ARLOCK(1 downto 0),
+      S_AXI_ACP_ARPROT(2 downto 0) => S_AXI_ACP_ARPROT(2 downto 0),
+      S_AXI_ACP_ARQOS(3 downto 0) => S_AXI_ACP_ARQOS(3 downto 0),
+      S_AXI_ACP_ARREADY => S_AXI_ACP_ARREADY,
+      S_AXI_ACP_ARSIZE(2 downto 0) => S_AXI_ACP_ARSIZE(2 downto 0),
+      S_AXI_ACP_ARUSER(4 downto 0) => S_AXI_ACP_ARUSER(4 downto 0),
+      S_AXI_ACP_ARVALID => S_AXI_ACP_ARVALID,
+      S_AXI_ACP_AWADDR(31 downto 0) => S_AXI_ACP_AWADDR(31 downto 0),
+      S_AXI_ACP_AWBURST(1 downto 0) => S_AXI_ACP_AWBURST(1 downto 0),
+      S_AXI_ACP_AWCACHE(3 downto 0) => S_AXI_ACP_AWCACHE(3 downto 0),
+      S_AXI_ACP_AWID(2 downto 0) => S_AXI_ACP_AWID(2 downto 0),
+      S_AXI_ACP_AWLEN(3 downto 0) => S_AXI_ACP_AWLEN(3 downto 0),
+      S_AXI_ACP_AWLOCK(1 downto 0) => S_AXI_ACP_AWLOCK(1 downto 0),
+      S_AXI_ACP_AWPROT(2 downto 0) => S_AXI_ACP_AWPROT(2 downto 0),
+      S_AXI_ACP_AWQOS(3 downto 0) => S_AXI_ACP_AWQOS(3 downto 0),
+      S_AXI_ACP_AWREADY => S_AXI_ACP_AWREADY,
+      S_AXI_ACP_AWSIZE(2 downto 0) => S_AXI_ACP_AWSIZE(2 downto 0),
+      S_AXI_ACP_AWUSER(4 downto 0) => S_AXI_ACP_AWUSER(4 downto 0),
+      S_AXI_ACP_AWVALID => S_AXI_ACP_AWVALID,
+      S_AXI_ACP_BID(2 downto 0) => S_AXI_ACP_BID(2 downto 0),
+      S_AXI_ACP_BREADY => S_AXI_ACP_BREADY,
+      S_AXI_ACP_BRESP(1 downto 0) => S_AXI_ACP_BRESP(1 downto 0),
+      S_AXI_ACP_BVALID => S_AXI_ACP_BVALID,
+      S_AXI_ACP_RDATA(63 downto 0) => S_AXI_ACP_RDATA(63 downto 0),
+      S_AXI_ACP_RID(2 downto 0) => S_AXI_ACP_RID(2 downto 0),
+      S_AXI_ACP_RLAST => S_AXI_ACP_RLAST,
+      S_AXI_ACP_RREADY => S_AXI_ACP_RREADY,
+      S_AXI_ACP_RRESP(1 downto 0) => S_AXI_ACP_RRESP(1 downto 0),
+      S_AXI_ACP_RVALID => S_AXI_ACP_RVALID,
+      S_AXI_ACP_WDATA(63 downto 0) => S_AXI_ACP_WDATA(63 downto 0),
+      S_AXI_ACP_WID(2 downto 0) => S_AXI_ACP_WID(2 downto 0),
+      S_AXI_ACP_WLAST => S_AXI_ACP_WLAST,
+      S_AXI_ACP_WREADY => S_AXI_ACP_WREADY,
+      S_AXI_ACP_WSTRB(7 downto 0) => S_AXI_ACP_WSTRB(7 downto 0),
+      S_AXI_ACP_WVALID => S_AXI_ACP_WVALID,
       S_AXI_GP0_ACLK => '0',
       S_AXI_GP0_ARADDR(31 downto 0) => B"00000000000000000000000000000000",
       S_AXI_GP0_ARBURST(1 downto 0) => B"00",

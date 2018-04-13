@@ -1,5 +1,5 @@
 #include "xparameters.h"
-#include "xuartlite_l.h"
+#include "xuartps_hw.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -10,5 +10,5 @@ char inbyte(void);
 #endif 
 
 char inbyte(void) {
-	 return XUartLite_RecvByte(STDIN_BASEADDRESS);
+	 return XUartPs_RecvByte(STDIN_BASEADDRESS);
 }

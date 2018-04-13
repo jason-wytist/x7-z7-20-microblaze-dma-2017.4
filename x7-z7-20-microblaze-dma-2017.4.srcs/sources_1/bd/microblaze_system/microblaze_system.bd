@@ -350,6 +350,7 @@
         <spirit:componentRef spirit:library="ip" spirit:name="smartconnect" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">microblaze_system_axi_smc_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="NUM_MI">2</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="NUM_SI">4</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
@@ -358,6 +359,7 @@
         <spirit:componentRef spirit:library="ip" spirit:name="axi_uartlite" spirit:vendor="xilinx.com" spirit:version="2.0"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">microblaze_system_axi_uartlite_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_BAUDRATE">115200</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
@@ -540,6 +542,7 @@
           <spirit:configurableElementValue spirit:referenceId="PCW_UART_PERIPHERAL_VALID">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_USE_AXI_NONSECURE">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_USE_M_AXI_GP0">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PCW_USE_S_AXI_ACP">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_USE_CROSS_TRIGGER">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_UART1_BAUD_RATE">115200</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_EN_4K_TIMER">0</spirit:configurableElementValue>
@@ -866,6 +869,11 @@
         <spirit:activeInterface spirit:busRef="M_AXI_S2MM" spirit:componentRef="axi_dma_0"/>
         <spirit:activeInterface spirit:busRef="S01_AXI" spirit:componentRef="axi_smc"/>
       </spirit:interconnection>
+      <spirit:interconnection>
+        <spirit:name>axi_smc_M01_AXI</spirit:name>
+        <spirit:activeInterface spirit:busRef="M01_AXI" spirit:componentRef="axi_smc"/>
+        <spirit:activeInterface spirit:busRef="S_AXI_ACP" spirit:componentRef="processing_system7_0"/>
+      </spirit:interconnection>
     </spirit:interconnections>
     <spirit:adHocConnections>
       <spirit:adHocConnection>
@@ -892,6 +900,7 @@
         <spirit:internalPortReference spirit:componentRef="microblaze_0_axi_periph" spirit:portRef="M03_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="microblaze_0_axi_periph" spirit:portRef="M04_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="microblaze_0_axi_periph" spirit:portRef="M05_ACLK"/>
+        <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="S_AXI_ACP_ACLK"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>clk_wiz_1_locked</spirit:name>
@@ -3077,6 +3086,24 @@
             <spirit:addressOffset>0xC0000000</spirit:addressOffset>
             <spirit:range>8K</spirit:range>
           </spirit:segment>
+          <spirit:segment>
+            <spirit:name>SEG_processing_system7_0_ACP_DDR_LOWOCM</spirit:name>
+            <spirit:displayName>/processing_system7_0/S_AXI_ACP/ACP_DDR_LOWOCM</spirit:displayName>
+            <spirit:addressOffset>0x00000000</spirit:addressOffset>
+            <spirit:range>1G</spirit:range>
+          </spirit:segment>
+          <spirit:segment>
+            <spirit:name>SEG_processing_system7_0_ACP_IOP</spirit:name>
+            <spirit:displayName>/processing_system7_0/S_AXI_ACP/ACP_IOP</spirit:displayName>
+            <spirit:addressOffset>0xE0000000</spirit:addressOffset>
+            <spirit:range>4M</spirit:range>
+          </spirit:segment>
+          <spirit:segment>
+            <spirit:name>SEG_processing_system7_0_ACP_QSPI_LINEAR</spirit:name>
+            <spirit:displayName>/processing_system7_0/S_AXI_ACP/ACP_QSPI_LINEAR</spirit:displayName>
+            <spirit:addressOffset>0xFC000000</spirit:addressOffset>
+            <spirit:range>16M</spirit:range>
+          </spirit:segment>
         </spirit:segments>
       </spirit:addressSpace>
     </spirit:addressSpaces>
@@ -3137,6 +3164,24 @@
             <spirit:addressOffset>0xC0000000</spirit:addressOffset>
             <spirit:range>8K</spirit:range>
           </spirit:segment>
+          <spirit:segment>
+            <spirit:name>SEG_processing_system7_0_ACP_DDR_LOWOCM</spirit:name>
+            <spirit:displayName>/processing_system7_0/S_AXI_ACP/ACP_DDR_LOWOCM</spirit:displayName>
+            <spirit:addressOffset>0x00000000</spirit:addressOffset>
+            <spirit:range>1G</spirit:range>
+          </spirit:segment>
+          <spirit:segment>
+            <spirit:name>SEG_processing_system7_0_ACP_QSPI_LINEAR</spirit:name>
+            <spirit:displayName>/processing_system7_0/S_AXI_ACP/ACP_QSPI_LINEAR</spirit:displayName>
+            <spirit:addressOffset>0xFC000000</spirit:addressOffset>
+            <spirit:range>16M</spirit:range>
+          </spirit:segment>
+          <spirit:segment bd:isExcluded="true">
+            <spirit:name>SEG_processing_system7_0_ACP_IOP</spirit:name>
+            <spirit:displayName>/processing_system7_0/S_AXI_ACP/ACP_IOP</spirit:displayName>
+            <spirit:addressOffset>0xE0000000</spirit:addressOffset>
+            <spirit:range>4M</spirit:range>
+          </spirit:segment>
         </spirit:segments>
       </spirit:addressSpace>
       <spirit:addressSpace>
@@ -3149,6 +3194,24 @@
             <spirit:displayName>/axi_bram_ctrl_0/S_AXI/Mem0</spirit:displayName>
             <spirit:addressOffset>0xC0000000</spirit:addressOffset>
             <spirit:range>8K</spirit:range>
+          </spirit:segment>
+          <spirit:segment>
+            <spirit:name>SEG_processing_system7_0_ACP_DDR_LOWOCM</spirit:name>
+            <spirit:displayName>/processing_system7_0/S_AXI_ACP/ACP_DDR_LOWOCM</spirit:displayName>
+            <spirit:addressOffset>0x00000000</spirit:addressOffset>
+            <spirit:range>1G</spirit:range>
+          </spirit:segment>
+          <spirit:segment>
+            <spirit:name>SEG_processing_system7_0_ACP_IOP</spirit:name>
+            <spirit:displayName>/processing_system7_0/S_AXI_ACP/ACP_IOP</spirit:displayName>
+            <spirit:addressOffset>0xE0000000</spirit:addressOffset>
+            <spirit:range>4M</spirit:range>
+          </spirit:segment>
+          <spirit:segment>
+            <spirit:name>SEG_processing_system7_0_ACP_QSPI_LINEAR</spirit:name>
+            <spirit:displayName>/processing_system7_0/S_AXI_ACP/ACP_QSPI_LINEAR</spirit:displayName>
+            <spirit:addressOffset>0xFC000000</spirit:addressOffset>
+            <spirit:range>16M</spirit:range>
           </spirit:segment>
         </spirit:segments>
       </spirit:addressSpace>
@@ -3242,7 +3305,7 @@
           <spirit:segment>
             <spirit:name>SEG_dlmb_bram_if_cntlr_Mem</spirit:name>
             <spirit:displayName>/microblaze_0_local_memory/dlmb_bram_if_cntlr/SLMB/Mem</spirit:displayName>
-            <spirit:addressOffset>0x00000000</spirit:addressOffset>
+            <spirit:addressOffset>0xF0000000</spirit:addressOffset>
             <spirit:range>128K</spirit:range>
           </spirit:segment>
           <spirit:segment>
@@ -3250,6 +3313,24 @@
             <spirit:displayName>/mdm_1/S_AXI/Reg</spirit:displayName>
             <spirit:addressOffset>0x41400000</spirit:addressOffset>
             <spirit:range>4K</spirit:range>
+          </spirit:segment>
+          <spirit:segment>
+            <spirit:name>SEG_processing_system7_0_ACP_DDR_LOWOCM</spirit:name>
+            <spirit:displayName>/processing_system7_0/S_AXI_ACP/ACP_DDR_LOWOCM</spirit:displayName>
+            <spirit:addressOffset>0x00000000</spirit:addressOffset>
+            <spirit:range>1G</spirit:range>
+          </spirit:segment>
+          <spirit:segment>
+            <spirit:name>SEG_processing_system7_0_ACP_IOP</spirit:name>
+            <spirit:displayName>/processing_system7_0/S_AXI_ACP/ACP_IOP</spirit:displayName>
+            <spirit:addressOffset>0xE0000000</spirit:addressOffset>
+            <spirit:range>4M</spirit:range>
+          </spirit:segment>
+          <spirit:segment>
+            <spirit:name>SEG_processing_system7_0_ACP_QSPI_LINEAR</spirit:name>
+            <spirit:displayName>/processing_system7_0/S_AXI_ACP/ACP_QSPI_LINEAR</spirit:displayName>
+            <spirit:addressOffset>0xFC000000</spirit:addressOffset>
+            <spirit:range>16M</spirit:range>
           </spirit:segment>
         </spirit:segments>
       </spirit:addressSpace>
@@ -3261,7 +3342,7 @@
           <spirit:segment>
             <spirit:name>SEG_ilmb_bram_if_cntlr_Mem</spirit:name>
             <spirit:displayName>/microblaze_0_local_memory/ilmb_bram_if_cntlr/SLMB/Mem</spirit:displayName>
-            <spirit:addressOffset>0x00000000</spirit:addressOffset>
+            <spirit:addressOffset>0xF0000000</spirit:addressOffset>
             <spirit:range>128K</spirit:range>
           </spirit:segment>
         </spirit:segments>
